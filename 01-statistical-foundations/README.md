@@ -549,12 +549,10 @@ A PDF is not itself merely a smoothed histogram.
 
 # References
 
-### Recommended supplementary resources
-
 - [OpenStax - Introductory Statistics](https://openstax.org/details/books/introductory-statistics-2e)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
 - [SciPy Statistics Documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
 
 ---
 
-**Next:** [Module 02 - Descriptive Statistics](../02-descriptive-statistics/README.md)
+**NEXT:** [Module 02 - Descriptive Statistics](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
