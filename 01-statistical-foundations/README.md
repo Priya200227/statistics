@@ -1,10 +1,10 @@
-# Module 01 — Statistical Foundations
+# Module 01 - Statistical Foundations
 
 > [!NOTE]
 >
 > **Section:** Krish Naik - [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 > 
-> **Purpose:** Establish the language and reasoning needed to analyze data responsibly. This module covers what statistics is, how populations and samples relate, how variables are classified, and how observations are summarized using frequency distributions and basic visualizations.
+> **Purpose:** Establish the language and reasoning needed to analyze data responsibly. This module covers what statistics is, how populations and samples relate, how variables are classified, and how to summarize observations using frequency distributions and basic visualizations.
 
 ---
 
@@ -58,7 +58,8 @@ Data are recorded observations, measurements, values, or information about entit
 | Customer feedback | "Delivery was late" | Text |
 | Satisfaction rating | Very dissatisfied → Very satisfied | Ordinal categorical |
 
-**Important:** A recorded value can be categorical even when it is represented by digits. A postal code or customer ID is usually an identifier/category, not a numerical measurement.
+> [!IMPORTANT]
+> A recorded value can be categorical even when digits represent it. A postal code or customer ID is usually an identifier/category, not a numerical measurement.
 
 ---
 
@@ -100,7 +101,8 @@ Common methods include:
 | Variance and standard deviation | Hypothesis testing |
 | Frequency tables and charts | Population parameter estimation |
 
-**Key distinction:** Descriptive statistics can summarize a sample or a complete population. Inferential statistics goes beyond the observed sample to estimate or test claims about a broader population or process.
+> [!NOTE]
+> Descriptive statistics can summarize a sample or a complete population. Inferential statistics goes beyond the observed sample to estimate or test claims about a broader population or process.
 
 ---
 
@@ -151,6 +153,7 @@ A **parameter** describes a characteristic of a population. A **statistic** desc
 
 The sample mean is:
 
+bar{x}=frac{sum_{i=1}^{n}x}
 \[
 \bar{x}=\frac{\sum_{i=1}^{n}x_i}{n}
 \]
@@ -522,25 +525,7 @@ A PDF is not itself merely a smoothed histogram.
 
 ---
 
-# 10. Applications in Data Analytics and AI Data Engineering
-
-| Concept | Data Analyst application | AI / Data Engineering application |
-|---|---|---|
-| Descriptive statistics | Sales and operational reporting | Data profiling and pipeline monitoring |
-| Inferential statistics | Surveys and experiments | Statistical validation and evaluation |
-| Population and sample | Customer research | Representative data subsets |
-| Sampling | Survey design | Data sampling and validation sets |
-| Variable types | Choosing summaries and charts | Schema and feature understanding |
-| Measurement scales | Correct interpretation of fields | Feature semantics and transformations |
-| Frequency distribution | Category and value analysis | Data-quality and distribution monitoring |
-| Histograms | Understanding numeric distributions | Detecting unusual data patterns |
-| PDF / KDE | Distribution analysis | Understanding feature distributions |
-
-**Practical caution:** Random splitting is not always appropriate for ML datasets. Time-dependent data may require chronological splitting; grouped data may require group-based splitting to prevent leakage.
-
----
-
-# 11. Common Misconceptions to Avoid
+# 10. Common Misconceptions to Avoid
 
 1. **Every numeric-looking column is quantitative.** False. IDs and postal codes are often nominal categories.
 2. **All quantitative variables are continuous.** False. Counts are often discrete.
@@ -553,28 +538,7 @@ A PDF is not itself merely a smoothed histogram.
 
 ---
 
-# 12. Knowledge Check
-
-Try these questions without looking at the notes.
-
-1. What is the difference between descriptive and inferential statistics?
-2. A company has 50,000 customers and surveys 800. Identify the population and sample.
-3. What is the difference between a parameter and a statistic?
-4. A company samples employees from every department. Which sampling method is this?
-5. A researcher selects every 12th customer after a random starting point. Which method is this?
-6. Why can a large convenience sample still be biased?
-7. Is a postal code quantitative or categorical? Explain.
-8. Classify number of orders, order value, and payment method.
-9. What is the difference between ordinal and interval data?
-10. Why is Celsius temperature an interval scale rather than a ratio scale?
-11. When is cumulative frequency meaningful?
-12. Explain the difference between a bar chart and a histogram.
-13. What does the area under a PDF curve represent?
-14. How is KDE different from a histogram?
-
----
-
-# 13. Learning Resources
+# References
 
 ### Recommended supplementary resources
 
@@ -584,22 +548,4 @@ Try these questions without looking at the notes.
 
 ---
 
-## Module completion criteria
-
-Do not mark Module 01 complete simply because the videos have been watched.
-
-- [ ] Explain statistics and its two main branches.
-- [ ] Distinguish population, sample, parameter, and statistic.
-- [ ] Explain the sampling methods and their limitations.
-- [ ] Classify quantitative and categorical variables.
-- [ ] Distinguish discrete and continuous variables.
-- [ ] Identify all four measurement scales.
-- [ ] Construct and interpret frequency tables.
-- [ ] Explain cumulative frequency.
-- [ ] Distinguish bar charts, histograms, PDFs, and KDE.
-- [ ] Complete the knowledge check.
-
-**Next module:** [Module 02 - Descriptive Statistics](../02-descriptive-statistics/README.md)
-
-Topics: Frequency distributions in greater depth, mean, median, mode, range, variance, standard deviation, quartiles, percentiles, IQR, outliers, skewness, and kurtosis.
-
+**Next:** [Module 02 - Descriptive Statistics](../02-descriptive-statistics/README.md)
