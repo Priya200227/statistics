@@ -135,3 +135,6 @@ print(mean_value, median_value, mode_values.tolist())
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [Pandas descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
 
+---
+
+**NEXT:** [03-Measures of Dispersion](03-measures-of-dispersion/README.md)
