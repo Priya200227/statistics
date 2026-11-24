@@ -2,6 +2,8 @@
 
 [← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
 
+---
+
 ## 1. Arithmetic mean
 
 The arithmetic mean is the sum of observations divided by the number of observations.
