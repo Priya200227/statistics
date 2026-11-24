@@ -1,4 +1,4 @@
-# Module 02 — Descriptive Statistics
+# Module 02 - Descriptive Statistics
 
 This module is split into focused topic notes rather than one long README. Read them in order.
 
