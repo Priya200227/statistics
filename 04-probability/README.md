@@ -1,7 +1,7 @@
 # Module 04 - Probability
 
 > [!NOTE]
-> **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions — the foundation for statistical inference, experimentation, and machine learning.
+> **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions - the foundation for statistical inference, experimentation, and machine learning.
 
 ---
 
