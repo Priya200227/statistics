@@ -121,13 +121,13 @@ Examples:
 - All eligible voters in a defined election
 - All products manufactured during a specified production period
 
-Population size is commonly denoted by uppercase \(N\).
+Population size is commonly denoted by uppercase $N$.
 
 The population must be defined precisely. "All customers" may be too vague unless the company, time period, and eligibility criteria are specified.
 
 ## 3.2 Sample
 
-A **sample** is a subset of the population selected for observation or analysis. Sample size is commonly denoted by lowercase \(n\).
+A **sample** is a subset of the population selected for observation or analysis. Sample size is commonly denoted by lowercase $n$.
 
 Sampling is used when collecting data from every population member is impractical, expensive, time-consuming, or unnecessary.
 
@@ -146,19 +146,20 @@ A **parameter** describes a characteristic of a population. A **statistic** desc
 
 | Quantity | Population parameter | Sample statistic |
 |---|---|---|
-| Mean | \(\mu\) | \(\bar{x}\) |
-| Standard deviation | \(\sigma\) | \(s\) |
-| Proportion | \(p\) | \(\hat{p}\) |
-| Size | \(N\) | \(n\) |
+| Mean | $\mu$ | $\bar{x}$ |
+| Standard deviation | $\sigma$ | $s$ |
+| Proportion | $p$ | $\hat{p}$ |
+| Size | $N$ | $n$ |
 
 The sample mean is:
 
-bar{x}=frac{sum_{i=1}^{n}x}
-\[
-\bar{x}=\frac{\sum_{i=1}^{n}x_i}{n}
-\]
 
-Where \(x_i\) is an observed sample value and \(n\) is the sample size.
+$$
+\bar{x}=\frac{\sum_{i=1}^{n}x_i}{n}
+$$
+
+
+Where $x_i$ is an observed sample value and $n$ is the sample size.
 
 The sample mean is often used to estimate the population mean. Do not confuse the statistic with the parameter it is intended to estimate.
 
@@ -191,17 +192,19 @@ Stratified sampling can improve representation of important subgroups. The sampl
 
 Select units at a fixed interval from an ordered sampling frame, usually after choosing a random starting position.
 
-\[
+
+$$
 k=\frac{N}{n}
-\]
+$$
+
 
 Where:
 
-- \(N\) = population size
-- \(n\) = desired sample size
-- \(k\) = sampling interval
+- $N$ = population size
+- $n$ = desired sample size
+- $k$ = sampling interval
 
-**Example:** If \(N=1{,}000\) and \(n=100\), then \(k=10\). Choose a random starting position from 1 to 10, then select every 10th unit.
+**Example:** If $N=1{,}000$ and $n=100$, then $k=10$. Choose a random starting position from 1 to 10, then select every 10th unit.
 
 **Limitation:** If the list has a periodic pattern that aligns with the interval, systematic sampling can produce a biased sample.
 
@@ -429,11 +432,13 @@ For the flower example:
 | Lily | 4 | 7 |
 | Sunflower | 2 | 9 |
 
-\[
-CF_i=\sum_{j=1}^{i}f_j
-\]
 
-Where \(f_j\) is the frequency of category or class \(j\).
+$$
+CF_i=\sum_{j=1}^{i}f_j
+$$
+
+
+Where $f_j$ is the frequency of category or class $j$.
 
 **Important:** Cumulative frequency is most meaningful when values or classes have a natural order, such as age intervals or satisfaction levels. For nominal categories such as flower types, the running total depends on arbitrary category order and usually has little analytical meaning.
 
@@ -495,21 +500,25 @@ The lecture informally describes a PDF as a smoothed histogram. That is an intui
 
 A **probability density function (PDF)** describes the density of a continuous probability distribution.
 
-For a continuous random variable \(X\):
+For a continuous random variable $X$:
 
-- \(f(x)\geq 0\)
+- $f(x)\geq 0$
 - The total area under the density curve is 1.
-- The probability that \(X\) lies between \(a\) and \(b\) is the area under the curve over that interval.
+- The probability that $X$ lies between $a$ and $b$ is the area under the curve over that interval.
 
-\[
+
+$$
 P(a\leq X\leq b)=\int_a^b f(x)\,dx
-\]
+$$
+
 
 For a continuous random variable, the probability at any one exact point is zero:
 
-\[
+
+$$
 P(X=x)=0
-\]
+$$
+
 
 ### Kernel Density Estimation (KDE)
 
