@@ -42,7 +42,7 @@ Quartiles divide ordered data into four parts:
 - Q2: 50th percentile (median).
 - Q3: 75th percentile.
 
-![Quartiles and interquartile range](../images/03-quartiles-and-boxplots/quartiles-iqr-boxplot.png)
+![Quartiles and interquartile range](../images/quartiles-iqr-boxplot.png)
 
 Quantile algorithms differ in how they interpolate between observations. NumPy and Pandas provide method options; state the method when exact reproducibility matters.
 
