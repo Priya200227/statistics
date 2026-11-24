@@ -1,5 +1,9 @@
 # Five-Number Summary
 
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
+---
+
 ## 1. Definition
 
 The five-number summary is a compact description of a numerical distribution:
