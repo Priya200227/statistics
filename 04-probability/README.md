@@ -1,5 +1,6 @@
 # Module 04 - Probability
 
+>[!NOTE]
 > **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions — the foundation for statistical inference, experimentation, and machine learning.
 
 ---
@@ -25,24 +26,6 @@
 - [16. Practical exercises](#16-practical-exercises)
 - [Completion checklist](#completion-checklist)
 - [References](#references)
-
----
-
-## Learning objectives
-
-By the end of this module, you should be able to:
-
-1. Define experiments, outcomes, sample spaces, and events.
-2. Calculate probabilities using complements, unions, intersections, and counting.
-3. Distinguish mutually exclusive events from independent events.
-4. Apply addition, multiplication, and conditional probability rules.
-5. Use tree diagrams and two-way tables to organize probability problems.
-6. Explain and apply Bayes' theorem, including the base-rate effect.
-7. Define discrete and continuous random variables.
-8. Calculate expected value, variance, and standard deviation of a random variable.
-9. Recognize common probability distributions and their assumptions.
-10. Calculate probabilities and simulate random processes using Python.
-11. Translate probability results into clear business interpretations.
 
 ---
 
