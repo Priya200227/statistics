@@ -1,24 +1,12 @@
 # Module 01 — Statistical Foundations
 
+> [!NOTE]
+>
+> **Section:** Krish Naik - [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
+> 
 > **Purpose:** Establish the language and reasoning needed to analyze data responsibly. This module covers what statistics is, how populations and samples relate, how variables are classified, and how observations are summarized using frequency distributions and basic visualizations.
 
-**Primary course:** Krish Naik — [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)  
-**Transcript coverage:** Approximately 04:32–42:00 (Chapters 4–9 and the frequency-distribution section)  
-**Repository focus:** Data Analytics foundations, with connections to Data Engineering and AI workflows.
-
 ---
-
-## Learning objectives
-
-After completing this module, you should be able to:
-
-1. Explain statistics and distinguish descriptive from inferential statistics.
-2. Define a target population, sample, parameter, and statistic.
-3. Explain probability and non-probability sampling methods and their limitations.
-4. Classify variables as quantitative or categorical, and quantitative variables as discrete or continuous.
-5. Distinguish nominal, ordinal, interval, and ratio measurement scales.
-6. Construct and interpret frequency and cumulative-frequency tables.
-7. Choose between a bar chart and histogram and explain what a probability density function represents.
 
 ## Visual overview
 
@@ -55,7 +43,7 @@ Statistical questions include:
 1. **Collect:** Obtain observations relevant to a question.
 2. **Organize:** Structure, clean, classify, and summarize observations.
 3. **Analyze:** Apply appropriate statistical methods.
-4. **Interpret:** Explain what the evidence does—and does not—support.
+4. **Interpret:** Explain what the evidence does and does not support.
 5. **Communicate and decide:** Present findings, assumptions, uncertainty, and limitations.
 
 ### What is data?
@@ -283,7 +271,7 @@ Examples:
 - Number of orders placed
 - Number of defects in a batch
 
-A count of bank accounts can be 0, 1, 2, 3, and so on—not 2.5 accounts.
+A count of bank accounts can be 0, 1, 2, 3, and so on not 2.5 accounts.
 
 ### Continuous variables
 
@@ -588,14 +576,9 @@ Try these questions without looking at the notes.
 
 # 13. Learning Resources
 
-### Primary source
-
-- Krish Naik — [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
-- Transcript range used: approximately 04:32–42:00.
-
 ### Recommended supplementary resources
 
-- [OpenStax — Introductory Statistics](https://openstax.org/details/books/introductory-statistics-2e)
+- [OpenStax - Introductory Statistics](https://openstax.org/details/books/introductory-statistics-2e)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
 - [SciPy Statistics Documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
 
@@ -616,7 +599,7 @@ Do not mark Module 01 complete simply because the videos have been watched.
 - [ ] Distinguish bar charts, histograms, PDFs, and KDE.
 - [ ] Complete the knowledge check.
 
-**Next module:** [Module 02 — Descriptive Statistics](../02-descriptive-statistics/README.md)
+**Next module:** [Module 02 - Descriptive Statistics](../02-descriptive-statistics/README.md)
 
 Topics: Frequency distributions in greater depth, mean, median, mode, range, variance, standard deviation, quartiles, percentiles, IQR, outliers, skewness, and kurtosis.
 
