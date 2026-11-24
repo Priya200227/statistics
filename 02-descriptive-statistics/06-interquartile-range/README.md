@@ -1,5 +1,9 @@
 # Interquartile Range (IQR)
 
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
+---
+
 ## 1. Definition
 
 The interquartile range measures the spread of the middle 50% of observations.
