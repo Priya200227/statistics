@@ -1,5 +1,7 @@
 # Measures of Central Tendency
 
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
 ## 1. Purpose
 
 Central tendency describes the centre or typical location of a distribution. It helps answer: **what value best represents a typical observation?**
