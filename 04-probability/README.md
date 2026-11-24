@@ -1,10 +1,7 @@
-# Module 04 — Probability
+# Module 04 - Probability
 
+> [!NOTE]
 > **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions — the foundation for statistical inference, experimentation, and machine learning.
-
-This module follows **Module 01 — Statistical Foundations**, **Module 02 — Descriptive Statistics**, and **Module 03 — Data Visualization**.
-
-**Scope note:** This README is a structured learning guide based on the agreed module roadmap and authoritative references. It is not yet reconciled against a specific course transcript. When course notes are supplied, update the terminology, sequence, examples, and coverage to match the source material while preserving mathematical correctness.
 
 ---
 
@@ -29,24 +26,6 @@ This module follows **Module 01 — Statistical Foundations**, **Module 02 — D
 - [16. Practical exercises](#16-practical-exercises)
 - [Completion checklist](#completion-checklist)
 - [References](#references)
-
----
-
-## Learning objectives
-
-By the end of this module, you should be able to:
-
-1. Define experiments, outcomes, sample spaces, and events.
-2. Calculate probabilities using complements, unions, intersections, and counting.
-3. Distinguish mutually exclusive events from independent events.
-4. Apply addition, multiplication, and conditional probability rules.
-5. Use tree diagrams and two-way tables to organize probability problems.
-6. Explain and apply Bayes' theorem, including the base-rate effect.
-7. Define discrete and continuous random variables.
-8. Calculate expected value, variance, and standard deviation of a random variable.
-9. Recognize common probability distributions and their assumptions.
-10. Calculate probabilities and simulate random processes using Python.
-11. Translate probability results into clear business interpretations.
 
 ---
 
@@ -199,7 +178,7 @@ $$
 0!=1
 $$
 
-## 4.2 Permutations — order matters
+## 4.2 Permutations - order matters
 
 Number of ways to select and arrange $r$ objects from $n$ distinct objects:
 
@@ -213,7 +192,7 @@ $$
 {}_{8}P_3=\frac{8!}{5!}=336
 $$
 
-## 4.3 Combinations — order does not matter
+## 4.3 Combinations - order does not matter
 
 Number of ways to select $r$ objects from $n$ distinct objects:
 
@@ -756,12 +735,12 @@ print(left_probability, right_probability, ninety_fifth_percentile)
 ## 11.6 Continuous distribution methods
 
 In SciPy:
-- `pdf()` — probability density function.
-- `pmf()` — probability mass function.
-- `cdf()` — cumulative distribution function.
-- `sf()` — survival function (often more numerically accurate for upper-tail probabilities).
-- `ppf()` — inverse CDF / quantile.
-- `rvs()` — random samples.
+- `pdf()` - probability density function.
+- `pmf()` - probability mass function.
+- `cdf()` - cumulative distribution function.
+- `sf()` - survival function (often more numerically accurate for upper-tail probabilities).
+- `ppf()` - inverse CDF / quantile.
+- `rvs()` - random samples.
 
 Remember: use `pmf` for discrete distributions and `pdf` for continuous distributions.
 
@@ -918,27 +897,16 @@ For every exercise, explain:
 ## References
 
 ### Learning and interactive explanations
-- [Khan Academy — Statistics and Probability](https://www.khanacademy.org/computing/statistics-probability) — probability, counting, random variables, and distributions.
-- [Seeing Theory](https://seeing-theory.brown.edu/) — interactive visual introduction to basic probability, compound probability, and probability distributions. The site is archived for reference.
-- [Seeing Theory — GitHub](https://github.com/seeingtheory/Seeing-Theory) — source repository for the interactive learning project.
+- [Khan Academy - Statistics and Probability](https://www.khanacademy.org/computing/statistics-probability) - probability, counting, random variables, and distributions.
+- [Seeing Theory](https://seeing-theory.brown.edu/) - interactive visual introduction to basic probability, compound probability, and probability distributions. The site is archived for reference.
+- [Seeing Theory - GitHub](https://github.com/seeingtheory/Seeing-Theory) - source repository for the interactive learning project.
 
 ### Mathematical and software references
-- [Khan Academy — Conditional probability and rules of probability](https://en.khanacademy.org/standards/CCSS.Math/HSS.CP)
-- [SciPy — Probability distributions tutorial](https://docs.scipy.org/doc/scipy/tutorial/stats/probability_distributions.html)
-- [SciPy — Statistical functions reference](https://docs.scipy.org/doc/scipy/reference/stats.html)
-- [NumPy — Random sampling](https://numpy.org/doc/stable/reference/random/index.html)
+- [Khan Academy - Conditional probability and rules of probability](https://en.khanacademy.org/standards/CCSS.Math/HSS.CP)
+- [SciPy - Probability distributions tutorial](https://docs.scipy.org/doc/scipy/tutorial/stats/probability_distributions.html)
+- [SciPy - Statistical functions reference](https://docs.scipy.org/doc/scipy/reference/stats.html)
+- [NumPy - Random sampling](https://numpy.org/doc/stable/reference/random/index.html)
 
 ---
 
-## Module status
-
-**Module 04 — Probability**
-
-Status: In progress
-
-Prerequisites:
-- Module 01 — Statistical Foundations
-- Module 02 — Descriptive Statistics
-- Module 03 — Data Visualization
-
-Next module: **Module 05 — Inferential Statistics**
+ **NEXT:** [05—Inferential Statistics](../05-inferential-statistics/README.md)
