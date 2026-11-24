@@ -16,7 +16,7 @@ This module follows the descriptive-statistics portions of the course, especiall
 
 # 1. Measures of Central Tendency
 
-![Mean, median, and mode comparison](images/01-central-tendency.png)
+![Mean, median, and mode comparison](images/central-tendency.png)
 
 
 Central tendency describes the centre or typical location of a distribution. The three common measures are **mean, median, and mode**.
@@ -152,7 +152,7 @@ Mode is particularly useful for categorical variables, such as most common produ
 
 # 2. Measures of Dispersion
 
-![Same mean, different spread](images/02-dispersion/same-mean-different-dispersion.png)
+![Same mean, different spread](images/same-mean-different-dispersion.png)
 
 
 A centre alone does not describe a dataset. Two datasets can have the same mean but very different spreads.
@@ -271,7 +271,7 @@ CV expresses standard deviation relative to the mean. It can help compare relati
 
 # 3. Percentiles and Quartiles
 
-![Quartiles and interquartile range](images/03-quartiles-and-boxplots/quartiles-iqr-boxplot.png)
+![Quartiles and interquartile range](images/quartiles-iqr-boxplot.png)
 
 
 ## 3.1 Percentile
@@ -292,7 +292,7 @@ Examples:
 These are different questions:
 
 - **Percentile rank:** What percentage of observations are below (or at/below) a particular value?
-- **Percentile value / quantile:** What value marks a specified percentage of the distribution?
+- **Percentile value/quantile:** What value marks a specified percentage of the distribution?
 
 A simple empirical percentile-rank calculation is:
 
@@ -406,14 +406,15 @@ Outlier treatment should be driven by the question and data-generating process, 
 
 # 6. Distribution Shape and Visualization
 
-![Symmetric, right-skewed, and left-skewed distributions](images/06-distribution-shape/symmetry-and-skewness.png)
+![Symmetric, right-skewed, and left-skewed distributions](images/symmetry-and-skewness.png)
 
 
 A distribution describes how observations are spread across possible values. In EDA, inspect shape before deciding which summary statistics are representative.
 
 ## 6.1 Histogram
 
-A histogram groups numerical observations into adjacent bins and displays the count or density in each bin.
+A histogram groups numerical observations into adjace+
+nt bins and displays the count or density in each bin.
 
 - X-axis: numerical intervals (bins)
 - Y-axis: count, frequency, or density
@@ -473,7 +474,7 @@ Many libraries report **excess kurtosis**, where the normal distribution has val
 
 # 7. Normal (Gaussian) Distribution
 
-![Normal distribution and the empirical rule](images/07-normal-distribution/normal-distribution-empirical-rule.png)
+![Normal distribution and the empirical rule](images/normal-distribution-empirical-rule.png)
 
 
 A normal distribution is a continuous, symmetric, bell-shaped probability distribution described by its mean $\mu$ and standard deviation $\sigma$.
@@ -508,7 +509,7 @@ These percentages are approximate and apply to a normal distribution. They are n
 
 # 8. Z-Scores and the Standard Normal Distribution
 
-![Z-score and standard normal distribution](images/08-z-scores/z-score-standard-normal.png)
+![Z-score and standard normal distribution](images/z-score-standard-normal.png)
 
 
 A z-score expresses how many standard deviations an observation is from the mean.
@@ -624,7 +625,7 @@ The transcript mentions $n\geq30$ as a rule of thumb. **Thirty is not a universa
 
 # 10. Python Implementation
 
-![Descriptive analysis workflow](images/10-python-and-analysis-workflow/descriptive-analysis-workflow.png)
+![Descriptive analysis workflow](images/descriptive-analysis-workflow.png)
 
 
 Use one notebook for this module:
