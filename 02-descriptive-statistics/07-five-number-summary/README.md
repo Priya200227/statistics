@@ -73,4 +73,4 @@ A boxplot is compact but does not reveal every feature. Pair it with a histogram
 
 ---
 
-**NEXT:** [08-Skewness & Kurtosis](08-skewness-and-kurtosis/README.md)
+**NEXT:** [08-Skewness & Kurtosis](../08-skewness-and-kurtosis/README.md)
