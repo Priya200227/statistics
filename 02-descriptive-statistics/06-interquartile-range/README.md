@@ -103,3 +103,5 @@ print("Potential outliers:", outliers.tolist())
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [NIST/SEMATECH e-Handbook](https://www.itl.nist.gov/div898/handbook/)
 
+---
+**NEXT:** [07-Five Number Summary](../07-five-number-summary/README.md)
