@@ -1,8 +1,6 @@
-# Module 03 — Data Visualization
+# Module 03 - Data Visualization
 
 > **Purpose:** Learn to select, build, critique, and communicate visualizations that answer analytical and business questions.
-
-This module follows **Module 01 — Statistical Foundations** and **Module 02 — Descriptive Statistics**. Module 02 introduced descriptive measures and distribution concepts. This module focuses on the visual encoding of data, chart selection, comparison, interpretation, and communication.
 
 ---
 
@@ -22,19 +20,6 @@ This module follows **Module 01 — Statistical Foundations** and **Module 02 �
 - [References](#references)
 
 ---
-
-## Learning objectives
-
-By the end of this module, you should be able to:
-
-1. Identify the analytical question before choosing a chart.
-2. Distinguish categorical, numerical, temporal, geographic, and relational data.
-3. Select an appropriate chart for comparison, trend, distribution, composition, relationship, location, and flow.
-4. Explain what a chart reveals and what it cannot establish.
-5. Compare distributions across groups using histograms, box plots, violin plots, and related charts.
-6. Build clear, reproducible visualizations using Python.
-7. Avoid misleading axes, inappropriate encodings, unnecessary decoration, and inaccessible color choices.
-8. Communicate a finding with a chart, a concise interpretation, and a defensible business implication.
 
 ## How to use the From Data to Viz reference
 
@@ -74,12 +59,12 @@ Start with the question, not the chart.
 
 ### A practical decision sequence
 
-- **Step 1 — Define the task:** comparison, trend, distribution, relationship, composition, geography, flow, or uncertainty.
-- **Step 2 — Identify the fields:** categorical, numerical, date/time, geographic, or network/entity fields.
-- **Step 3 — Count the groups:** many categories can make stacked bars, pie charts, and legends unreadable.
-- **Step 4 — Choose an encoding:** position and length are usually easier to compare accurately than angle, area, or color intensity.
-- **Step 5 — Check the scale:** units, zero baseline where relevant, linear/log scale, time interval, and missing values.
-- **Step 6 — Test the interpretation:** can a reader answer the original question without guessing?
+- **Step 1 - Define the task:** comparison, trend, distribution, relationship, composition, geography, flow, or uncertainty.
+- **Step 2 - Identify the fields:** categorical, numerical, date/time, geographic, or network/entity fields.
+- **Step 3 - Count the groups:** many categories can make stacked bars, pie charts, and legends unreadable.
+- **Step 4 - Choose an encoding:** position and length are usually easier to compare accurately than angle, area, or color intensity.
+- **Step 5 - Check the scale:** units, zero baseline where relevant, linear/log scale, time interval, and missing values.
+- **Step 6 - Test the interpretation:** can a reader answer the original question without guessing?
 
 ---
 
@@ -99,12 +84,15 @@ The coverage below is deliberately prioritized. Learn the essential charts deepl
 - [ ] Dot plot
 - [ ] Lollipop chart
 
-**Specialized / optional**
-- [ ] Circular bar chart — usually less precise for comparisons than a conventional bar chart.
+**Specialized/optional**
+- [ ] Circular bar chart - usually less precise for comparisons than a conventional bar chart.
 
-**Use when:** comparing values across categories, ranking products, comparing departments, or comparing composition across a small number of groups.
 
-**Watch out for:** too many categories, inconsistent sorting, crowded labels, and stacked bars where middle segments are difficult to compare.
+> [!IMPORTANT]
+> Comparing values across categories, ranking products, comparing departments, or comparing composition across a small number of groups.
+
+>[!NOTE]
+> Too many categories, inconsistent sorting, crowded labels, and stacked bars where middle segments are difficult to compare.
 
 ### 2. Numerical distributions
 
@@ -119,13 +107,14 @@ The coverage below is deliberately prioritized. Learn the essential charts deepl
 - [ ] Swarm plot
 - [ ] Ridgeline plot
 
-**Use when:** understanding spread, shape, skew, concentration, outliers, and differences between groups.
+> [!IMPORTANT]
+> Understanding spread, shape, skew, concentration, outliers, and differences between groups.
 
-**Watch out for:**
-- Histogram appearance depends on bin width and bin boundaries.
-- KDE bandwidth affects smoothness and can hide local structure.
-- A box plot compresses distribution detail; it does not show every observation.
-- Violin width represents estimated density, not the number of observations unless the plot is configured to encode sample size.
+>[!NOTE]
+> Histogram appearance depends on bin width and bin boundaries.
+> KDE bandwidth affects smoothness and can hide local structure.
+> A box plot compresses distribution detail; it does not show every observation.
+> Violin width represents estimated density, not the number of observations unless the plot is configured to encode sample size.
 
 ![Distribution chart comparison](images/03-distribution-chart-comparison.png)
 
@@ -141,11 +130,13 @@ The coverage below is deliberately prioritized. Learn the essential charts deepl
 **Additional charts**
 - [ ] Calendar heatmap
 - [ ] Small multiples / faceted time-series charts
-- [ ] Streamgraph — specialized; use only when its composition-focused design is appropriate.
+- [ ] Streamgraph - specialized; use only when its composition-focused design is appropriate.
 
-**Use when:** showing trends, seasonality, changes, peaks, dips, and comparisons over time.
+> [!IMPORTANT]
+> Showing trends, seasonality, changes, peaks, dips, and comparisons over time.
 
-**Watch out for:** irregular time intervals, missing dates, misleading aggregation, inappropriate interpolation, and stacked areas that make individual series hard to compare.
+>[!NOTE]
+> Irregular time intervals, missing dates, misleading aggregation, inappropriate interpolation, and stacked areas that make individual series hard to compare.
 
 ### 4. Relationships between variables
 
@@ -160,9 +151,11 @@ The coverage below is deliberately prioritized. Learn the essential charts deepl
 - [ ] 2D density / hexbin plot
 - [ ] Parallel coordinates plot
 
-**Use when:** examining association, clusters, non-linear patterns, unusual observations, or relationships among multiple variables.
+> [!IMPORTANT]
+> Examining association, clusters, non-linear patterns, unusual observations, or relationships among multiple variables.
 
-**Watch out for:** correlation does not prove causation; overplotting can hide observations; bubble area must be scaled carefully; and a correlation heatmap can hide non-linear relationships or be distorted by outliers.
+>[!NOTE]
+> Correlation does not prove causation; overplotting can hide observations; bubble area must be scaled carefully; and a correlation heatmap can hide non-linear relationships or be distorted by outliers.
 
 ### 5. Part-to-whole and hierarchical composition
 
@@ -176,9 +169,11 @@ The coverage below is deliberately prioritized. Learn the essential charts deepl
 - [ ] Doughnut chart
 - [ ] Sunburst chart
 
-**Use when:** showing how components contribute to a whole or how categories nest within a hierarchy.
+> [!IMPORTANT]
+> Showing how components contribute to a whole or how categories nest within a hierarchy.
 
-**Watch out for:** pie/doughnut charts are difficult to compare when there are many slices or similar proportions. Do not use them when precise ranking is the goal; use a sorted bar chart instead. A 100% stacked chart compares proportions, not absolute totals.
+>[!NOTE]
+> Pie/Doughnut charts are difficult to compare when there are many slices or similar proportions. Do not use them when precise ranking is the goal; use a sorted bar chart instead. A 100% stacked chart compares proportions, not absolute totals.
 
 ### 6. Geospatial visualization
 
@@ -188,37 +183,42 @@ The coverage below is deliberately prioritized. Learn the essential charts deepl
 
 **Specialized**
 - [ ] Hexbin map
-- [ ] Connection / flow map
+- [ ] Connection/flow map
 - [ ] Cartogram
 
-**Use when:** location itself is analytically meaningful, such as regional rates, store locations, or movement between places.
+> [!IMPORTANT]
+> The location itself is analytically meaningful, such as regional rates, store locations, or movement between places.
 
-**Watch out for:** choropleth maps should generally use normalized rates or ratios when geographic areas have different population sizes. Large regions can visually dominate small ones. Include a clear legend, units, geographic boundary source, and date.
+>[!NOTE]
+> Choropleth maps should generally use normalized rates or ratios when geographic areas have different population sizes. Large regions can visually dominate small ones. Include a clear legend, units, geographic boundary source, and date.
 
 ### 7. Flow, funnel, hierarchy, and network
 
 **Useful charts**
-- [ ] Funnel chart — conversion or drop-off through ordered stages.
-- [ ] Sankey diagram — quantities moving between stages or nodes.
-- [ ] Dendrogram — hierarchical clustering output.
-- [ ] Network graph — nodes and edges representing connections.
-- [ ] Sunburst / circle packing — hierarchical composition.
-- [ ] Chord diagram / arc diagram / edge bundling — specialized relationship or flow structures.
+- [ ] Funnel chart - conversion or drop-off through ordered stages.
+- [ ] Sankey diagram - quantities moving between stages or nodes.
+- [ ] Dendrogram - hierarchical clustering output.
+- [ ] Network graph - nodes and edges representing connections.
+- [ ] Sunburst/circle packing - hierarchical composition.
+- [ ] Chord diagram / arc diagram / edge bundling - specialized relationship or flow structures.
 
-**Use when:** the structure is inherently sequential, hierarchical, or network-based.
+> [!IMPORTANT]
+> The structure is inherently sequential, hierarchical, or network-based.
 
-**Watch out for:** these charts can become visually dense. Use them only when the flow, hierarchy, or network is the question; otherwise a bar chart or table may be clearer.
+>[!NOTE]
+> These charts can become visually dense. Use them only when the flow, hierarchy, or network is the question; otherwise a bar chart or table may be clearer.
 
 ### 8. Uncertainty, effects, and changes
 
 These are important additions for analytical reporting and experimentation.
 
-- [ ] Error-bar chart — variability or uncertainty around a point estimate; define exactly what the bars represent.
-- [ ] Confidence-interval / forest plot — compares estimates and intervals across groups or studies.
-- [ ] Waterfall chart — explains sequential contributions to a total change.
-- [ ] Bullet chart — compares performance with a target and qualitative ranges.
+- [ ] Error-bar chart - variability or uncertainty around a point estimate; define exactly what the bars represent.
+- [ ] Confidence-interval / forest plot - compares estimates and intervals across groups or studies.
+- [ ] Waterfall chart - explains sequential contributions to a total change.
+- [ ] Bullet chart - compares performance with a target and qualitative ranges.
 
-**Important:** an error bar is not self-explanatory. State whether it represents standard deviation, standard error, a confidence interval, or another interval.
+> [!IMPORTANT]
+> An error bar is not self-explanatory. State whether it represents standard deviation, standard error, a confidence interval, or another interval.
 
 ---
 
@@ -383,24 +383,6 @@ Business example:
 Interpretation:
 ```
 
----
-
-## Completion checklist
-
-- [ ] I can translate a business question into a visualization task.
-- [ ] I can distinguish categorical, numerical, temporal, relational, and geographic data.
-- [ ] I can choose between bar, line, histogram, box, scatter, and heatmap charts.
-- [ ] I can explain the trade-offs between histogram, KDE, box, and violin plots.
-- [ ] I can compare groups without using misleading scales.
-- [ ] I can identify when a chart is too cluttered or unsuitable.
-- [ ] I can build and customize common charts using Matplotlib and Seaborn.
-- [ ] I can explain a chart's finding and its limitations in plain language.
-- [ ] I have completed the business exercises and saved the notebook.
-
-**Exit criterion:** Given an unfamiliar business question and dataset, you can independently select a defensible chart, implement it, and explain why it is appropriate.
-
----
-
 ## References
 
 ### Chart selection and design
@@ -420,15 +402,5 @@ Interpretation:
 
 ---
 
-## Module status
-
-**Module 03 — Data Visualization**
-
-Status: In progress
-
-Pre-requisites:
-- Module 01 — Statistical Foundations
-- Module 02 — Descriptive Statistics
-
-Next module: **Module 04 — Probability**
+**NEXT:** [Module 04 - Probability](../04-probability/README.md)
 
