@@ -60,3 +60,6 @@ Dispersion helps assess:
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [NIST/SEMATECH e-Handbook](https://www.itl.nist.gov/div898/handbook/)
 
+---
+
+**NEXT:** [04-Range, Variance, Standard Deviation](../04-range-variance-standard-deviation/README.md)
