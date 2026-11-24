@@ -256,7 +256,7 @@ It measures average absolute distance and remains in the original units. Some so
 Median absolute deviation (robust version):
 
 $$
-\text{MAD}_{\text{median}} = {median}(|x_i-\operatorname{median}(x)|)
+{MAD}_{median} = {median}(|x_i-\operatorname{median}(x)|)
 $$
 
 ## 2.5 Coefficient of variation (CV)
@@ -581,7 +581,7 @@ Large absolute z-scores can indicate unusual observations, but a fixed cutoff su
 
 ---
 
-# 9. Log-Normal, Pareto, and the Central Limit Theorem — Orientation
+# 9. Log-Normal, Pareto, and the Central Limit Theorem - Orientation
 
 These ideas appear later in the course transcript. They connect distribution shape to real-world data, but they should not be confused with the core descriptive-statistics calculations above.
 
@@ -780,21 +780,7 @@ Interpret the output instead of merely printing it. Ask:
 
 ---
 
-# 11. Business Applications for a Data Analyst
-
-| Business problem | Statistical tool | Example interpretation |
-|---|---|---|
-| Typical delivery time | Median, percentiles | Median delivery time is 2 days; 90th percentile is 5 days |
-| Revenue consistency | Mean, SD, CV | Compare average revenue and relative variation across stores |
-| Customer spending | Median, quartiles, histogram | Identify skewed spend and high-value customers |
-| Detect unusually large orders | IQR, boxplot, domain rules | Flag orders for review, not automatic deletion |
-| Compare service wait times | Distribution plots, median, IQR | Compare typical wait and variability across branches |
-| Monitor operational variation | Mean and SD over time | Detect changes in process consistency |
-| Missing categorical values | Mode, domain rules | Consider most frequent category, while checking category imbalance |
-
----
-
-# 12. Common Mistakes to Avoid
+# 11. Common Mistakes to Avoid
 
 1. Treating mean and median as interchangeable.
 2. Assuming the mean is always the best measure of a typical value.
@@ -814,7 +800,7 @@ Interpret the output instead of merely printing it. Ask:
 
 ---
 
-# 13. Revision Sheet — Formulas
+# 12. Revision Sheet - Formulas
 
 | Concept | Formula |
 |---|---|
@@ -835,49 +821,12 @@ Interpret the output instead of merely printing it. Ask:
 
 ---
 
-# 14. Practice and Completion Checklist
-
-Before moving to the next module, complete these tasks:
-
-- [ ] Explain mean, median, and mode without reading notes.
-- [ ] Calculate population and sample mean.
-- [ ] Explain why outliers affect mean more than median.
-- [ ] Calculate population and sample variance by hand.
-- [ ] Explain the difference between variance and standard deviation.
-- [ ] Calculate quartiles and IQR, stating the quantile convention.
-- [ ] Calculate IQR fences and explain why flagged values are not automatically errors.
-- [ ] Interpret a boxplot and histogram.
-- [ ] Identify symmetric, right-skewed, and left-skewed distributions.
-- [ ] Explain the normal distribution and empirical rule.
-- [ ] Calculate z-scores and interpret a normal CDF.
-- [ ] Implement the calculations in Python and explain the outputs.
-- [ ] Complete one small EDA exercise on a real dataset.
-
-## Suggested practical exercise
-
-Use the Seaborn `tips` dataset or a retail/orders dataset. Choose at least three numerical columns and one categorical column.
-
-For each numerical column:
-- Calculate mean, median, mode, range, variance, SD, Q1, Q3, IQR, skewness, and potential outliers.
-- Plot a histogram with KDE and a boxplot.
-- Write 2–3 sentences interpreting the distribution.
-
-For the categorical column:
-- Calculate frequencies and identify the mode.
-- Explain whether mode is a useful summary.
-
-**Deliverable:** a notebook with reproducible code, visualizations, and written business interpretations.
-
----
-
 ## References
 
-- [Krish Naik — Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
-- [NumPy — Descriptive statistics routines](https://numpy.org/doc/stable/reference/routines.statistics.html)
-- [Pandas — Descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
-- [SciPy — Statistical functions](https://docs.scipy.org/doc/scipy/reference/stats.html)
+- [NumPy - Descriptive statistics routines](https://numpy.org/doc/stable/reference/routines.statistics.html)
+- [Pandas - Descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
+- [SciPy - Statistical functions](https://docs.scipy.org/doc/scipy/reference/stats.html)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
 
 ---
 
-**Module 02 status:** Documentation baseline complete. Work through the practice checklist and notebook before considering the module mastered.
