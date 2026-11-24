@@ -1,5 +1,9 @@
 # Measures of Dispersion
 
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
+---
+
 ## 1. Purpose
 
 Measures of dispersion quantify how spread out observations are. A centre alone does not describe a dataset: two datasets can have the same mean but very different variability.
