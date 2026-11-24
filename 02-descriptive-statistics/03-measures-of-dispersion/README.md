@@ -4,7 +4,7 @@
 
 Measures of dispersion quantify how spread out observations are. A centre alone does not describe a dataset: two datasets can have the same mean but very different variability.
 
-![Same mean, different spread](../images/02-dispersion/same-mean-different-dispersion.png)
+![Same mean, different spread](../images/same-mean-different-dispersion.png)
 
 For example:
 
