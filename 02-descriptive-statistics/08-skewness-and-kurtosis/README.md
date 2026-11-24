@@ -88,3 +88,6 @@ Pandas reports Fisher/excess kurtosis by default. Different packages may use dif
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [Pandas descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
 
+---
+
+**NEXT:** [09-Covariance & Correlation ](../09-covariance-and-correlation/README.md)
