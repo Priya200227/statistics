@@ -1,10 +1,6 @@
-# Module 04 — Probability
+# Module 04 - Probability
 
 > **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions — the foundation for statistical inference, experimentation, and machine learning.
-
-This module follows **Module 01 — Statistical Foundations**, **Module 02 — Descriptive Statistics**, and **Module 03 — Data Visualization**.
-
-**Scope note:** This README is a structured learning guide based on the agreed module roadmap and authoritative references. It is not yet reconciled against a specific course transcript. When course notes are supplied, update the terminology, sequence, examples, and coverage to match the source material while preserving mathematical correctness.
 
 ---
 
