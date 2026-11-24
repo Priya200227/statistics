@@ -1,6 +1,11 @@
 # Covariance and Correlation
 
-> **Source note:** The supplied Module 02 README does not contain the detailed lecture explanation for covariance and correlation. This file adds the standard definitions and Python workflow for the topic you requested. Compare it with your Chapter 27 transcript before treating it as a transcript-faithful final note.
+>[!NOTE]
+> The supplied Module 02 README does not contain the detailed lecture explanation for covariance and correlation. This file adds the standard definitions and Python workflow for the topic you requested. Compare it with your Chapter 27 transcript before treating it as a transcript-faithful final note.
+
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
+---
 
 ## 1. Why measure relationships?
 
