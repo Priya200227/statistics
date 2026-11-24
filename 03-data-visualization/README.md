@@ -1,5 +1,6 @@
 # Module 03 - Data Visualization
 
+>[!NOTE]
 > **Purpose:** Learn to select, build, critique, and communicate visualizations that answer analytical and business questions.
 
 ---
