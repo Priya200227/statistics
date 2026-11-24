@@ -1,5 +1,9 @@
 # Skewness and Kurtosis
 
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
+---
+
 ## 1. Distribution shape
 
 A distribution describes how observations are spread across possible values. Inspect shape before deciding which summary statistics are representative.
