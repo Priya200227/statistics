@@ -386,10 +386,10 @@ Interpretation:
 ## References
 
 ### Chart selection and design
-- [From Data to Viz](https://www.data-to-viz.com/) — chart selection by data structure and analytical objective.
-- [Data Visualization Catalogue](https://datavizcatalogue.com/) — visual reference for chart types and their functions.
-- [Data-to-Viz: avoid common pitfalls](https://www.data-to-viz.com/caveat.html) — chart caveats and alternatives.
-- [Storytelling with Data](https://www.storytellingwithdata.com/) — communicating analytical findings.
+- [From Data to Viz](https://www.data-to-viz.com/) - chart selection by data structure and analytical objective.
+- [Data Visualization Catalogue](https://datavizcatalogue.com/) - visual reference for chart types and their functions.
+- [Data-to-Viz: avoid common pitfalls](https://www.data-to-viz.com/caveat.html) - chart caveats and alternatives.
+- [Storytelling with Data](https://www.storytellingwithdata.com/) - communicating analytical findings.
 
 ### Python documentation
 - [Matplotlib tutorials](https://matplotlib.org/stable/tutorials/index.html)
