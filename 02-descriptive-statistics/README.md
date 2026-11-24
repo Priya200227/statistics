@@ -1,5 +1,9 @@
 # Module 02 - Descriptive Statistics
 
+[← Back to Statistics Repository](https://github.com/Priya200227/statistics)
+
+---
+
 This module is split into focused topic notes rather than one long README. Read them in order.
 
 | # | Topic | Notes |
