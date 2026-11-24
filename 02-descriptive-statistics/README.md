@@ -1,10 +1,12 @@
-# Module 02 — Descriptive Statistics
+# Module 02 - Descriptive Statistics
 
 > [!NOTE]
 >
-> **Section:** Krish Naik — [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
+> **Section:** Krish Naik - [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 >
 > **Purpose:** Learn how to summarize and describe the main characteristics of a dataset. This module focuses on the centre, spread, position, shape, and unusual observations in numerical data, then applies these ideas using Python.
+
+---
 
 Descriptive statistics helps answer: **What does the data look like? Where is its centre? How much does it vary? Is it skewed? Are there unusual observations?**
 
@@ -12,44 +14,9 @@ This module follows the descriptive-statistics portions of the course, especiall
 
 ---
 
-## Learning outcomes
-
-By the end of this module, you should be able to:
-
-- Choose and interpret mean, median, and mode.
-- Distinguish population and sample variance and standard deviation.
-- Explain spread in the original units and in squared units.
-- Interpret percentiles, quartiles, and the five-number summary.
-- Calculate IQR fences and flag potential outliers.
-- Read boxplots, histograms, and density curves.
-- Recognize symmetric, skewed, normal, and log-normal distributions.
-- Calculate and interpret z-scores and use the empirical rule appropriately.
-- Summarize real datasets using Python, NumPy, Pandas, SciPy, and Matplotlib/Seaborn.
-- Explain why a statistical summary is useful for a business or data-quality question.
-
-## Course coverage and boundaries
-
-| Course chapter | Topic | Included here? |
-|---|---|---|
-| 10 | Mean, Median, Mode | Yes |
-| 11 | Variance and Standard Deviation | Yes |
-| 12 | Percentiles and Quartiles | Yes |
-| 13 | Five-number summary and boxplot | Yes |
-| 14 | Gaussian / Normal Distribution, z-scores | Yes |
-| 15 | Statistics interview question | Yes, as applied practice |
-| 16 | Finding outliers in Python | Yes |
-| 17–18 | Probability, counting, permutations and combinations | No — separate probability module |
-| 19–26 | p-values, hypothesis tests, confidence intervals and tests | No — inferential statistics module |
-| 27 | Covariance and correlation | Separate association-analysis section/module |
-| 29 | Log-normal, Bernoulli, Binomial, Pareto and CLT | Only log-normal/Pareto and CLT are introduced as distribution context; discrete probability distributions belong in Probability & Distributions |
-
-**Important:** The transcript covers much more than descriptive statistics. Do not place every chapter in this README. Probability rules, hypothesis testing, confidence intervals, and statistical tests need their own modules so the repository remains logically organized.
-
----
-
 # 1. Measures of Central Tendency
 
-![Mean, median, and mode comparison](images/01-central-tendency/central-tendency.png)
+![Mean, median, and mode comparison](images/01-central-tendency.png)
 
 
 Central tendency describes the centre or typical location of a distribution. The three common measures are **mean, median, and mode**.
