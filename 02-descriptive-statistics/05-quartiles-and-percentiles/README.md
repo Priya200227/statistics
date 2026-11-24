@@ -82,3 +82,7 @@ For a reproducible analysis, record the quantile interpolation/method choice whe
 
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [Pandas quantile documentation](https://pandas.pydata.org/docs/reference/api/pandas.Series.quantile.html)
+
+---
+
+**NEXT:** [06-IQR](../06-interquartile-range/README.md)
