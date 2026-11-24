@@ -1,7 +1,10 @@
-# Module 04 - Probability
+# Module 04 — Probability
 
->[!NOTE]
 > **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions — the foundation for statistical inference, experimentation, and machine learning.
+
+This module follows **Module 01 — Statistical Foundations**, **Module 02 — Descriptive Statistics**, and **Module 03 — Data Visualization**.
+
+**Scope note:** This README is a structured learning guide based on the agreed module roadmap and authoritative references. It is not yet reconciled against a specific course transcript. When course notes are supplied, update the terminology, sequence, examples, and coverage to match the source material while preserving mathematical correctness.
 
 ---
 
@@ -29,33 +32,51 @@
 
 ---
 
+## Learning objectives
+
+By the end of this module, you should be able to:
+
+1. Define experiments, outcomes, sample spaces, and events.
+2. Calculate probabilities using complements, unions, intersections, and counting.
+3. Distinguish mutually exclusive events from independent events.
+4. Apply addition, multiplication, and conditional probability rules.
+5. Use tree diagrams and two-way tables to organize probability problems.
+6. Explain and apply Bayes' theorem, including the base-rate effect.
+7. Define discrete and continuous random variables.
+8. Calculate expected value, variance, and standard deviation of a random variable.
+9. Recognize common probability distributions and their assumptions.
+10. Calculate probabilities and simulate random processes using Python.
+11. Translate probability results into clear business interpretations.
+
+---
+
 # 1. Probability foundations
 
 Probability quantifies uncertainty about the outcome of a random experiment.
 
 A probability lies between 0 and 1:
 
-\[
+$$
 0 \leq P(A) \leq 1
-\]
+$$
 
-- \(P(A)=0\): event \(A\) is impossible under the model.
-- \(P(A)=1\): event \(A\) is certain under the model.
+- $P(A)=0$: event $A$ is impossible under the model.
+- $P(A)=1$: event $A$ is certain under the model.
 - Values between 0 and 1 represent degrees of likelihood.
 
 ### Three useful perspectives
 
 | Perspective | Meaning | Example |
 |---|---|---|
-| Theoretical probability | Derived from a probability model and its assumptions | Fair die: \(P(6)=1/6\) |
+| Theoretical probability | Derived from a probability model and its assumptions | Fair die: $P(6)=1/6$ |
 | Empirical probability | Estimated from observed relative frequency | 42 conversions from 200 visits: 0.21 |
 | Subjective probability | A degree of belief based on available information | An analyst's forecast under uncertainty |
 
 Empirical relative frequency:
 
-\[
+$$
 \widehat P(A)=\frac{\text{Number of times A occurs}}{\text{Number of trials}}
-\]
+$$
 
 An empirical estimate is not automatically the true long-run probability. Its reliability depends on the sampling process, number of observations, and whether the process is stable.
 
@@ -74,27 +95,27 @@ A probability model describes possible outcomes and assigns probabilities to the
 # 2. Sample spaces and events
 
 - **Outcome:** one possible result of an experiment.
-- **Sample space \(S\):** the set of all possible outcomes.
+- **Sample space $S$:** the set of all possible outcomes.
 - **Event:** a subset of the sample space.
 
 Example: rolling a fair six-sided die.
 
-\[
+$$
 S=\{1,2,3,4,5,6\}
-\]
+$$
 
 Let:
-- \(A=\{\text{even result}\}=\{2,4,6\}\)
-- \(B=\{\text{result greater than 3}\}=\{4,5,6\}\)
+- $A=\{\text{even result}\}=\{2,4,6\}$
+- $B=\{\text{result greater than 3}\}=\{4,5,6\}$
 
 ### Set operations
 
 | Operation | Meaning | Example |
 |---|---|---|
-| \(A \cup B\) | A or B or both (union) | \(\{2,4,5,6\}\) |
-| \(A \cap B\) | A and B (intersection) | \(\{4,6\}\) |
-| \(A^c\) | Not A (complement) | \(\{1,3,5\}\) |
-| \(A \setminus B\) | A but not B | \(\{2\}\) |
+| $A \cup B$ | A or B or both (union) | $\{2,4,5,6\}$ |
+| $A \cap B$ | A and B (intersection) | $\{4,6\}$ |
+| $A^c$ | Not A (complement) | $\{1,3,5\}$ |
+| $A \setminus B$ | A but not B | $\{2\}$ |
 
 ![Sample space and events](images/01-sample-space-events-venn.png)
 
@@ -102,9 +123,9 @@ Let:
 
 Two events are mutually exclusive if they cannot occur together:
 
-\[
+$$
 P(A \cap B)=0
-\]
+$$
 
 For one roll of a die, getting a 2 and getting a 5 are mutually exclusive.
 
@@ -116,15 +137,15 @@ For one roll of a die, getting a 2 and getting a 5 are mutually exclusive.
 
 ## 3.1 Complement rule
 
-\[
+$$
 P(A^c)=1-P(A)
-\]
+$$
 
 Example: if the probability an order is delayed is 0.08, the probability it is not delayed is:
 
-\[
+$$
 1-0.08=0.92
-\]
+$$
 
 The complement rule is often useful for “at least one” questions.
 
@@ -132,31 +153,31 @@ The complement rule is often useful for “at least one” questions.
 
 General rule:
 
-\[
+$$
 P(A\cup B)=P(A)+P(B)-P(A\cap B)
-\]
+$$
 
 If A and B are mutually exclusive:
 
-\[
+$$
 P(A\cup B)=P(A)+P(B)
-\]
+$$
 
-**Why subtract the intersection?** Adding \(P(A)\) and \(P(B)\) counts outcomes in both events twice. Subtract the overlap once.
+**Why subtract the intersection?** Adding $P(A)$ and $P(B)$ counts outcomes in both events twice. Subtract the overlap once.
 
 ## 3.3 Multiplication rule
 
 General rule:
 
-\[
+$$
 P(A\cap B)=P(A)P(B\mid A)
-\]
+$$
 
 If A and B are independent:
 
-\[
+$$
 P(A\cap B)=P(A)P(B)
-\]
+$$
 
 The general rule works whether events are independent or dependent. The simplified product is valid only when independence is justified.
 
@@ -168,43 +189,43 @@ Counting methods help calculate the number of possible outcomes without listing 
 
 ## 4.1 Factorial
 
-\[
+$$
 n!=n(n-1)(n-2)\cdots 2\cdot1
-\]
+$$
 
 By convention:
 
-\[
+$$
 0!=1
-\]
+$$
 
 ## 4.2 Permutations — order matters
 
-Number of ways to select and arrange \(r\) objects from \(n\) distinct objects:
+Number of ways to select and arrange $r$ objects from $n$ distinct objects:
 
-\[
+$$
 {}_{n}P_r=\frac{n!}{(n-r)!}
-\]
+$$
 
 Example: assigning first, second, and third place among 8 competitors:
 
-\[
+$$
 {}_{8}P_3=\frac{8!}{5!}=336
-\]
+$$
 
 ## 4.3 Combinations — order does not matter
 
-Number of ways to select \(r\) objects from \(n\) distinct objects:
+Number of ways to select $r$ objects from $n$ distinct objects:
 
-\[
+$$
 {n\choose r}=\frac{n!}{r!(n-r)!}
-\]
+$$
 
 Example: choosing 3 people from a team of 8:
 
-\[
+$$
 {8\choose3}=56
-\]
+$$
 
 ### Decision rule
 
@@ -220,9 +241,9 @@ Always state whether repetition is allowed and whether order matters before sele
 
 Conditional probability is the probability of A occurring when B is already known to have occurred.
 
-\[
+$$
 P(A\mid B)=\frac{P(A\cap B)}{P(B)}, \quad P(B)>0
-\]
+$$
 
 Example:
 
@@ -230,11 +251,11 @@ Example:
 - 40 opened a promotional email.
 - Of those 40, 8 purchased.
 
-\[
+$$
 P(\text{Purchase}\mid\text{Opened})=\frac{8}{40}=0.20
-\]
+$$
 
-This is not the same as \(P(\text{Opened}\mid\text{Purchase})\). Reversing the condition changes the question.
+This is not the same as $P(\text{Opened}\mid\text{Purchase})$. Reversing the condition changes the question.
 
 ## Tree diagrams
 
@@ -246,23 +267,23 @@ For a tree:
 
 General multiplication rule:
 
-\[
+$$
 P(A\cap B)=P(A)P(B\mid A)
-\]
+$$
 
 ## Independence
 
 A and B are independent if knowing that one occurred does not change the probability of the other:
 
-\[
+$$
 P(A\mid B)=P(A)
-\]
+$$
 
 Equivalent condition:
 
-\[
+$$
 P(A\cap B)=P(A)P(B)
-\]
+$$
 
 Independence is an assumption about the process, not something to assume merely because two variables look unrelated in a small dataset.
 
@@ -281,21 +302,21 @@ If both events have positive probability, they cannot be both independent and mu
 
 Bayes' theorem reverses a conditional probability by incorporating prior information.
 
-\[
+$$
 P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}
-\]
+$$
 
 Where:
-- \(P(A)\): prior probability.
-- \(P(B\mid A)\): likelihood of evidence B when A is true.
-- \(P(B)\): overall probability of observing B.
-- \(P(A\mid B)\): posterior probability after observing B.
+- $P(A)$: prior probability.
+- $P(B\mid A)$: likelihood of evidence B when A is true.
+- $P(B)$: overall probability of observing B.
+- $P(A\mid B)$: posterior probability after observing B.
 
 For two possible states A and not-A:
 
-\[
+$$
 P(B)=P(B\mid A)P(A)+P(B\mid A^c)P(A^c)
-\]
+$$
 
 ## Example: interpreting a positive test
 
@@ -310,10 +331,10 @@ Imagine 10,000 people:
 
 Therefore:
 
-\[
+$$
 P(\text{Condition}\mid\text{Positive})
 =\frac{90}{90+495}\approx0.154
-\]
+$$
 
 So the probability of having the condition given a positive result is approximately **15.4%**, under these assumptions.
 
@@ -352,29 +373,29 @@ Can take any value within an interval, such as:
 
 For a discrete random variable:
 
-\[
+$$
 p(x)=P(X=x)
-\]
+$$
 
 Properties:
 
-\[
+$$
 p(x)\geq0,\qquad \sum_x p(x)=1
-\]
+$$
 
 ### Probability density function (PDF)
 
 For a continuous random variable, probabilities are areas under the density curve:
 
-\[
+$$
 P(a\leq X\leq b)=\int_a^b f(x)\,dx
-\]
+$$
 
 For a continuous variable:
 
-\[
+$$
 P(X=a)=0
-\]
+$$
 
 A PDF value is a density, not the probability of observing that exact value.
 
@@ -382,9 +403,9 @@ A PDF value is a density, not the probability of observing that exact value.
 
 For either discrete or continuous variables:
 
-\[
+$$
 F(x)=P(X\leq x)
-\]
+$$
 
 The CDF gives the probability accumulated up to x.
 
@@ -396,9 +417,9 @@ Expected value is the probability-weighted long-run average of a random variable
 
 ## 8.1 Discrete expected value
 
-\[
+$$
 E[X]=\sum_x xP(X=x)
-\]
+$$
 
 Example:
 
@@ -409,29 +430,29 @@ Example:
 | 2 | 0.3 | 0.6 |
 | **Total** | **1.0** | **1.1** |
 
-\[
+$$
 E[X]=1.1
-\]
+$$
 
 This does not mean the variable must actually take the value 1.1. It is the long-run average under the model.
 
 ## 8.2 Variance
 
-\[
+$$
 Var(X)=E[(X-E[X])^2]
-\]
+$$
 
 Equivalent computational form:
 
-\[
+$$
 Var(X)=E[X^2]-(E[X])^2
-\]
+$$
 
 Standard deviation:
 
-\[
+$$
 SD(X)=\sqrt{Var(X)}
-\]
+$$
 
 Variance measures squared spread; standard deviation is in the same units as X.
 
@@ -439,27 +460,27 @@ Variance measures squared spread; standard deviation is in the same units as X.
 
 For constants a and b:
 
-\[
+$$
 E[aX+b]=aE[X]+b
-\]
+$$
 
 For any two random variables:
 
-\[
+$$
 E[X+Y]=E[X]+E[Y]
-\]
+$$
 
 For variance:
 
-\[
+$$
 Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)
-\]
+$$
 
 If X and Y are independent, their covariance is zero, so:
 
-\[
+$$
 Var(X+Y)=Var(X)+Var(Y)
-\]
+$$
 
 ---
 
@@ -473,13 +494,13 @@ A probability distribution describes the possible values of a random variable an
 
 One trial with two outcomes: success (1) or failure (0).
 
-\[
+$$
 P(X=x)=p^x(1-p)^{1-x}, \quad x\in\{0,1\}
-\]
+$$
 
 - Parameter: success probability p.
-- Mean: \(E[X]=p\).
-- Variance: \(Var(X)=p(1-p)\).
+- Mean: $E[X]=p$.
+- Variance: $Var(X)=p(1-p)$.
 
 Example: whether one visitor converts or does not convert.
 
@@ -487,9 +508,9 @@ Example: whether one visitor converts or does not convert.
 
 Counts the number of successes in n independent Bernoulli trials, each with the same success probability p.
 
-\[
+$$
 P(X=k)={n\choose k}p^k(1-p)^{n-k}
-\]
+$$
 
 Conditions:
 1. Fixed number of trials n.
@@ -499,9 +520,9 @@ Conditions:
 
 Mean and variance:
 
-\[
+$$
 E[X]=np,\qquad Var(X)=np(1-p)
-\]
+$$
 
 Example: number of conversions among 100 independent visitors, if each has the same conversion probability.
 
@@ -511,13 +532,13 @@ Counts the number of independent Bernoulli trials until the first success, under
 
 Using the convention that X includes the successful trial:
 
-\[
+$$
 P(X=k)=(1-p)^{k-1}p,\quad k=1,2,\ldots
-\]
+$$
 
-\[
+$$
 E[X]=\frac{1}{p},\qquad Var(X)=\frac{1-p}{p^2}
-\]
+$$
 
 Be careful: some references define the geometric variable as the number of failures before the first success. State the convention.
 
@@ -525,13 +546,13 @@ Be careful: some references define the geometric variable as the number of failu
 
 Models the number of events in a fixed interval of time, space, or another exposure measure when events occur at a constant average rate and satisfy the model's independence assumptions.
 
-\[
+$$
 P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}
-\]
+$$
 
-- Parameter: \(\lambda>0\), expected count in the interval.
-- Mean: \(\lambda\).
-- Variance: \(\lambda\).
+- Parameter: $\lambda>0$, expected count in the interval.
+- Mean: $\lambda$.
+- Variance: $\lambda$.
 
 Example: number of support tickets arriving per hour under a stable arrival-rate model.
 
@@ -545,9 +566,9 @@ Parameters:
 - n: number of draws.
 - k: observed number of successes.
 
-\[
+$$
 P(X=k)=\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}
-\]
+$$
 
 Use it when sampling without replacement makes trial outcomes dependent.
 
@@ -571,15 +592,15 @@ Use it when sampling without replacement makes trial outcomes dependent.
 
 All values in a specified interval have the same density.
 
-For \(X\sim U(a,b)\):
+For $X\sim U(a,b)$:
 
-\[
+$$
 f(x)=\frac{1}{b-a},\quad a\leq x\leq b
-\]
+$$
 
-\[
+$$
 E[X]=\frac{a+b}{2},\qquad Var(X)=\frac{(b-a)^2}{12}
-\]
+$$
 
 Example: a simplified model of a random arrival time within a fixed interval.
 
@@ -587,37 +608,37 @@ Example: a simplified model of a random arrival time within a fixed interval.
 
 A continuous waiting-time model associated with a Poisson process.
 
-For rate \(\lambda>0\):
+For rate $\lambda>0$:
 
-\[
+$$
 f(x)=\lambda e^{-\lambda x},\quad x\geq0
-\]
+$$
 
-\[
+$$
 E[X]=\frac{1}{\lambda},\qquad Var(X)=\frac{1}{\lambda^2}
-\]
+$$
 
 It has the memoryless property:
 
-\[
+$$
 P(X>s+t\mid X>s)=P(X>t)
-\]
+$$
 
 Use only when the constant-rate Poisson-process assumptions are reasonable.
 
 ## 10.3 Normal distribution
 
-A symmetric, bell-shaped continuous distribution characterized by mean \(\mu\) and standard deviation \(\sigma\):
+A symmetric, bell-shaped continuous distribution characterized by mean $\mu$ and standard deviation $\sigma$:
 
-\[
+$$
 X\sim N(\mu,\sigma^2)
-\]
+$$
 
 Standardization:
 
-\[
+$$
 Z=\frac{X-\mu}{\sigma}
-\]
+$$
 
 The empirical 68–95–99.7 rule is an approximation for normally distributed variables:
 - About 68% within 1 standard deviation of the mean.
@@ -629,8 +650,8 @@ The empirical 68–95–99.7 rule is an approximation for normally distributed v
 ### Important distinction: PDF, CDF, and survival function
 
 - PDF: density at a point.
-- CDF: \(P(X\leq x)\).
-- Survival function: \(P(X>x)=1-F(x)\).
+- CDF: $P(X\leq x)$.
+- Survival function: $P(X>x)=1-F(x)$.
 
 For a continuous variable, interval probability is an area under the PDF or a difference between CDF values.
 
@@ -800,9 +821,9 @@ Suppose an order has:
 
 Expected revenue per visitor:
 
-\[
+$$
 E[X]=1000(0.20)+0(0.80)=₹200
-\]
+$$
 
 This is a model-based expected value, not a guarantee that each visitor generates ₹200.
 
@@ -811,8 +832,8 @@ This is a model-based expected value, not a guarantee that each visitor generate
 # 14. Common mistakes
 
 1. Treating mutually exclusive events as independent.
-2. Using \(P(A)P(B)\) without establishing independence.
-3. Reversing conditional probabilities: \(P(A\mid B)\ne P(B\mid A)\) in general.
+2. Using $P(A)P(B)$ without establishing independence.
+3. Reversing conditional probabilities: $P(A\mid B)\ne P(B\mid A)$ in general.
 4. Forgetting to subtract the intersection in the general addition rule.
 5. Using combinations when order matters, or permutations when it does not.
 6. Applying a binomial model when trials are dependent or probabilities change.
@@ -829,23 +850,23 @@ This is a model-based expected value, not a guarantee that each visitor generate
 
 | Concept | Formula |
 |---|---|
-| Probability bounds | \(0\leq P(A)\leq1\) |
-| Complement | \(P(A^c)=1-P(A)\) |
-| Addition rule | \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\) |
-| Conditional probability | \(P(A\mid B)=P(A\cap B)/P(B)\) |
-| General multiplication | \(P(A\cap B)=P(A)P(B\mid A)\) |
-| Independent events | \(P(A\cap B)=P(A)P(B)\) |
-| Bayes' theorem | \(P(A\mid B)=P(B\mid A)P(A)/P(B)\) |
-| Permutations | \(n!/(n-r)!\) |
-| Combinations | \(n!/[r!(n-r)!]\) |
-| Expected value | \(E[X]=\sum_x xP(X=x)\) |
-| Variance | \(Var(X)=E[X^2]-(E[X])^2\) |
-| Bernoulli mean | \(p\) |
-| Bernoulli variance | \(p(1-p)\) |
-| Binomial mean | \(np\) |
-| Binomial variance | \(np(1-p)\) |
-| Poisson mean and variance | \(\lambda\) |
-| Normal standardization | \(Z=(X-\mu)/\sigma\) |
+| Probability bounds | $0\leq P(A)\leq1$ |
+| Complement | $P(A^c)=1-P(A)$ |
+| Addition rule | $P(A\cup B)=P(A)+P(B)-P(A\cap B)$ |
+| Conditional probability | $P(A\mid B)=P(A\cap B)/P(B)$ |
+| General multiplication | $P(A\cap B)=P(A)P(B\mid A)$ |
+| Independent events | $P(A\cap B)=P(A)P(B)$ |
+| Bayes' theorem | $P(A\mid B)=P(B\mid A)P(A)/P(B)$ |
+| Permutations | $n!/(n-r)!$ |
+| Combinations | $n!/[r!(n-r)!]$ |
+| Expected value | $E[X]=\sum_x xP(X=x)$ |
+| Variance | $Var(X)=E[X^2]-(E[X])^2$ |
+| Bernoulli mean | $p$ |
+| Bernoulli variance | $p(1-p)$ |
+| Binomial mean | $np$ |
+| Binomial variance | $np(1-p)$ |
+| Poisson mean and variance | $\lambda$ |
+| Normal standardization | $Z=(X-\mu)/\sigma$ |
 
 ---
 
@@ -921,4 +942,3 @@ Prerequisites:
 - Module 03 — Data Visualization
 
 Next module: **Module 05 — Inferential Statistics**
-
