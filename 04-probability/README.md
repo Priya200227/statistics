@@ -849,51 +849,6 @@ This is a model-based expected value, not a guarantee that each visitor generate
 
 ---
 
-# 16. Practical exercises
-
-Complete these in a Jupyter notebook. Show the calculation, Python verification, and interpretation.
-
-1. A fair die is rolled. Calculate the probability of an even number and the probability of a number greater than 4.
-2. Two events have probabilities 0.4 and 0.5, with intersection 0.2. Calculate their union probability.
-3. A website visitor opens an email with probability 0.4. Given an open, the probability of purchase is 0.2. Calculate the joint probability of open and purchase.
-4. Choose 4 analysts from a team of 10. Calculate the number of possible teams. Then calculate the number of ways to assign 1st, 2nd, 3rd, and 4th roles.
-5. A conversion probability is 0.05 for each of 20 independent visitors. Calculate the probability of exactly 2 conversions and at least 1 conversion.
-6. A support desk receives an average of 3 tickets per hour. Under a Poisson model, calculate the probability of 0, 1, and 2 tickets in one hour.
-7. A measurement follows a normal model with mean 100 and standard deviation 15. Calculate the probability that it is above 130.
-8. A test has sensitivity 90%, specificity 95%, and prevalence 1%. Calculate the probability of the condition given a positive result.
-9. Simulate 10,000 fair coin flips and plot the running proportion of heads.
-10. Compare binomial and hypergeometric models for sampling with and without replacement.
-
-For every exercise, explain:
-- What is the random experiment?
-- What is the event or random variable?
-- Which assumptions are required?
-- Why is the selected rule or distribution appropriate?
-- What does the result mean in the business or practical context?
-
----
-
-## Completion checklist
-
-- [ ] I understand probability, outcomes, sample spaces, and events.
-- [ ] I can use unions, intersections, and complements.
-- [ ] I can distinguish mutually exclusive and independent events.
-- [ ] I can apply addition and multiplication rules.
-- [ ] I can calculate permutations and combinations.
-- [ ] I can calculate and interpret conditional probability.
-- [ ] I can apply Bayes' theorem and explain base rates.
-- [ ] I understand discrete and continuous random variables.
-- [ ] I can calculate expected value, variance, and standard deviation.
-- [ ] I can identify when to use Bernoulli, binomial, geometric, Poisson, and hypergeometric models.
-- [ ] I can distinguish PMF, PDF, CDF, and survival function.
-- [ ] I can calculate probabilities using SciPy.
-- [ ] I can simulate random processes and explain the law of large numbers.
-- [ ] I have completed the practical exercises.
-
-**Exit criterion:** Given a practical uncertainty question, you can define the event or random variable, identify a defensible probability model, calculate or simulate the probability, check assumptions, and explain the result.
-
----
-
 ## References
 
 ### Learning and interactive explanations
@@ -909,4 +864,4 @@ For every exercise, explain:
 
 ---
 
- **NEXT:** [05—Inferential Statistics](../05-inferential-statistics/README.md)
+ **NEXT:** [05-Inferential Statistics](../05-inferential-statistics/README.md)
