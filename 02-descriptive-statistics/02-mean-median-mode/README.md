@@ -137,4 +137,4 @@ print(mean_value, median_value, mode_values.tolist())
 
 ---
 
-**NEXT:** [03-Measures of Dispersion](03-measures-of-dispersion/README.md)
+**NEXT:** [03-Measures of Dispersion](../03-measures-of-dispersion/README.md)
