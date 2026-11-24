@@ -1,27 +1,16 @@
 # Module 02 — Descriptive Statistics
 
-> **Statistics learning repository | Data Analytics → Data Engineering → AI Engineering**
+> [!NOTE]
+>
+> **Section:** Krish Naik — [Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
+>
+> **Purpose:** Learn how to summarize and describe the main characteristics of a dataset. This module focuses on the centre, spread, position, shape, and unusual observations in numerical data, then applies these ideas using Python.
 
-Descriptive statistics is the process of organizing, summarizing, and describing the main characteristics of a dataset. It helps answer: **What does the data look like? Where is its centre? How much does it vary? Is it skewed? Are there unusual observations?**
+Descriptive statistics helps answer: **What does the data look like? Where is its centre? How much does it vary? Is it skewed? Are there unusual observations?**
 
-This module follows the descriptive-statistics portions of **Krish Naik — Complete Statistics for Data Science (6 hours)**, especially Chapters 10–16, with selected distribution concepts from Chapter 29. Explanations below preserve the course's learning sequence while correcting transcription slips and adding essential statistical qualifications.
+This module follows the descriptive-statistics portions of the course, especially Chapters 10–16, with selected distribution concepts from Chapter 29. It keeps probability rules and inferential methods in separate modules.
 
 ---
-
-
-## Visual revision sketches
-
-These original hand-drawn-style diagrams are designed as quick paper-revision references.
-
-| Sketch | What it explains |
-|---|---|
-| ![Central tendency](images/01-central-tendency.png) | Mean, median, and mode |
-| ![Dispersion](images/02-dispersion-same-mean.png) | Same mean, different spread |
-| ![Quartiles and IQR](images/03-quartiles-iqr-boxplot.png) | Quartiles, fences, and boxplot |
-| ![Skewness](images/04-distribution-skewness.png) | Symmetric and skewed distributions |
-| ![Normal distribution](images/05-normal-empirical-rule.png) | Empirical rule |
-| ![Z-score](images/06-z-score-standard-normal.png) | Z-score and tail probabilities |
-| ![Workflow](images/07-descriptive-analysis-workflow.png) | Analyst's descriptive-analysis workflow |
 
 ## Learning outcomes
 
@@ -60,6 +49,9 @@ By the end of this module, you should be able to:
 
 # 1. Measures of Central Tendency
 
+![Mean, median, and mode comparison](images/01-central-tendency/central-tendency.png)
+
+
 Central tendency describes the centre or typical location of a distribution. The three common measures are **mean, median, and mode**.
 
 ## 1.1 Arithmetic mean
@@ -68,30 +60,30 @@ The arithmetic mean is the sum of all observations divided by the number of obse
 
 ### Population mean
 
-\[
+$$
 \mu = \frac{\sum_{i=1}^{N} x_i}{N}
-\]
+$$
 
-- \(\mu\): population mean
-- \(x_i\): the \(i\)-th observation
-- \(N\): population size
+- $\mu$: population mean
+- $x_i$: the $i$-th observation
+- $N$: population size
 
 ### Sample mean
 
-\[
+$$
 \bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}
-\]
+$$
 
-- \(\bar{x}\): sample mean
-- \(n\): sample size
+- $\bar{x}$: sample mean
+- $n$: sample size
 
 **Example**
 
 Dataset: `[1, 1, 2, 2, 3, 3, 4, 5, 5, 6]`
 
-\[
+$$
 \bar{x} = \frac{32}{10} = 3.2
-\]
+$$
 
 The population/sample formulas differ in notation and the set being summarized. If the same ten observations are treated as either the whole population or a sample, the numerical average is the same.
 
@@ -99,15 +91,15 @@ The population/sample formulas differ in notation and the set being summarized. 
 
 A weighted mean gives some observations more influence than others.
 
-\[
+$$
 \bar{x}_w = \frac{\sum_{i=1}^{k} w_i x_i}{\sum_{i=1}^{k} w_i}
-\]
+$$
 
 Example: A course grade has assignments worth 30% and an exam worth 70%. If the scores are 80 and 90:
 
-\[
+$$
 0.30(80) + 0.70(90) = 87
-\]
+$$
 
 Use a weighted mean when observations have different importance, exposure, frequency, or denominators. Do not use a simple average of subgroup averages unless subgroup sizes/weights are equal.
 
@@ -123,20 +115,20 @@ Use a weighted mean when observations have different importance, exposure, frequ
 The median is the middle observation after sorting the data.
 
 1. Sort observations in ascending order.
-2. If \(n\) is odd, select the observation at position \((n+1)/2\).
-3. If \(n\) is even, average the observations at positions \(n/2\) and \(n/2+1\).
+2. If $n$ is odd, select the observation at position $(n+1)/2$.
+3. If $n$ is even, average the observations at positions $n/2$ and $n/2+1$.
 
 For an odd sample:
 
-\[
+$$
 \text{Median} = x_{((n+1)/2)}
-\]
+$$
 
 For an even sample:
 
-\[
+$$
 \text{Median} = \frac{x_{(n/2)} + x_{(n/2+1)}}{2}
-\]
+$$
 
 **Outlier illustration from the lecture**
 
@@ -193,6 +185,9 @@ Mode is particularly useful for categorical variables, such as most common produ
 
 # 2. Measures of Dispersion
 
+![Same mean, different spread](images/02-dispersion/same-mean-different-dispersion.png)
+
+
 A centre alone does not describe a dataset. Two datasets can have the same mean but very different spreads.
 
 Example:
@@ -204,9 +199,9 @@ Dataset A varies; dataset B has no variation. Dispersion measures quantify this 
 
 ## 2.1 Range
 
-\[
+$$
 \text{Range} = x_{\max} - x_{\min}
-\]
+$$
 
 Simple to calculate, but it depends only on the two extremes and is highly sensitive to outliers.
 
@@ -216,17 +211,17 @@ Variance measures the average squared deviation from the mean.
 
 ### Population variance
 
-\[
+$$
 \sigma^2 = \frac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}
-\]
+$$
 
 ### Sample variance
 
-\[
+$$
 s^2 = \frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}
-\]
+$$
 
-The sample formula uses \(n-1\), known as **Bessel's correction**, when estimating population variance from a sample using the sample mean. It corrects the downward bias of the corresponding \(n\)-denominator estimator under the usual random-sampling assumptions.
+The sample formula uses $n-1$, known as **Bessel's correction**, when estimating population variance from a sample using the sample mean. It corrects the downward bias of the corresponding $n$-denominator estimator under the usual random-sampling assumptions.
 
 ### Why square deviations?
 
@@ -240,27 +235,27 @@ The sample formula uses \(n-1\), known as **Bessel's correction**, when estimati
 2. Subtract the mean from each observation.
 3. Square each deviation.
 4. Sum squared deviations.
-5. Divide by \(N\) for a population or \(n-1\) for a sample.
+5. Divide by $N$ for a population or $n-1$ for a sample.
 
 Lecture example: `[1, 2, 2, 3, 4, 5]`
 
 Population mean:
 
-\[
+$$
 \mu = \frac{17}{6} \approx 2.8333
-\]
+$$
 
 Population variance:
 
-\[
+$$
 \sigma^2 = \frac{\sum(x_i-\mu)^2}{6} \approx 1.8056
-\]
+$$
 
 Population standard deviation:
 
-\[
+$$
 \sigma = \sqrt{1.8056} \approx 1.3437
-\]
+$$
 
 The transcript rounds intermediate values, so its displayed result is approximately 1.81 variance and 1.345 standard deviation.
 
@@ -268,11 +263,11 @@ The transcript rounds intermediate values, so its displayed result is approximat
 
 Standard deviation is the square root of variance.
 
-\[
+$$
 \sigma = \sqrt{\sigma^2}
 \qquad
 s = \sqrt{s^2}
-\]
+$$
 
 It describes the typical scale of deviations from the mean and is expressed in the original variable's units.
 
@@ -285,23 +280,23 @@ It describes the typical scale of deviations from the mean and is expressed in t
 
 Mean absolute deviation around the mean is:
 
-\[
+$$
 \text{MAD}_{\text{mean}} = \frac{1}{n}\sum_{i=1}^{n}|x_i-\bar{x}|
-\]
+$$
 
 It measures average absolute distance and remains in the original units. Some software and literature use “MAD” to mean **median absolute deviation** instead; always state which definition is being used.
 
 Median absolute deviation (robust version):
 
-\[
+$$
 \text{MAD}_{\text{median}} = \operatorname{median}(|x_i-\operatorname{median}(x)|)
-\]
+$$
 
 ## 2.5 Coefficient of variation (CV)
 
-\[
+$$
 CV = \frac{s}{|\bar{x}|}\times100\%
-\]
+$$
 
 CV expresses standard deviation relative to the mean. It can help compare relative variability across measurements with different units or scales, but is meaningful mainly for ratio-scale data with a nonzero mean. It is unstable or misleading when the mean is near zero, and should not be used for interval-scale values such as Celsius temperatures.
 
@@ -309,9 +304,12 @@ CV expresses standard deviation relative to the mean. It can help compare relati
 
 # 3. Percentiles and Quartiles
 
+![Quartiles and interquartile range](images/03-quartiles-and-boxplots/quartiles-iqr-boxplot.png)
+
+
 ## 3.1 Percentile
 
-The \(p\)-th percentile is a value at or below which approximately \(p\%\) of observations lie, according to the chosen quantile convention.
+The $p$-th percentile is a value at or below which approximately $p\%$ of observations lie, according to the chosen quantile convention.
 
 Examples:
 
@@ -331,10 +329,10 @@ These are different questions:
 
 A simple empirical percentile-rank calculation is:
 
-\[
+$$
 \text{Percentile rank}(x)=
 \frac{\#\{x_i < x\}}{n}\times100
-\]
+$$
 
 This is one convention. Ties and alternative definitions (less-than vs less-than-or-equal, midrank, interpolation) produce different results. Do not treat the transcript's simple formula as a universal software standard.
 
@@ -350,9 +348,9 @@ Quantile algorithms differ in how they interpolate between observations. Python/
 
 ## 3.4 Interquartile range (IQR)
 
-\[
+$$
 IQR = Q3-Q1
-\]
+$$
 
 IQR measures the spread of the middle 50% of observations. Because it ignores the most extreme quarters, it is more resistant to outliers than range or standard deviation.
 
@@ -389,21 +387,21 @@ An outlier is an observation that is unusually far from the rest of the data und
 
 ## 5.1 Tukey fences
 
-\[
+$$
 \text{Lower fence}=Q1-1.5(IQR)
-\]
+$$
 
-\[
+$$
 \text{Upper fence}=Q3+1.5(IQR)
-\]
+$$
 
 Flag observations:
 
-\[
+$$
 x < \text{Lower fence}
 \quad \text{or} \quad
 x > \text{Upper fence}
-\]
+$$
 
 The 1.5 × IQR rule is a screening convention, not proof that an observation is invalid.
 
@@ -440,6 +438,9 @@ Outlier treatment should be driven by the question and data-generating process, 
 ---
 
 # 6. Distribution Shape and Visualization
+
+![Symmetric, right-skewed, and left-skewed distributions](images/06-distribution-shape/symmetry-and-skewness.png)
+
 
 A distribution describes how observations are spread across possible values. In EDA, inspect shape before deciding which summary statistics are representative.
 
@@ -505,11 +506,14 @@ Many libraries report **excess kurtosis**, where the normal distribution has val
 
 # 7. Normal (Gaussian) Distribution
 
-A normal distribution is a continuous, symmetric, bell-shaped probability distribution described by its mean \(\mu\) and standard deviation \(\sigma\).
+![Normal distribution and the empirical rule](images/07-normal-distribution/normal-distribution-empirical-rule.png)
 
-\[
+
+A normal distribution is a continuous, symmetric, bell-shaped probability distribution described by its mean $\mu$ and standard deviation $\sigma$.
+
+$$
 X \sim \mathcal{N}(\mu,\sigma^2)
-\]
+$$
 
 Properties:
 
@@ -527,9 +531,9 @@ For a normal distribution:
 
 | Interval | Approximate proportion |
 |---|---:|
-| \(\mu \pm 1\sigma\) | 68% |
-| \(\mu \pm 2\sigma\) | 95% |
-| \(\mu \pm 3\sigma\) | 99.7% |
+| $\mu \pm 1\sigma$ | 68% |
+| $\mu \pm 2\sigma$ | 95% |
+| $\mu \pm 3\sigma$ | 99.7% |
 
 These percentages are approximate and apply to a normal distribution. They are not a general rule for arbitrary data.
 
@@ -537,64 +541,67 @@ These percentages are approximate and apply to a normal distribution. They are n
 
 # 8. Z-Scores and the Standard Normal Distribution
 
+![Z-score and standard normal distribution](images/08-z-scores/z-score-standard-normal.png)
+
+
 A z-score expresses how many standard deviations an observation is from the mean.
 
 For a population with known parameters:
 
-\[
+$$
 z = \frac{x-\mu}{\sigma}
-\]
+$$
 
 For a sample-based standardized score, one commonly uses:
 
-\[
+$$
 z = \frac{x-\bar{x}}{s}
-\]
+$$
 
 Interpretation:
-- \(z=0\): at the mean
-- \(z=+1\): one SD above the mean
-- \(z=-2\): two SDs below the mean
+- $z=0$: at the mean
+- $z=+1$: one SD above the mean
+- $z=-2$: two SDs below the mean
 
 A positive z-score is above the mean; a negative z-score is below it.
 
 ## 8.1 Standard normal distribution
 
-\[
+$$
 Z \sim \mathcal{N}(0,1)
-\]
+$$
 
 The standard normal distribution has mean 0 and standard deviation 1. Standardizing a normally distributed variable produces a standard normal variable.
 
 A z-table or software CDF gives cumulative probability:
 
-\[
+$$
 P(Z \le z)=\Phi(z)
-\]
+$$
 
 Right-tail probability:
 
-\[
+$$
 P(Z>z)=1-\Phi(z)
-\]
+$$
 
 Probability between two values:
 
-\[
+$$
 P(a<Z<b)=\Phi(b)-\Phi(a)
-\]
+$$
 
-**Lecture example:** If \(X\) is normal with mean 4 and SD 1, then for \(x=4.25\):
+**Lecture example:** If $X$ is normal with mean 4 and SD 1, then for $x=4.25$:
 
-\[
+$$
 z=\frac{4.25-4}{1}=0.25
-\]
+$$
 
 The probability above 4.25 is:
 
-\[
+$$
 P(X>4.25)=1-\Phi(0.25)\approx 0.4013
-\]
+$$
 
 So approximately 40.13% of the distribution lies above 4.25.
 
@@ -602,7 +609,7 @@ So approximately 40.13% of the distribution lies above 4.25.
 
 ## 8.2 Z-score as an outlier flag
 
-Large absolute z-scores can indicate unusual observations, but a fixed cutoff such as \(|z|>3\) is not a universal outlier rule. Z-scores are sensitive to the mean and SD, so they can be misleading for skewed distributions or datasets already containing extreme values. Consider robust methods such as IQR or median absolute deviation.
+Large absolute z-scores can indicate unusual observations, but a fixed cutoff such as $|z|>3$ is not a universal outlier rule. Z-scores are sensitive to the mean and SD, so they can be misleading for skewed distributions or datasets already containing extreme values. Consider robust methods such as IQR or median absolute deviation.
 
 ---
 
@@ -612,11 +619,11 @@ These ideas appear later in the course transcript. They connect distribution sha
 
 ## 9.1 Log-normal distribution
 
-A positive random variable \(X\) is log-normal when \(\ln(X)\) follows a normal distribution.
+A positive random variable $X$ is log-normal when $\ln(X)$ follows a normal distribution.
 
-\[
+$$
 \ln(X)\sim\mathcal{N}(\mu,\sigma^2)
-\]
+$$
 
 Log-normal data are positive and typically right-skewed. Examples can include some income, transaction-size, duration, and biological measurement variables, depending on the data-generating process.
 
@@ -634,21 +641,24 @@ The CLT concerns the distribution of sample means, not the shape of the raw obse
 
 Under suitable conditions (including independent observations with finite variance), as sample size increases, the sampling distribution of the sample mean approaches a normal distribution:
 
-\[
+$$
 \bar{X}\ \approx\ \mathcal{N}\left(\mu,\frac{\sigma^2}{n}\right)
-\]
+$$
 
 The standard error is:
 
-\[
+$$
 SE(\bar{X})=\frac{\sigma}{\sqrt{n}}
-\]
+$$
 
-The transcript mentions \(n\geq30\) as a rule of thumb. **Thirty is not a universal threshold.** Required sample size depends on skewness, tail behaviour, dependence, and the accuracy needed. The CLT does not say the original data become normally distributed.
+The transcript mentions $n\geq30$ as a rule of thumb. **Thirty is not a universal threshold.** Required sample size depends on skewness, tail behaviour, dependence, and the accuracy needed. The CLT does not say the original data become normally distributed.
 
 ---
 
 # 10. Python Implementation
+
+![Descriptive analysis workflow](images/10-python-and-analysis-workflow/descriptive-analysis-workflow.png)
+
 
 Use one notebook for this module:
 
@@ -697,7 +707,7 @@ print(population_sd, sample_sd)
 print(data_range, mean_absolute_deviation)
 ```
 
-In NumPy/Pandas, `ddof=0` divides by \(n\); `ddof=1` divides by \(n-1\). Pandas `Series.var()` and `Series.std()` default to `ddof=1`, while NumPy's `np.var()` and `np.std()` default to `ddof=0`. Set it explicitly.
+In NumPy/Pandas, `ddof=0` divides by $n$; `ddof=1` divides by $n-1$. Pandas `Series.var()` and `Series.std()` default to `ddof=1`, while NumPy's `np.var()` and `np.std()` default to `ddof=0`. Set it explicitly.
 
 ## 10.4 Quantiles, IQR, and fences
 
@@ -822,7 +832,7 @@ Interpret the output instead of merely printing it. Ask:
 2. Assuming the mean is always the best measure of a typical value.
 3. Forgetting to sort data before manually finding the median.
 4. Confusing population variance with sample variance.
-5. Using \(n\) instead of \(n-1\) for the usual unbiased sample-variance estimator.
+5. Using $n$ instead of $n-1$ for the usual unbiased sample-variance estimator.
 6. Interpreting variance as being in the original units.
 7. Assuming every observation lies within one standard deviation.
 8. Treating percentile rank and percentile value as the same thing.
@@ -831,7 +841,7 @@ Interpret the output instead of merely printing it. Ask:
 11. Calling a histogram a bar chart, or treating KDE height as point probability.
 12. Assuming every dataset follows a normal distribution.
 13. Treating the 68–95–99.7 rule as valid for every distribution.
-14. Treating \(n=30\) as a guaranteed CLT threshold.
+14. Treating $n=30$ as a guaranteed CLT threshold.
 15. Confusing the distribution of raw data with the sampling distribution of the mean.
 
 ---
@@ -840,20 +850,20 @@ Interpret the output instead of merely printing it. Ask:
 
 | Concept | Formula |
 |---|---|
-| Population mean | \(\mu=\frac{\sum x_i}{N}\) |
-| Sample mean | \(\bar{x}=\frac{\sum x_i}{n}\) |
-| Weighted mean | \(\bar{x}_w=\frac{\sum w_ix_i}{\sum w_i}\) |
-| Range | \(\max(x)-\min(x)\) |
-| Population variance | \(\sigma^2=\frac{\sum(x_i-\mu)^2}{N}\) |
-| Sample variance | \(s^2=\frac{\sum(x_i-\bar{x})^2}{n-1}\) |
+| Population mean | $\mu=\frac{\sum x_i}{N}$ |
+| Sample mean | $\bar{x}=\frac{\sum x_i}{n}$ |
+| Weighted mean | $\bar{x}_w=\frac{\sum w_ix_i}{\sum w_i}$ |
+| Range | $\max(x)-\min(x)$ |
+| Population variance | $\sigma^2=\frac{\sum(x_i-\mu)^2}{N}$ |
+| Sample variance | $s^2=\frac{\sum(x_i-\bar{x})^2}{n-1}$ |
 | Standard deviation | Square root of variance |
-| Mean absolute deviation | \(\frac{1}{n}\sum|x_i-\bar{x}|\) |
-| IQR | \(Q3-Q1\) |
-| Lower fence | \(Q1-1.5(IQR)\) |
-| Upper fence | \(Q3+1.5(IQR)\) |
-| Z-score | \(\frac{x-\mu}{\sigma}\) |
-| Coefficient of variation | \(\frac{s}{|\bar{x}|}\times100\%\) |
-| Standard error of mean | \(\frac{\sigma}{\sqrt n}\) |
+| Mean absolute deviation | $\frac{1}{n}\sum|x_i-\bar{x}|$ |
+| IQR | $Q3-Q1$ |
+| Lower fence | $Q1-1.5(IQR)$ |
+| Upper fence | $Q3+1.5(IQR)$ |
+| Z-score | $\frac{x-\mu}{\sigma}$ |
+| Coefficient of variation | $\frac{s}{|\bar{x}|}\times100\%$ |
+| Standard error of mean | $\frac{\sigma}{\sqrt n}$ |
 
 ---
 
@@ -903,4 +913,3 @@ For the categorical column:
 ---
 
 **Module 02 status:** Documentation baseline complete. Work through the practice checklist and notebook before considering the module mastered.
-
