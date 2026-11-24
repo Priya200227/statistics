@@ -71,3 +71,6 @@ A boxplot is compact but does not reveal every feature. Pair it with a histogram
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [Pandas descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
 
+---
+
+**NEXT:** [08-Skewness & Kurtosis](08-skewness-and-kurtosis/README.md)
