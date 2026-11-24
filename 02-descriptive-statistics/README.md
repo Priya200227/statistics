@@ -256,7 +256,7 @@ It measures average absolute distance and remains in the original units. Some so
 Median absolute deviation (robust version):
 
 $$
-\text{MAD}_{\text{median}} = \operatorname{median}(|x_i-\operatorname{median}(x)|)
+\text{MAD}_{\text{median}} = {median}(|x_i-\operatorname{median}(x)|)
 $$
 
 ## 2.5 Coefficient of variation (CV)
