@@ -26,10 +26,10 @@ These answer different questions:
 
 One empirical percentile-rank convention is:
 
-Let \(N_{<x}\) be the number of observations in the dataset that are strictly less than \(x\).
+Let `N_below_x` be the number of observations in the dataset that are strictly less than the value `x`.
 
 $$
-\text{Percentile rank}(x)=\frac{N_{<x}}{n}\times100
+\mathrm{PercentileRank}(x)=\frac{N_{\mathrm{below}\ x}}{n}\times100
 $$
 
 This uses the strict-less-than convention. Ties and alternative definitions (less-than-or-equal, midrank, interpolation) produce different results. It is not a universal software standard.
