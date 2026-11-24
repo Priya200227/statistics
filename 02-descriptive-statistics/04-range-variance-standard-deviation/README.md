@@ -134,3 +134,5 @@ In Pandas, `ddof=0` divides by $n$ and `ddof=1` divides by $n-1$. Set `ddof` exp
 - [NumPy statistics routines](https://numpy.org/doc/stable/reference/routines.statistics.html)
 - [Pandas descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
 
+---
+**NEXT:** [Quartiles & Percentiles](../05-quartiles-and-percentiles/README.md)
