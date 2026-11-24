@@ -60,3 +60,6 @@ print("Mode(s):", values.mode().tolist())
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [Pandas descriptive statistics](https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics)
 
+---
+**NEXT:** [02-Mean, Median, Mode](../02-mean-median-mode/README.md)
+
