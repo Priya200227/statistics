@@ -1,5 +1,9 @@
 # Quartiles and Percentiles
 
+[← Back to Descriptive Statistics Repository](https://github.com/Priya200227/statistics/tree/main/02-descriptive-statistics)
+
+---
+
 ## 1. Percentiles
 
 The $p$-th percentile is a value at or below which approximately $p\%$ of observations lie, according to the selected quantile convention.
@@ -22,9 +26,10 @@ These answer different questions:
 
 One empirical percentile-rank convention is:
 
+Let \(N_{<x}\) be the number of observations in the dataset that are strictly less than \(x\).
+
 $$
-\mathrm{PercentileRank}(x)=
-\frac{|\{i:x_i<x\}|}{n}\times100
+\text{Percentile rank}(x)=\frac{N_{<x}}{n}\times100
 $$
 
 This uses the strict-less-than convention. Ties and alternative definitions (less-than-or-equal, midrank, interpolation) produce different results. It is not a universal software standard.
@@ -37,7 +42,7 @@ Quartiles divide ordered data into four parts:
 - Q2: 50th percentile (median).
 - Q3: 75th percentile.
 
-![Quartiles and interquartile range](../images/quartiles-iqr-boxplot.png)
+![Quartiles and interquartile range](../images/03-quartiles-and-boxplots/quartiles-iqr-boxplot.png)
 
 Quantile algorithms differ in how they interpolate between observations. NumPy and Pandas provide method options; state the method when exact reproducibility matters.
 
@@ -77,4 +82,3 @@ For a reproducible analysis, record the quantile interpolation/method choice whe
 
 - [Krish Naik - Complete Statistics for Data Science](https://www.youtube.com/watch?v=LZzq1zSL1bs)
 - [Pandas quantile documentation](https://pandas.pydata.org/docs/reference/api/pandas.Series.quantile.html)
-
