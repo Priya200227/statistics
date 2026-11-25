@@ -18,7 +18,7 @@ The distribution of those means is the **sampling distribution of the sample mea
 
 ![Three types of distributions: population, sample and sampling](images/01-three-types-of-distributions.png)
 
-### Three distributions — the distinction matters
+### Three distributions - the distinction matters
 
 | Distribution | What is distributed? | Example |
 |---|---|---|
@@ -48,10 +48,10 @@ The distribution of those means is the **sampling distribution of the sample mea
 
 | Symbol / term | Meaning |
 |---|---|
-| `μ` | Population mean — a parameter |
-| `p` | Population proportion — a parameter |
-| `x̄` | Sample mean — a statistic |
-| `p̂` | Sample proportion — a statistic |
+| `μ` | Population mean - a parameter |
+| `p` | Population proportion - a parameter |
+| `x̄` | Sample mean - a statistic |
+| `p̂` | Sample proportion - a statistic |
 | `θ` | Generic population parameter |
 | `θ̂` | Estimator/statistic used to estimate `θ` |
 
@@ -88,7 +88,7 @@ $$
 
 ## 3. Central Limit Theorem (CLT)
 
-The **Central Limit Theorem** says that, under suitable conditions, the sampling distribution of the sample mean becomes approximately normal as sample size increases — even if the original population distribution is not normal.
+The **Central Limit Theorem** says that, under suitable conditions, the sampling distribution of the sample mean becomes approximately normal as sample size increases - even if the original population distribution is not normal.
 
 For independent, identically distributed observations with finite population mean `μ` and finite variance `σ²`:
 
@@ -253,7 +253,7 @@ $$
 
 ![Success and failure condition](images/08-success-failure-condition.png)
 
-### Example A — overripe fruit
+### Example A - overripe fruit
 
 A shipment contains a sample of `n = 50` fruit. Assume the population proportion overripe is `p = 0.12`.
 
@@ -265,12 +265,12 @@ $$
 n(1-p)=50(0.88)=44
 $$
 
-- Expected successes: `6` — fails the condition.
-- Expected failures: `44` — passes the condition.
+- Expected successes: `6` - fails the condition.
+- Expected failures: `44` - passes the condition.
 
 **Conclusion:** The usual normal approximation is not supported by this rule because one condition fails.
 
-### Example B — radio reach
+### Example B - radio reach
 
 Assume `p = 0.88` and `n = 125`.
 
@@ -290,7 +290,7 @@ Both conditions pass. The normal approximation is supported by this rule of thum
 
 ## 8. Probability using the sampling distribution of a proportion
 
-### Worked example — student stress survey
+### Worked example - student stress survey
 
 Assume a school has 1,750 students. The true population proportion who experienced extreme stress during the past month is `p = 0.15`. A simple random sample of `n = 160` students is selected.
 
@@ -302,7 +302,7 @@ $$
 P(\hat p>0.10)
 $$
 
-### Step 1 — Check normal conditions
+### Step 1 - Check normal conditions
 
 $$
 np=160(0.15)=24\geq10
@@ -314,13 +314,13 @@ $$
 
 Both conditions pass.
 
-### Step 2 — Find the centre
+### Step 2 - Find the centre
 
 $$
 \mu_{\hat p}=p=0.15
 $$
 
-### Step 3 — Calculate the standard error
+### Step 3 - Calculate the standard error
 
 $$
 SE(\hat p)=\sqrt{\frac{p(1-p)}{n}}
@@ -331,7 +331,7 @@ $$
 \approx0.02824
 $$
 
-### Step 4 — Convert the threshold to a z-score
+### Step 4 - Convert the threshold to a z-score
 
 $$
 z=\frac{\hat p-p}{SE(\hat p)}
@@ -343,7 +343,7 @@ $$
 z=\frac{0.10-0.15}{0.02824}\approx-1.77
 $$
 
-### Step 5 — Calculate the right-tail probability
+### Step 5 - Calculate the right-tail probability
 
 $$
 P(\hat p>0.10)=P(Z>-1.77)
@@ -357,11 +357,11 @@ $$
 
 **Interpretation:** If the true population proportion is 15%, then under the normal approximation and stated sampling assumptions, a sample proportion greater than 10% would occur in about 96.1% of repeated samples of size 160.
 
-This is a probability about the sample proportion across repeated samples — **not** the probability that the fixed population proportion is greater than 10%.
+This is a probability about the sample proportion across repeated samples - **not** the probability that the fixed population proportion is greater than 10%.
 
 ---
 
-## 9. Finite population correction (FPC) — additional concept
+## 9. Finite population correction (FPC) - additional concept
 
 When a simple random sample is drawn **without replacement** from a finite population, the observations are not fully independent. When the sample is a substantial fraction of the population, a finite population correction can reduce the standard error.
 
@@ -399,7 +399,7 @@ Sampling distributions connect sample data to population-level conclusions.
 4. The standard error quantifies its sampling variability.
 5. These ideas support confidence intervals and hypothesis tests.
 
-**Next section:** `02 — Confidence Intervals`
+**Next section:** `02 - Confidence Intervals`
 
 ---
 
@@ -549,11 +549,11 @@ Expected probability: approximately `0.961`.
 
 ## References
 
-- [Khan Academy — Sampling distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
-- [Penn State — STAT 415](https://online.stat.psu.edu/stat415/)
+- [Khan Academy - Sampling distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
+- [Penn State - STAT 415](https://online.stat.psu.edu/stat415/)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
-- [SciPy — Normal distribution](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html)
-- [NumPy — Random sampling](https://numpy.org/doc/stable/reference/random/index.html)
+- [SciPy - Normal distribution](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html)
+- [NumPy - Random sampling](https://numpy.org/doc/stable/reference/random/index.html)
 
 ---
 
