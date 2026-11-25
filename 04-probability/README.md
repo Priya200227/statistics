@@ -3,6 +3,8 @@
 > [!NOTE]
 > **Purpose:** Build a rigorous understanding of chance, events, conditional reasoning, random variables, and probability distributions - the foundation for statistical inference, experimentation, and machine learning.
 
+[← Back to Statistics Repository](https://github.com/Priya200227/statistics)
+
 ---
 
 ## Contents
