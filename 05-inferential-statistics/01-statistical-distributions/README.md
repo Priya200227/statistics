@@ -5,6 +5,8 @@
 >
 > Sampling distributions explain how a statistic changes from sample to sample. They are the foundation for understanding standard errors, confidence intervals and hypothesis tests.
 
+[← Back to Inferential Statistics Repository](https://github.com/Priya200227/statistics/tree/main/05-inferential-statistics)
+
 ---
 
 ## 1. The core idea: what is a sampling distribution?
