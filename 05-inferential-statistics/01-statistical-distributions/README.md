@@ -1,23 +1,8 @@
-# 01 — Sampling Distributions
+# 01 - Sampling Distributions
 
-> **Statistics learning path · Inferential Statistics**
+> **Section:** [Khan Academy](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
 >
 > Sampling distributions explain how a statistic changes from sample to sample. They are the foundation for understanding standard errors, confidence intervals and hypothesis tests.
-
-## Learning outcomes
-
-After this section, you should be able to:
-
-- Distinguish population, sample and sampling distributions.
-- Explain why a statistic changes across random samples.
-- Define estimator bias using expected value.
-- Explain the Central Limit Theorem (CLT) without relying on the misleading “n = 30 always works” shortcut.
-- Calculate the mean and standard error of a sample mean.
-- Distinguish standard deviation (SD) from standard error (SE).
-- Calculate the mean and standard error of a sample proportion.
-- Check the success–failure condition for a normal approximation.
-- Solve and interpret a probability question involving a sample proportion.
-- Explain when a finite population correction may be needed.
 
 ---
 
@@ -41,7 +26,8 @@ The distribution of those means is the **sampling distribution of the sample mea
 | Sample distribution | Raw values in one selected sample | Order values for 100 sampled customers |
 | Sampling distribution | A statistic across repeated samples | Average order values from thousands of samples |
 
-> **IMPORTANT — Do not confuse them:** A sampling distribution does not contain all the raw observations from one sample. Each value in it is a statistic (for example, one sample mean) calculated from one separate sample.
+> [!IMPORTANT]
+> **Do not confuse them:** A sampling distribution does not contain all the raw observations from one sample. Each value in it is a statistic (for example, one sample mean) calculated from one separate sample.
 
 ### How do we construct one?
 
@@ -93,7 +79,8 @@ $$
 
 ![Bias and unbiased estimator](images/03-bias-and-unbiased-estimator.png)
 
-> **IMPORTANT:** Bias is about the estimator's expected value over repeated samples. It is not the same as skewness. A sampling distribution can be asymmetric and still be unbiased.
+> [!IMPORTANT]
+> Bias is about the estimator's expected value over repeated samples. It is not the same as skewness. A sampling distribution can be asymmetric and still be unbiased.
 
 **Do not overclaim from a small simulation:** If 50 repeated samples produce estimates that look centred around the parameter, that is an illustration, not mathematical proof of unbiasedness. The definition is based on the expected value.
 
@@ -209,7 +196,8 @@ $$
 SE\propto\frac{1}{\sqrt n}
 $$
 
-> **TIP:** More data can improve precision by reducing standard error. It does not automatically fix bias, selection bias, measurement error or a poor sampling design.
+> [!TIP]
+> More data can improve precision by reducing standard error. It does not automatically fix bias, selection bias, measurement error or a poor sampling design.
 
 ---
 
@@ -244,7 +232,8 @@ $$
 
 ![Sampling distribution of a sample proportion](images/07-sampling-distribution-of-proportion.png)
 
-> **IMPORTANT:** The theoretical standard error formula uses the population proportion `p`. In actual inference, the appropriate standard-error formula depends on the procedure and assumptions. Do not replace `p` with `p̂` automatically in every context.
+> [!IMPORTANT]
+> The theoretical standard error formula uses the population proportion `p`. In actual inference, the appropriate standard-error formula depends on the procedure and assumptions. Do not replace `p` with `p̂` automatically in every context.
 
 ---
 
@@ -547,21 +536,6 @@ Expected probability: approximately `0.961`.
 ## 14. One-page revision map
 
 ![Sampling distributions revision map](images/12-sampling-distributions-revision-map.png)
-
-### Self-check before moving on
-
-- [ ] I can distinguish population, sample, parameter, statistic and sampling distribution.
-- [ ] I can explain how repeated sampling creates a sampling distribution.
-- [ ] I can define bias using expected value.
-- [ ] I understand why skewness is not the same as bias.
-- [ ] I can explain the CLT and its assumptions.
-- [ ] I know why `n = 30` is not a universal guarantee.
-- [ ] I can calculate the mean, variance and SE of a sample mean.
-- [ ] I can explain SD versus SE.
-- [ ] I can calculate the SE of a sample proportion.
-- [ ] I can check both success–failure conditions.
-- [ ] I can calculate and interpret a z-score and right-tail probability.
-- [ ] I understand when finite population correction may be relevant.
 
 ### Practice questions
 
