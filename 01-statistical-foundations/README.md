@@ -6,6 +6,8 @@
 > 
 > **Purpose:** Establish the language and reasoning needed to analyze data responsibly. This module covers what statistics is, how populations and samples relate, how variables are classified, and how to summarize observations using frequency distributions and basic visualizations.
 
+[← Back to Statistics Repository](https://github.com/Priya200227/statistics)
+
 ---
 
 ## Visual overview
