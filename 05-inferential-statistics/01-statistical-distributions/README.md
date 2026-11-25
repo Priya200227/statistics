@@ -78,13 +78,13 @@ An **estimator** is the rule or procedure used to estimate a parameter. An **est
 The bias of an estimator is:
 
 $$
-\\operatorname{Bias}(\\hat{\\theta})=E(\\hat{\\theta})-\\theta
+\text{Bias}(\hat{\theta})=E(\hat{\theta})-\theta
 $$
 
 An estimator is **unbiased** if:
 
 $$
-E(\\hat{\\theta})=\\theta
+E(\hat{\theta})=\theta
 $$
 
 - **Unbiased:** its long-run expected value equals the true parameter.
@@ -106,9 +106,9 @@ The **Central Limit Theorem** says that, under suitable conditions, the sampling
 For independent, identically distributed observations with finite population mean `μ` and finite variance `σ²`:
 
 $$
-\\frac{\\bar X-\\mu}{\\sigma/\\sqrt n}
-\\xrightarrow{d}N(0,1)
-\\quad\\text{as }n\\to\\infty
+\frac{\bar X-\mu}{\sigma/\sqrt n}
+\xrightarrow{d}N(0,1)
+\quad\text{as }n\to\infty
 $$
 
 ### What changes as sample size increases?
@@ -145,7 +145,7 @@ Let `X₁, X₂, ..., Xₙ` be observations from a population with mean `μ` and
 The sample mean is:
 
 $$
-\\bar X=\\frac{X_1+X_2+\\cdots+X_n}{n}
+\bar X=\frac{X_1+X_2+\cdots+X_n}{n}
 $$
 
 Under independent sampling with a common population variance:
@@ -153,25 +153,25 @@ Under independent sampling with a common population variance:
 ### Centre
 
 $$
-E(\\bar X)=\\mu
+E(\bar X)=\mu
 $$
 
 ### Variance
 
 $$
-\\operatorname{Var}(\\bar X)=\\frac{\\sigma^2}{n}
+\text{Var}(\bar X)=\frac{\sigma^2}{n}
 $$
 
 ### Standard error
 
 $$
-SE(\\bar X)=\\frac{\\sigma}{\\sqrt n}
+SE(\bar X)=\frac{\sigma}{\sqrt n}
 $$
 
 If `σ` is unknown, the standard error is commonly estimated using the sample standard deviation `s`:
 
 $$
-\\widehat{SE}(\\bar X)=\\frac{s}{\\sqrt n}
+\widehat{SE}(\bar X)=\frac{s}{\sqrt n}
 $$
 
 ![Sampling distribution of the sample mean](images/06-sampling-distribution-of-the-mean.png)
@@ -206,7 +206,7 @@ Suppose population standard deviation `σ = 10`.
 If sample size increases fourfold, the standard error is halved:
 
 $$
-SE\\propto\\frac{1}{\\sqrt n}
+SE\propto\frac{1}{\sqrt n}
 $$
 
 > **TIP:** More data can improve precision by reducing standard error. It does not automatically fix bias, selection bias, measurement error or a poor sampling design.
@@ -218,7 +218,7 @@ $$
 A sample proportion is the fraction of sample observations that have a particular characteristic.
 
 $$
-\\hat p=\\frac{x}{n}
+\hat p=\frac{x}{n}
 $$
 
 Where:
@@ -233,13 +233,13 @@ Under the usual random-sampling conditions:
 ### Mean
 
 $$
-E(\\hat p)=p
+E(\hat p)=p
 $$
 
 ### Standard error
 
 $$
-SE(\\hat p)=\\sqrt{\\frac{p(1-p)}{n}}
+SE(\hat p)=\sqrt{\frac{p(1-p)}{n}}
 $$
 
 ![Sampling distribution of a sample proportion](images/07-sampling-distribution-of-proportion.png)
@@ -253,11 +253,11 @@ $$
 For an introductory normal approximation to the sampling distribution of `p̂`, a common rule of thumb checks whether the expected counts of successes and failures are both at least 10:
 
 $$
-np\\geq10
+np\geq10
 $$
 
 $$
-n(1-p)\\geq10
+n(1-p)\geq10
 $$
 
 **Both conditions must pass.**
@@ -310,17 +310,17 @@ Assume a school has 1,750 students. The true population proportion who experienc
 We want:
 
 $$
-P(\\hat p>0.10)
+P(\hat p>0.10)
 $$
 
 ### Step 1 — Check normal conditions
 
 $$
-np=160(0.15)=24\\geq10
+np=160(0.15)=24\geq10
 $$
 
 $$
-n(1-p)=160(0.85)=136\\geq10
+n(1-p)=160(0.85)=136\geq10
 $$
 
 Both conditions pass.
@@ -328,40 +328,40 @@ Both conditions pass.
 ### Step 2 — Find the centre
 
 $$
-\\mu_{\\hat p}=p=0.15
+\mu_{\hat p}=p=0.15
 $$
 
 ### Step 3 — Calculate the standard error
 
 $$
-SE(\\hat p)=\\sqrt{\\frac{p(1-p)}{n}}
+SE(\hat p)=\sqrt{\frac{p(1-p)}{n}}
 $$
 
 $$
-=\\sqrt{\\frac{0.15(0.85)}{160}}
-\\approx0.02824
+=\sqrt{\frac{0.15(0.85)}{160}}
+\approx0.02824
 $$
 
 ### Step 4 — Convert the threshold to a z-score
 
 $$
-z=\\frac{\\hat p-p}{SE(\\hat p)}
+z=\frac{\hat p-p}{SE(\hat p)}
 $$
 
 At the threshold `p̂ = 0.10`:
 
 $$
-z=\\frac{0.10-0.15}{0.02824}\\approx-1.77
+z=\frac{0.10-0.15}{0.02824}\approx-1.77
 $$
 
 ### Step 5 — Calculate the right-tail probability
 
 $$
-P(\\hat p>0.10)=P(Z>-1.77)
+P(\hat p>0.10)=P(Z>-1.77)
 $$
 
 $$
-\\boxed{P(\\hat p>0.10)\\approx0.961}
+\boxed{P(\hat p>0.10)\approx0.961}
 $$
 
 ![Worked probability example](images/09-worked-proportion-probability.png)
@@ -379,12 +379,12 @@ When a simple random sample is drawn **without replacement** from a finite popul
 For the sample mean:
 
 $$
-FPC=\\sqrt{\\frac{N-n}{N-1}}
+FPC=\sqrt{\frac{N-n}{N-1}}
 $$
 
 $$
-SE(\\bar X)=\\frac{\\sigma}{\\sqrt n}
-\\times\\sqrt{\\frac{N-n}{N-1}}
+SE(\bar X)=\frac{\sigma}{\sqrt n}
+\times\sqrt{\frac{N-n}{N-1}}
 $$
 
 Where:
@@ -584,4 +584,3 @@ Expected probability: approximately `0.961`.
 ---
 
 > **Learning rule:** Never memorise a sampling formula without knowing what statistic it describes, what assumptions it needs, and how to interpret its result in context.
-
