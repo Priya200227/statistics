@@ -1,7 +1,7 @@
 # 01 - Sampling Distributions
 
 > [!NOTE]
-> **Section:** [Khan Academy](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
+> **Section:** Khan Academy - [Sampling Distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
 >
 > Sampling distributions explain how a statistic changes from sample to sample. They are the foundation for understanding standard errors, confidence intervals and hypothesis tests.
 
