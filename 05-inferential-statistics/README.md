@@ -1,4 +1,4 @@
-# Inferential Statistics
+# Module 05 - Inferential Statistics
 
 Inferential statistics uses information from a sample to draw
 conclusions about a larger population. It helps us estimate unknown
@@ -9,6 +9,8 @@ This folder documents the core concepts and methods of inferential
 statistics, with an emphasis on understanding when to use a method,
 checking its assumptions, interpreting its results, and applying it to
 practical data-analysis problems.
+
+[← Back to Statistics Repository](https://github.com/Priya200227/statistics)
 
 ------------------------------------------------------------------------
 
