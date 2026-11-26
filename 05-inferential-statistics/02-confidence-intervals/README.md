@@ -1,6 +1,7 @@
 # Confidence Intervals
 
 > [!NOTE]
+> 
 > **Section:** Khan Academy - [Confidence Interval](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample)
 >
 > **Purpose:** Estimate an unknown population mean from sample data and quantify uncertainty around that estimate.
@@ -830,40 +831,6 @@ Construct d̄ ± t* × SE
     ↓
 Interpret the mean difference
 ```
-
-## 19. Knowledge Check
-
-Try answering without looking at the explanations above.
-
-1. What is the difference between a population parameter and a sample statistic?
-2. What does standard error measure, and how is it different from standard deviation?
-3. Why is t generally preferred when the population SD is unknown?
-4. A sample contains 20 observations. What are the degrees of freedom for a one-sample t interval?
-5. For a 95% two-sided interval, what is alpha and what is the area in each tail?
-6. What happens to the t-distribution as degrees of freedom increase?
-7. Why is $n=30$ not a universal guarantee that a t interval is valid?
-8. When should you use a paired t interval?
-9. For a small paired sample, which values need to be approximately normal?
-10. What does a 95% confidence level mean in the long-run frequentist interpretation?
-11. If a confidence interval for a mean difference includes zero, what can you conclude?
-12. Why must a required sample size be rounded up?
-13. Can a confidence interval correct selection bias in a convenience sample? Explain.
-14. A sample has $\bar{x}=50$, $s=8$, and $n=16$. What is the estimated standard error?
-15. If the confidence level increases while the sample data remain the same, what generally happens to the interval width?
-
-### Practical exercise
-
-Use a dataset of your choice:
-
-1. Select a numeric variable.
-2. Define the population you want to make an inference about.
-3. Draw an appropriate sample.
-4. Calculate $n$, $\bar{x}$, and $s$.
-5. Construct a 95% one-sample t interval in Python.
-6. Check the sampling and distribution assumptions.
-7. Write a plain-English interpretation.
-8. Explain what the interval does **not** allow you to claim.
-
 ---
 
 ## Key Takeaway
