@@ -1,6 +1,6 @@
 # Confidence Intervals
 
-> > [!NOTE]
+> [!NOTE]
 > **Section:** Khan Academy - [Confidence Interval](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample)
 > > 
 > **Purpose:** Estimate an unknown population mean from sample data and quantify uncertainty around that estimate.
