@@ -266,25 +266,25 @@ For a two-sided confidence interval, the critical value leaves $\alpha/2$ in eac
 
 Suppose we need a 98% interval with sample size 15.
 
-**Step 1 — Alpha**
+**Step 1 - Alpha**
 
 $$
 \alpha=1-0.98=0.02
 $$
 
-**Step 2 — Area in each tail**
+**Step 2 - Area in each tail**
 
 $$
 \frac{\alpha}{2}=0.01
 $$
 
-**Step 3 — Degrees of freedom**
+**Step 3 - Degrees of freedom**
 
 $$
 df=15-1=14
 $$
 
-**Step 4 — Critical value**
+**Step 4 - Critical value**
 
 For $df=14$ and 0.01 in the upper tail:
 
@@ -309,9 +309,9 @@ Given:
 - $s=50$
 - Confidence level = 95%
 
-**Step 1 — Method:** The population SD is unknown, so use a one-sample t interval.
+**Step 1 - Method:** The population SD is unknown, so use a one-sample t interval.
 
-**Step 2 — Degrees of freedom:**
+**Step 2 - Degrees of freedom:**
 
 $$
 df=14-1=13
@@ -323,19 +323,19 @@ $$
 t^*\approx2.160
 $$
 
-**Step 3 — Standard error:**
+**Step 3 - Standard error:**
 
 $$
 SE=\frac{50}{\sqrt{14}}\approx13.36
 $$
 
-**Step 4 — Margin of error:**
+**Step 4 - Margin of error:**
 
 $$
 ME=2.160\times13.36\approx28.86
 $$
 
-**Step 5 — Interval:**
+**Step 5 - Interval:**
 
 $$
 700\pm28.86
@@ -451,19 +451,19 @@ Given:
 - $df=5-1=4$
 - $t^*=2.776$
 
-**Step 1 — Standard error:**
+**Step 1 - Standard error:**
 
 $$
 SE=\frac{1.64}{\sqrt{5}}\approx0.734
 $$
 
-**Step 2 — Margin of error:**
+**Step 2 - Margin of error:**
 
 $$
 ME=2.776\times0.734\approx2.036
 $$
 
-**Step 3 — Confidence interval:**
+**Step 3 - Confidence interval:**
 
 $$
 6.8\pm2.036
