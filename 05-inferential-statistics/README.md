@@ -1,4 +1,4 @@
-# 05-Inferential Statistics
+# Inferential Statistics
 
 Inferential statistics uses information from a sample to draw
 conclusions about a larger population. It helps us estimate unknown
