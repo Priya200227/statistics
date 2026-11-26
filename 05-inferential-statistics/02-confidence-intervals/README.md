@@ -7,28 +7,6 @@
 
 [← Back to Inferential Statistics Repository](https://github.com/Priya200227/statistics/tree/main/05-inferential-statistics)
 
-## Table of Contents
-
-1. [Why Confidence Intervals Matter](#1-why-confidence-intervals-matter)
-2. [Population Parameters and Sample Statistics](#2-population-parameters-and-sample-statistics)
-3. [Sampling Distribution and Standard Error](#3-sampling-distribution-and-standard-error)
-4. [Confidence Level, Alpha, and Critical Values](#4-confidence-level-alpha-and-critical-values)
-5. [Z-Interval vs. T-Interval](#5-z-interval-vs-t-interval)
-6. [Student's t-Distribution](#6-students-t-distribution)
-7. [One-Sample t Confidence Interval](#7-one-sample-t-confidence-interval)
-8. [Finding a Critical t-Value](#8-finding-a-critical-t-value)
-9. [Worked Example: Burrito Calories](#9-worked-example-burrito-calories)
-10. [Conditions for a Valid t-Interval](#10-conditions-for-a-valid-t-interval)
-11. [Confidence Intervals with Paired Data](#11-confidence-intervals-with-paired-data)
-12. [Worked Example: Paired Finger-Snapping Data](#12-worked-example-paired-finger-snapping-data)
-13. [Interpreting a Confidence Interval](#13-interpreting-a-confidence-interval)
-14. [Choosing a Sample Size for a Desired Margin of Error](#14-choosing-a-sample-size-for-a-desired-margin-of-error)
-15. [Python Implementation](#15-python-implementation)
-16. [Common Mistakes and Clarifications](#16-common-mistakes-and-clarifications)
-17. [Practical Applications in Data Analytics](#17-practical-applications-in-data-analytics)
-18. [Quick Revision Sheet](#18-quick-revision-sheet)
-19. [Knowledge Check](#19-knowledge-check)
-
 ---
 
 ## 1. Why Confidence Intervals Matter
