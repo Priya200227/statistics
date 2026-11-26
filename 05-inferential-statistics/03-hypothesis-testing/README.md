@@ -1,22 +1,7 @@
-# Unit 12 — Significance Tests (Hypothesis Testing)
+# Significance Tests (Hypothesis Testing)
 
 > **Statistics learning notes | Khan Academy — Unit 12: Significance tests**  
 > Topics consolidated from the lesson transcripts shared for this unit, with technical clarifications explicitly marked.
-
-> **Math rendering:** Equations use GitHub Markdown's `$...$` inline and `$$...$$` display math delimiters. View this README on GitHub for rendered equations.
-
-## Learning objectives
-
-By the end of this unit, you should be able to:
-
-1. Translate a research question into $H_0$ and $H_a$.
-2. Decide whether a test is left-tailed, right-tailed, or two-tailed.
-3. Explain what a p-value means — and what it does **not** mean.
-4. Distinguish Type I error, Type II error, and statistical power.
-5. Choose an appropriate one-sample test for a population proportion or population mean.
-6. Check the assumptions and conditions before calculating a test statistic.
-7. Calculate a test statistic, p-value, and conclusion using a table, calculator, or Python.
-8. Communicate the conclusion in the context of the original question.
 
 ---
 
