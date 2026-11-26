@@ -198,13 +198,28 @@ As degrees of freedom increase, the t-distribution approaches the standard norma
 
 A one-sample t interval estimates a population mean using one sample when the population standard deviation is unknown.
 
+When the population standard deviation is unknown, we estimate it using the sample standard deviation \(s\).
+
+The one-sample t confidence interval is:
+
 $$
 \boxed{
-\bar{x}\pm t^*_{1-\alpha/2,\;n-1}\left(\frac{s}{\sqrt{n}}\right)
+\bar{x} \pm t^*_{1-\alpha/2,\;n-1}
+\left(\frac{s}{\sqrt{n}}\right)
 }
-
-Here, $t^*_{1-\alpha/2,\;n-1}$ is the positive t critical value with upper-tail area $\alpha/2$ and $n-1$ degrees of freedom.
 $$
+
+Here:
+
+- \(\bar{x}\) = Sample mean
+- \(t^*_{1-\alpha/2,\;n-1}\) = Positive critical t-value
+- \(\alpha\) = Significance level, \(1-C\)
+- \(n\) = Sample size
+- \(n-1\) = Degrees of freedom
+- \(s\) = Sample standard deviation
+- \(\frac{s}{\sqrt{n}}\) = Estimated standard error
+
+The critical t-value is sel
 
 | Symbol | Meaning |
 |---|---|
