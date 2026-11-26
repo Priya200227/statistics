@@ -1,4 +1,4 @@
-# 01 - Sampling Distributions
+# Sampling Distributions
 
 > [!NOTE]
 > **Section:** Khan Academy - [Sampling Distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
