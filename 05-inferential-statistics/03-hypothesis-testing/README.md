@@ -1,6 +1,6 @@
 # Significance Tests (Hypothesis Testing)
 
-> **Statistics learning notes | Khan Academy — Unit 12: Significance tests**  
+> **Statistics learning notes | Khan Academy - Unit 12: Significance tests**  
 > Topics consolidated from the lesson transcripts shared for this unit, with technical clarifications explicitly marked.
 
 ---
@@ -40,8 +40,8 @@ Some course materials write the first rule as $p<\alpha$. If the p-value is exac
 
 ## 2. Null and alternative hypotheses
 
-- $H_0$: the null hypothesis — the status-quo/reference claim used to construct the test.
-- $H_a$ (also written $H_1$): the alternative hypothesis — the direction or difference the study is looking for.
+- $H_0$: the null hypothesis - the status-quo/reference claim used to construct the test.
+- $H_a$ (also written $H_1$): the alternative hypothesis - the direction or difference the study is looking for.
 
 Hypotheses are statements about **population parameters**, not sample statistics.
 
@@ -60,9 +60,9 @@ Here $\theta$ represents the relevant population parameter, such as $\mu$ or $p$
 The known mean response time without the drug is 1.2 seconds.
 
 - “Does the drug have an effect?”  
-  $H_0:\mu=1.2$, $H_a:\mu\ne1.2$ — two-tailed. A substantially lower **or** higher mean counts as an effect.
+  $H_0:\mu=1.2$, $H_a:\mu\ne1.2$ - two-tailed. A substantially lower **or** higher mean counts as an effect.
 - “Does the drug lower response time?”  
-  $H_0:\mu=1.2$, $H_a:\mu<1.2$ — left-tailed.
+  $H_0:\mu=1.2$, $H_a:\mu<1.2$ - left-tailed.
 
 **Important:** Choose the tail from the research question before examining the sample result. Do not switch to a one-tailed test after seeing which direction the data went.
 
@@ -199,7 +199,7 @@ $$
 
 A claim says more than 30% of U.S. households have internet access. A random sample of 150 households finds 57 with access. Test at $\alpha=0.05$.
 
-**Step 1 — Parameter and hypotheses**
+**Step 1 - Parameter and hypotheses**
 
 Let $p$ be the true proportion of U.S. households with internet access.
 
@@ -209,13 +209,13 @@ $$
 
 Right-tailed test.
 
-**Step 2 — Sample proportion**
+**Step 2 - Sample proportion**
 
 $$
 \hat p=\frac{57}{150}=0.38
 $$
 
-**Step 3 — Conditions**
+**Step 3 - Conditions**
 
 $$
 np_0=150(0.30)=45,\quad n(1-p_0)=150(0.70)=105
@@ -223,7 +223,7 @@ $$
 
 Both are comfortably above 10. Randomness and the 10% independence condition must also be justified from the sampling context.
 
-**Step 4 — Test statistic**
+**Step 4 - Test statistic**
 
 $$
 SE_0=\sqrt{\frac{0.30(0.70)}{150}}\approx0.03742
@@ -233,7 +233,7 @@ $$
 z=\frac{0.38-0.30}{0.03742}\approx2.14
 $$
 
-**Step 5 — P-value and decision**
+**Step 5 - P-value and decision**
 
 Right-tail p-value $P(Z\ge2.14)\approx0.0162$.
 
@@ -292,7 +292,7 @@ $$
 
 The $n\ge30$ guideline is a heuristic, not a guarantee. A small sample from a strongly skewed population may not support a standard t-test.
 
-### Z vs. t for a population mean — the correct rule
+### Z vs. t for a population mean - the correct rule
 
 | Situation | Test statistic |
 |---|---|
@@ -310,7 +310,7 @@ In real-world analysis, $\sigma$ is rarely known, so the one-sample t-test is co
 
 A new engine design meets the requirement if its population mean emission is below 20 ppm. Ten engines have $\bar x=17.17$ ppm and $s=2.98$ ppm. The significance level is $\alpha=0.01$.
 
-**Step 1 — Parameter and hypotheses**
+**Step 1 - Parameter and hypotheses**
 
 Let $\mu$ be the true mean emission level for engines of this design.
 
@@ -320,17 +320,17 @@ $$
 
 Left-tailed test.
 
-**Step 2 — Conditions**
+**Step 2 - Conditions**
 
 The transcript gives 10 test engines. The random/representative sampling basis and independence should be justified from the study design. With $n=10$, the normality of the population or a sufficiently well-behaved distribution is important; the transcript does not provide the raw data shape or explicitly establish population normality. Treat this condition as an assumption unless verified.
 
-**Step 3 — Test statistic**
+**Step 3 - Test statistic**
 
 $$
 t=\frac{17.17-20}{2.98/\sqrt{10}}\approx-3.00,\qquad df=9
 $$
 
-**Step 4 — Critical value / p-value**
+**Step 4 - Critical value / p-value**
 
 For a left-tail test at $\alpha=0.01$, $t^*\approx-2.821$ for $df=9$.
 
