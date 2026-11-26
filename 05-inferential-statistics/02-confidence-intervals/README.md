@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > **Section:** Khan Academy - [Confidence Interval](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample)
-> > 
+>
 > **Purpose:** Estimate an unknown population mean from sample data and quantify uncertainty around that estimate.
 
 [← Back to Inferential Statistics Repository](https://github.com/Priya200227/statistics/tree/main/05-inferential-statistics)
@@ -15,7 +15,6 @@
 
 > [!NOTE]
 > A confidence interval estimates a **population parameter**. It is not a range containing a stated percentage of individual observations.
-
 
 In statistics, we often want to know a population value but cannot measure every member of that population. Collecting data from an entire population may be expensive, slow, or impossible. Instead, we select a sample and calculate a statistic.
 
@@ -34,13 +33,12 @@ The interval communicates both the estimate and its uncertainty.
 $$
 \text{Confidence Interval}=\text{Point Estimate}\pm\text{Margin of Error}
 $$
+
 For a population mean, the point estimate is usually the sample mean $\bar{x}$.
 
 ## 2. Population Parameters and Sample Statistics
 
 ![Population parameter versus sample statistic](images/02-population-parameter-vs-sample-statistic.png)
-
-
 
 | Term | Meaning | Symbol |
 |---|---|---|
@@ -58,7 +56,6 @@ For estimating a population mean, $\bar{x}$ estimates $\mu$, while $s$ estimates
 
 ![Repeated samples create a sampling distribution and standard error](images/03-sampling-distribution-and-standard-error.png)
 
-
 ### 3.1 Sampling distribution
 
 Imagine repeatedly taking random samples of the same size from a population and calculating the sample mean for every sample. The distribution of those sample means is the **sampling distribution of the sample mean**.
@@ -68,9 +65,11 @@ Under the usual independent-sampling assumptions:
 $$
 E(\bar{X})=\mu
 $$
+
 $$
 SD(\bar{X})=\frac{\sigma}{\sqrt{n}}
 $$
+
 ### 3.2 Standard error
 
 The **standard error (SE)** measures the estimated variability of a statistic across repeated samples.
@@ -80,11 +79,13 @@ If the population standard deviation is known:
 $$
 SE_{\bar{x}}=\frac{\sigma}{\sqrt{n}}
 $$
+
 If it is unknown, estimate it using the sample standard deviation:
 
 $$
 SE_{\bar{x}}=\frac{s}{\sqrt{n}}
 $$
+
 The standard error is not the same as the sample standard deviation.
 
 | Measure | What it describes |
@@ -97,7 +98,6 @@ As sample size increases, standard error generally decreases. However, a large s
 ## 4. Confidence Level, Alpha, and Critical Values
 
 ![Central 95 percent and alpha split between two tails](images/04-confidence-level-alpha-two-tails.png)
-
 
 ### 4.1 Confidence level
 
@@ -115,9 +115,11 @@ For a two-sided interval:
 $$
 \alpha=1-C
 $$
+
 $$
 \text{Area in each tail}=\frac{\alpha}{2}
 $$
+
 For a 95% interval, $\alpha=0.05$, so 0.025 lies in each tail and the central area is 0.95.
 
 ### 4.2 Critical value
@@ -130,7 +132,6 @@ A higher confidence level generally requires a larger critical value and produce
 > [!IMPORTANT]
 > For the standard one-sample mean interval, when the population SD is unknown, use the **t-distribution** and sample SD $s$.
 
-
 The choice depends primarily on whether the population standard deviation is known.
 
 ### 5.1 Z-interval for a population mean
@@ -140,6 +141,7 @@ When the population standard deviation $\sigma$ is known:
 $$
 \boxed{\bar{x}\pm z^*\frac{\sigma}{\sqrt{n}}}
 $$
+
 ### 5.2 T-interval for a population mean
 
 When $\sigma$ is unknown, we estimate it using the sample standard deviation $s$:
@@ -147,6 +149,7 @@ When $\sigma$ is unknown, we estimate it using the sample standard deviation $s$
 $$
 \boxed{\bar{x}\pm t^*\frac{s}{\sqrt{n}}}
 $$
+
 ### 5.3 Comparison
 
 | Feature | Z-interval | T-interval |
@@ -163,7 +166,6 @@ Do not replace an unknown population SD with $s$ and automatically keep using th
 
 ![Student t curves compared with the standard normal curve](images/05-t-distribution-vs-z.png)
 
-
 Student's t-distribution resembles the standard normal distribution but has heavier tails, especially with few degrees of freedom.
 
 ### 6.1 Degrees of freedom
@@ -173,6 +175,7 @@ For a one-sample t interval:
 $$
 \boxed{df=n-1}
 $$
+
 For a sample of 14 observations, $df=13$.
 
 ### 6.2 Why heavier tails?
@@ -192,14 +195,16 @@ As degrees of freedom increase, the t-distribution approaches the standard norma
 
 ![The point estimate, bounds and margin of error](images/06-one-sample-t-interval-anatomy.png)
 
-
 A one-sample t interval estimates a population mean using one sample when the population standard deviation is unknown.
 
 $$
 \boxed{
 \bar{x}\pm t^*_{1-\alpha/2,\;n-1}\left(\frac{s}{\sqrt{n}}\right)
 }
+
+Here, $t^*_{1-\alpha/2,\;n-1}$ is the positive t critical value with upper-tail area $\alpha/2$ and $n-1$ degrees of freedom.
 $$
+
 | Symbol | Meaning |
 |---|---|
 | $\bar{x}$ | Sample mean |
@@ -217,12 +222,15 @@ $$
 \qquad
 SE=\frac{s}{\sqrt{n}}
 $$
+
 $$
 \text{Lower bound}=\bar{x}-ME
 $$
+
 $$
 \text{Upper bound}=\bar{x}+ME
 $$
+
 ### Calculation workflow
 
 1. Identify sample size $n$, sample mean $\bar{x}$, and sample SD $s$.
@@ -238,7 +246,6 @@ $$
 > [!TIP]
 > For a two-sided interval, split alpha across both tails: use $\alpha/2$ in each tail. Check whether your t-table is labelled by one-tail or two-tail probability.
 
-
 For a two-sided confidence interval, the critical value leaves $\alpha/2$ in each tail.
 
 Suppose we need a 98% interval with sample size 15.
@@ -248,16 +255,19 @@ Suppose we need a 98% interval with sample size 15.
 $$
 \alpha=1-0.98=0.02
 $$
+
 **Step 2 — Area in each tail**
 
 $$
 \frac{\alpha}{2}=0.01
 $$
+
 **Step 3 — Degrees of freedom**
 
 $$
 df=15-1=14
 $$
+
 **Step 4 — Critical value**
 
 For $df=14$ and 0.01 in the upper tail:
@@ -265,6 +275,7 @@ For $df=14$ and 0.01 in the upper tail:
 $$
 \boxed{t^*\approx2.624}
 $$
+
 The central 98% of the t-distribution lies approximately between $-2.624$ and $+2.624$.
 
 > **Transcript correction:** The critical value is approximately **2.624**, not 2.264.
@@ -272,7 +283,6 @@ The central 98% of the t-distribution lies approximately between $-2.624$ and $+
 Always check whether a t-table reports one-tail or two-tail probabilities.
 
 ## 9. Worked Example: Burrito Calories
-
 
 A sample of 14 burritos has a sample mean of 700 calories and sample SD of 50 calories. Construct a 95% confidence interval for the population mean.
 
@@ -290,39 +300,43 @@ Given:
 $$
 df=14-1=13
 $$
+
 For a 95% two-sided interval with 13 degrees of freedom:
 
 $$
 t^*\approx2.160
 $$
+
 **Step 3 — Standard error:**
 
 $$
 SE=\frac{50}{\sqrt{14}}\approx13.36
 $$
+
 **Step 4 — Margin of error:**
 
 $$
 ME=2.160\times13.36\approx28.86
 $$
+
 **Step 5 — Interval:**
 
 $$
 700\pm28.86
 $$
+
 $$
 \boxed{(671.14,\;728.86)\text{ calories}}
 $$
+
 **Interpretation:** Using this sampling method, we are 95% confident that the population mean calorie count lies between approximately 671 and 729 calories, assuming the sampling and t-interval conditions are reasonably satisfied.
 
 ## 10. Conditions for a Valid t-Interval
 
 ![Checklist of conditions for a valid t interval](images/08-t-interval-conditions-checklist.png)
 
-
 > [!WARNING]
 > A correct formula cannot rescue a biased or dependent sample. Check the sampling design and assumptions before interpreting the interval.
-
 
 A confidence interval is only as reliable as the data collection process and the assumptions behind the method.
 
@@ -337,6 +351,7 @@ Observations should be independent. When sampling without replacement from a fin
 $$
 n\leq0.10N
 $$
+
 where $N$ is the population size.
 
 ### 10.3 Nearly normal population or a well-behaved sampling distribution
@@ -357,7 +372,6 @@ For a paired t interval, the normality condition applies to the **within-pair di
 
 > [!IMPORTANT]
 > In paired analysis, calculate one difference per matched pair. Build the t interval from the **differences**, not from two unrelated samples.
-
 
 Paired data occurs when two measurements are naturally linked:
 
@@ -380,6 +394,7 @@ Define the difference consistently. For example:
 $$
 d_i=\text{Measurement A}_i-\text{Measurement B}_i
 $$
+
 Calculate the mean difference $\bar d$, SD of differences $s_d$, and number of pairs $n$.
 
 ### 11.2 Paired t confidence interval
@@ -390,6 +405,7 @@ $$
 \left(\frac{s_d}{\sqrt{n}}\right)
 }
 $$
+
 The interval estimates the population mean of the paired differences.
 
 The paired approach accounts for the relationship between measurements within each pair. It focuses on each subject's difference rather than treating the two sets of measurements as unrelated groups.
@@ -403,11 +419,13 @@ Define:
 $$
 d=\text{Dominant hand}-\text{Non-dominant hand}
 $$
+
 Observed differences:
 
 $$
 9,\;5,\;8,\;6,\;6
 $$
+
 Given:
 
 - $n=5$
@@ -422,19 +440,23 @@ Given:
 $$
 SE=\frac{1.64}{\sqrt{5}}\approx0.734
 $$
+
 **Step 2 — Margin of error:**
 
 $$
 ME=2.776\times0.734\approx2.036
 $$
+
 **Step 3 — Confidence interval:**
 
 $$
 6.8\pm2.036
 $$
+
 $$
 \boxed{(4.764,\;8.836)}
 $$
+
 **Interpretation:** The 95% confidence interval for the mean difference is approximately 4.76 to 8.84 snaps. The interval is entirely above zero, indicating a positive mean difference for the population represented by the sampling process, subject to the assumptions.
 
 **Scope limitation:** If the five participants were friends or volunteers rather than a random sample, this result does not justify a broad claim about all people. The interval calculation cannot repair a non-representative sampling method.
@@ -442,7 +464,6 @@ $$
 ## 13. Interpreting a Confidence Interval
 > [!NOTE]
 > In the frequentist interpretation, 95% describes the long-run coverage of the **procedure** over repeated samples. It is not a 95% probability statement about the fixed parameter after this interval has been observed.
-
 
 A 95% confidence interval does **not** mean there is a 95% probability that the fixed population mean is inside this particular interval.
 
@@ -486,7 +507,6 @@ An interval excluding zero is evidence of a non-zero mean difference under the a
 > [!TIP]
 > Round the calculated sample size **up**. A rounded-down sample can miss the requested precision target.
 
-
 Sometimes we plan a study before collecting the full sample. We may know the desired confidence level, maximum acceptable margin of error, and an estimate of the population SD from prior data or a pilot study.
 
 An approximate planning formula using a z critical value is:
@@ -494,6 +514,7 @@ An approximate planning formula using a z critical value is:
 $$
 \boxed{n\approx\left(\frac{z^*\sigma}{ME}\right)^2}
 $$
+
 | Symbol | Meaning |
 |---|---|
 | $n$ | Required sample size |
@@ -513,14 +534,17 @@ Suppose we want to estimate the mean driving range of an electric vehicle model.
 $$
 n\approx\left(\frac{1.645\times15}{10}\right)^2
 $$
+
 $$
 n\approx(2.4675)^2\approx6.09
 $$
+
 Round up:
 
 $$
 \boxed{n=7}
 $$
+
 ### Limitations
 
 - This is an approximate planning calculation.
@@ -851,6 +875,7 @@ For a population mean when the population standard deviation is unknown, the cen
 $$
 \boxed{\bar{x}\pm t^*_{n-1}\frac{s}{\sqrt n}}
 $$
+
 For paired observations, first calculate the within-pair differences and then apply the same one-sample t interval logic to those differences.
 
 Always interpret the result in context, check the assumptions, and communicate the limitations of the sample.
