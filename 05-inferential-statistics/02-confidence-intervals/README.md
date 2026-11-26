@@ -1,11 +1,11 @@
 # Confidence Intervals
 
-> **Module:** 02 — Confidence Intervals  
-> **Parent topic:** Inferential Statistics  
+> > [!NOTE]
+> **Section:** Khan Academy - [Confidence Interval](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample)
+> > 
 > **Purpose:** Estimate an unknown population mean from sample data and quantify uncertainty around that estimate.
 
-> [!NOTE]
-> **Formula rendering:** Display equations use `$$ ... $$` and inline equations use `$ ... $`, the math delimiters supported by GitHub Flavored Markdown. Check the rendered preview after pushing to GitHub.
+[← Back to Inferential Statistics Repository](https://github.com/Priya200227/statistics/tree/main/05-inferential-statistics)
 
 ## Table of Contents
 
