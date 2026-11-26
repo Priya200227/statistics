@@ -522,7 +522,7 @@ Use `sf` (survival function) for upper-tail probabilities. It is often numerical
 
 ---
 
-## 11. Exam / interview answer template
+## 11. Exam/interview answer template
 
 Use this structure for a written significance-test response:
 
@@ -553,21 +553,3 @@ Use this structure for a written significance-test response:
 | Direction of $H_a$ | Determines left/right/two tails |
 | Proportion null SE | Uses $p_0$ |
 | Mean test with unknown $\sigma$ | t statistic |
-
----
-
-## Scope and source notes
-
-These notes consolidate the Khan Academy Unit 12 lesson transcripts shared in this learning sequence, including:
-
-- Hypothesis testing and p-values
-- One-tailed and two-tailed tests
-- Z-statistics vs. t-statistics
-- Small-sample hypothesis testing
-- Error probabilities and power
-- Tests about a population proportion
-- Tests about a population mean
-- Large-sample proportion hypothesis testing
-- Milk-packaging compliance free-response example
-
-Where a transcript uses a simplified rule (for example, $n>30$ as a z/t shortcut), the notes flag the limitation and give the more general statistical rule. Condition thresholds for normal approximation can vary by course; use the threshold specified by the course or exam rubric.
