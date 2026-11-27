@@ -935,4 +935,4 @@ Recommended order for studying and adding notes to this folder:
 
 ---
 
-**NEXT:** [](../02-non-parametric-methods/README.md)
+**NEXT:** [Non-Parametric Methods](../02-non-parametric-methods/README.md)
