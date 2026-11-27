@@ -932,3 +932,7 @@ Recommended order for studying and adding notes to this folder:
 - Penn State STAT 200 - [Lesson 10: One-Way ANOVA](https://online.stat.psu.edu/stat200/Lesson10), including ANOVA assumptions, the F distribution, ANOVA source tables, and Tukey pairwise comparisons.
 - SciPy documentation - [scipy.stats.ttest_ind](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html), [ttest_rel](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html), [f_oneway](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html).
 - Statsmodels documentation - [proportions_ztest](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html), [pairwise_tukeyhsd](https://www.statsmodels.org/stable/generated/statsmodels.stats.multicomp.pairwise_tukeyhsd.html).
+
+---
+
+**NEXT:** [](../02-non-parametric-methods/README.md)
