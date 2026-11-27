@@ -1,12 +1,11 @@
-# 02 - Non-parametric Methods
+# 02 — Non-parametric Methods
 
-> [!NOTE]
-> 
 > **Purpose:** A practical reference to rank-based and count-based methods used when the assumptions or data structure make a conventional parametric procedure unsuitable.
 >
 > **Important distinction:** “Non-parametric” does not mean “assumption-free.” These methods still require appropriate sampling/design, independence where specified, and test-specific conditions.
 
 [← Back to Statistical Tests Repository](https://github.com/Priya200227/statistics/tree/main/06-statistical-tests)
+
 
 ## Contents
 
@@ -30,7 +29,7 @@
 
 ![Non-parametric test selection guide](images/00-test-selection-guide.png)
 
-| Question/data structure | Test |
+| Question / data structure | Test |
 |---|---|
 | Compare two independent groups using ranks / ordinal or non-normal continuous outcomes | Mann–Whitney U |
 | Compare three or more independent groups using ranks | Kruskal–Wallis |
@@ -127,7 +126,7 @@ Many software packages report the smaller U value for a two-sided test. Follow t
 - For a simple location-shift / median interpretation, group distributions should have comparable shapes and spreads.
 - For small samples, exact methods may be appropriate; large-sample implementations use an approximation, often with tie correction.
 
-### 3.5 Worked example - customer satisfaction ratings
+### 3.5 Worked example — customer satisfaction ratings
 
 Suppose satisfaction ratings (1–10) are collected from two independent customer groups. Because ratings are ordinal, compare the groups using Mann–Whitney U.
 
@@ -141,7 +140,7 @@ Illustrative data:
 | 7 | 9 |
 | 8 | 10 |
 
-The analysis ranks all ten ratings together (ties receive average ranks), calculates the rank sums and U statistic, then obtains a p-value. The conclusion concerns evidence of a difference in the rank distributions / stochastic ordering-not automatically a difference in population medians.
+The analysis ranks all ten ratings together (ties receive average ranks), calculates the rank sums and U statistic, then obtains a p-value. The conclusion concerns evidence of a difference in the rank distributions / stochastic ordering—not automatically a difference in population medians.
 
 ![Mann Whitney ranking sketch](images/01-mann-whitney-ranks.png)
 
@@ -231,7 +230,7 @@ Let $n'$ be the number of non-zero differences and let $X$ be the number of posi
 Under $H_0$, assuming positive and negative signs are equally likely:
 
 $$
-X \sim \operatorname{Binomial}(n', 0.5)
+X \sim \mathrm{Bin}(n', 0.5)
 $$
 
 For a two-sided test, the p-value is:
@@ -256,13 +255,13 @@ Suppose 12 customers rate a service before and after a change. After calculating
 
 Exclude the zero: $n'=11$, with $x=9$ positive signs.
 
-Under $H_0$, $X\sim\operatorname{Binomial}(11,0.5)$. For a two-sided test:
+Under $H_0$, $X\sim\mathrm{Bin}(11,0.5)$. For a two-sided test:
 
 $$
 p=2P(X\geq 9)
 $$
 
-Calculate this exact binomial tail in software; compare the result with the preselected $\alpha$. Do not count the zero difference as positive or negative.
+For this example, $P(X\geq9)=(\binom{11}{9}+\binom{11}{10}+\binom{11}{11})/2^{11}=67/2048$. Therefore, the two-sided p-value is $2(67/2048)\approx0.0654$. Compare this with the preselected $\alpha$. Do not count the zero difference as positive or negative.
 
 ![Sign test sketch](images/03-sign-test.png)
 
@@ -293,7 +292,7 @@ For a population rank correlation:
 Rank each variable separately, then calculate the Pearson correlation between the ranks:
 
 $$
-r_s = \operatorname{Corr}(R_X,R_Y)
+r_s = \frac{\sum_{i=1}^{n}(R_{X,i}-\bar R_X)(R_{Y,i}-\bar R_Y)}{\sqrt{\sum_{i=1}^{n}(R_{X,i}-\bar R_X)^2\;\sum_{i=1}^{n}(R_{Y,i}-\bar R_Y)^2}}
 $$
 
 When there are no tied ranks, the shortcut formula is:
@@ -367,7 +366,7 @@ If parameters are estimated from the data, degrees of freedom are reduced accord
 - Observations are independent.
 - Expected counts are sufficiently large for the chi-square approximation. A common classroom rule is all expected counts at least 5; other accepted guidelines allow limited smaller expected counts. Follow the course or analysis standard and combine categories only when substantively defensible.
 
-### 7.5 Worked example - equal product preference
+### 7.5 Worked example — equal product preference
 
 A survey records 100 customers' first choice among four products. If preference is equally distributed under $H_0$, each expected count is:
 
@@ -450,7 +449,7 @@ The p-value is the right-tail probability from the chi-square distribution.
 - Expected cell counts are sufficiently large for the chi-square approximation.
 - If expected counts are too small, consider an exact procedure (such as Fisher's exact test for suitable tables) or a defensible alternative.
 
-### 8.6 Worked example - device type and conversion
+### 8.6 Worked example — device type and conversion
 
 Suppose 200 visitors are classified by device and conversion:
 
@@ -651,13 +650,13 @@ $$
 ### Sign test
 
 $$
-X\sim\operatorname{Binomial}(n',0.5)
+X\sim\mathrm{Bin}(n',0.5)
 $$
 
 ### Spearman rank correlation
 
 $$
-r_s=\operatorname{Corr}(R_X,R_Y)
+r_s = \frac{\sum_{i=1}^{n}(R_{X,i}-\bar R_X)(R_{Y,i}-\bar R_Y)}{\sqrt{\sum_{i=1}^{n}(R_{X,i}-\bar R_X)^2\;\sum_{i=1}^{n}(R_{Y,i}-\bar R_Y)^2}}
 $$
 
 No ties:
@@ -701,7 +700,7 @@ $$
 6. Chi-square independence: contingency tables, expected cells and association.
 7. Implement all six methods in Python and interpret the outputs.
 
-## References
+## 13. References
 
 - SciPy documentation:
   - [mannwhitneyu](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html)
@@ -710,4 +709,4 @@ $$
   - [spearmanr](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html)
   - [chisquare](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html)
   - [chi2_contingency](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html)
-- Penn State Online Statistics: [STAT 500 - Applied Statistics](https://online.stat.psu.edu/stat500/)
+- Penn State Online Statistics: [STAT 500 — Applied Statistics](https://online.stat.psu.edu/stat500/)
