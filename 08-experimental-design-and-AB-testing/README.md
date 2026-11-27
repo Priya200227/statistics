@@ -542,21 +542,24 @@ Do not confuse “not statistically significant” with “no effect.” Use the
 
 ## 13. Formula sheet
 
+The formulas below use GitHub's inline math delimiters (`$...$`) so they render correctly in table cells.
+
 | Concept | Formula |
 |---|---|
-| Mean treatment effect estimate | \(\widehat{\Delta}=\bar Y_B-\bar Y_A\) |
-| Difference in proportions | \(\widehat{\Delta}=\hat p_B-\hat p_A\) |
-| Conversion rate | \(\hat p=x/n\) |
-| Pooled proportion under \(H_0\) | \(\hat p_{\mathrm{pool}}=(x_A+x_B)/(n_A+n_B)\) |
-| Two-proportion null SE | \(\sqrt{\hat p_{\mathrm{pool}}(1-\hat p_{\mathrm{pool}})(1/n_A+1/n_B)}\) |
-| Two-proportion z statistic | \((\hat p_B-\hat p_A)/SE_0\) |
-| Power | \(1-\beta\) |
-| Type I error rate | \(\alpha\) |
-| Type II error rate | \(\beta\) |
-| Relative lift | \((\hat p_B-\hat p_A)/\hat p_A\) |
-| Approximate sample size | Use the two-proportion planning formula in Section 22 |
+| Mean treatment effect estimate | $\widehat{\Delta}=\bar{Y}_B-\bar{Y}_A$ |
+| Difference in proportions | $\widehat{\Delta}=\hat{p}_B-\hat{p}_A$ |
+| Conversion rate | $\hat{p}=x/n$ |
+| Pooled proportion under $H_0$ | $\hat{p}_{\mathrm{pool}}=\dfrac{x_A+x_B}{n_A+n_B}$ |
+| Two-proportion null standard error | $SE_0=\sqrt{\hat{p}_{\mathrm{pool}}(1-\hat{p}_{\mathrm{pool}})\left(\dfrac{1}{n_A}+\dfrac{1}{n_B}\right)}$ |
+| Two-proportion z statistic | $z=\dfrac{\hat{p}_B-\hat{p}_A}{SE_0}$ |
+| Confidence interval for difference in proportions | $(\hat{p}_B-\hat{p}_A)\pm z_{1-\alpha/2}\sqrt{\dfrac{\hat{p}_A(1-\hat{p}_A)}{n_A}+\dfrac{\hat{p}_B(1-\hat{p}_B)}{n_B}}$ |
+| Power | $1-\beta$ |
+| Type I error rate | $\alpha$ |
+| Type II error rate | $\beta$ |
+| Relative lift | $\dfrac{\hat{p}_B-\hat{p}_A}{\hat{p}_A}$ |
+| Approximate sample size | See the two-proportion planning formula in [Section 10](#10-sample-size-and-statistical-power); $n$ is per group for equal allocation. |
 
----
+**Notation:** A denotes the control group and B denotes the treatment group; $x$ is the number of conversions and $n$ is the number of eligible experimental units. The confidence-interval formula uses the unpooled standard error, while the null-hypothesis z-test uses the pooled standard error.
 
 ## 14. Python implementation
 
