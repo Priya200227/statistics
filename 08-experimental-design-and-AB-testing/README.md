@@ -1,34 +1,14 @@
-# 08 - Experimental Design and A/B Testing
+# Experimental Design and A/B Testing
 
-> **Purpose:** Learn how to design credible experiments, compare treatments fairly, analyse A/B tests, and make decisions using statistical evidence and practical impact.
+> [!NOTE]
+>
+>**Purpose:** Learn how to design credible experiments, compare treatments fairly, analyse A/B tests, and make decisions using statistical evidence and practical impact.
 
 [← Back to Statistics Repository](https://github.com/Priya200227/statistics) · [← Regression and Relationships](../07-regression-and-relationships/README.md)
 
 ---
 
-## Contents
-
-13. [Observational vs experimental studies](#13-observational-vs-experimental-studies)
-14. [Independent and dependent variables](#14-independent-and-dependent-variables)
-15. [Control and treatment groups](#15-control-and-treatment-groups)
-16. [Randomisation](#16-randomisation)
-17. [Confounding variables](#17-confounding-variables)
-18. [Bias and experimental validity](#18-bias-and-experimental-validity)
-19. [A/B testing fundamentals](#19-ab-testing-fundamentals)
-20. [Hypotheses for A/B tests](#20-hypotheses-for-ab-tests)
-21. [Choosing metrics and guardrail metrics](#21-choosing-metrics-and-guardrail-metrics)
-22. [Sample size and statistical power](#22-sample-size-and-statistical-power)
-23. [Significance testing for experiments](#23-significance-testing-for-experiments)
-24. [Practical significance and experiment interpretation](#24-practical-significance-and-experiment-interpretation)
-25. [Formula sheet](#25-formula-sheet)
-26. [Python implementation](#26-python-implementation)
-27. [Common mistakes](#27-common-mistakes)
-28. [Practical experiment workflow](#28-practical-experiment-workflow)
-29. [References](#29-references)
-
----
-
-## 13. Observational vs experimental studies
+## 1. Observational vs experimental studies
 
 ### Observational study
 
@@ -56,7 +36,7 @@ A well-designed randomised experiment can support causal inference because rando
 
 ---
 
-## 14. Independent and dependent variables
+## 2. Independent and dependent variables
 
 ### Independent variable
 
@@ -87,7 +67,7 @@ Be precise about the unit of analysis: users, sessions, accounts, transactions, 
 
 ---
 
-## 15. Control and treatment groups
+## 3. Control and treatment groups
 
 ### Control group
 
@@ -122,7 +102,7 @@ A control group helps distinguish the effect of the intervention from changes th
 
 ---
 
-## 16. Randomisation
+## 4. Randomisation
 
 Randomisation assigns eligible experimental units to treatment groups using a chance mechanism.
 
@@ -152,7 +132,7 @@ Randomisation does not guarantee identical groups in every realised sample; it p
 
 ---
 
-## 17. Confounding variables
+## 5. Confounding variables
 
 A confounder is a variable related to both the exposure/treatment and the outcome that can distort the observed relationship.
 
@@ -176,7 +156,7 @@ Do not automatically control for every variable collected. Adjusting for post-tr
 
 ---
 
-## 18. Bias and experimental validity
+## 6. Bias and experimental validity
 
 Bias is a systematic error that can push an estimate away from the true effect.
 
@@ -205,7 +185,7 @@ A randomised experiment can have strong internal validity but limited external v
 
 ---
 
-## 19. A/B testing fundamentals
+## 7. A/B testing fundamentals
 
 A/B testing is a controlled experiment comparing two versions of an experience:
 
@@ -243,7 +223,7 @@ A/B tests should be planned before results are examined.
 
 ---
 
-## 20. Hypotheses for A/B tests
+## 8. Hypotheses for A/B tests
 
 Hypotheses describe the population-level effect the experiment is designed to assess.
 
@@ -291,7 +271,7 @@ $$
 
 ---
 
-## 21. Choosing metrics and guardrail metrics
+## 9. Choosing metrics and guardrail metrics
 
 ### Primary metric
 
@@ -339,7 +319,7 @@ Avoid selecting a winner based on whichever of many metrics happens to look sign
 
 ---
 
-## 22. Sample size and statistical power
+## 10. Sample size and statistical power
 
 ### Statistical power
 
@@ -402,7 +382,7 @@ Here \(n\) is the approximate sample size **per group** for a two-sided test. Th
 
 ---
 
-## 23. Significance testing for experiments
+## 11. Significance testing for experiments
 
 A common workflow for a two-proportion A/B test:
 
@@ -523,7 +503,7 @@ The two-sided p-value is approximately 0.15. At \(\alpha=0.05\), we fail to reje
 
 ---
 
-## 24. Practical significance and experiment interpretation
+## 12. Practical significance and experiment interpretation
 
 Statistical significance and practical significance answer different questions.
 
@@ -560,7 +540,7 @@ Do not confuse “not statistically significant” with “no effect.” Use the
 
 ---
 
-## 25. Formula sheet
+## 13. Formula sheet
 
 | Concept | Formula |
 |---|---|
@@ -578,7 +558,7 @@ Do not confuse “not statistically significant” with “no effect.” Use the
 
 ---
 
-## 26. Python implementation
+## 14. Python implementation
 
 Install packages:
 
@@ -586,7 +566,7 @@ Install packages:
 pip install numpy pandas scipy statsmodels matplotlib
 ```
 
-### 26.1 Calculate conversion rates and lift
+### 14.1 Calculate conversion rates and lift
 
 ```python
 import pandas as pd
@@ -612,7 +592,7 @@ print("Absolute lift:", absolute_lift)
 print("Relative lift:", relative_lift)
 ```
 
-### 26.2 Two-proportion z-test
+### 14.2 Two-proportion z-test
 
 ```python
 from statsmodels.stats.proportion import proportions_ztest
@@ -630,7 +610,7 @@ print("z statistic:", z_stat)
 print("p-value:", p_value)
 ```
 
-### 26.3 Confidence interval for difference in proportions
+### 14.3 Confidence interval for difference in proportions
 
 ```python
 from statsmodels.stats.proportion import confint_proportions_2indep
@@ -649,7 +629,7 @@ print("CI for treatment - control:", (ci_low, ci_high))
 
 Check the function's argument ordering and installed Statsmodels version before using it in a production analysis. Keep the subtraction direction consistent with your stated treatment effect.
 
-### 26.4 Power and sample-size planning
+### 14.4 Power and sample-size planning
 
 ```python
 from statsmodels.stats.power import NormalIndPower
@@ -675,7 +655,7 @@ print("Approximate sample size per group:", round(n_per_group))
 
 Power calculations depend on the effect-size definition and approximation used. Validate the design with an appropriate method for your experiment.
 
-### 26.5 Visualise group conversion rates
+### 14.5 Visualise group conversion rates
 
 ```python
 import matplotlib.pyplot as plt
@@ -692,7 +672,7 @@ plt.show()
 
 ---
 
-## 27. Common mistakes
+## 15. Common mistakes
 
 | Mistake | Correct approach |
 |---|---|
@@ -713,46 +693,13 @@ plt.show()
 
 ---
 
-## 28. Practical experiment workflow
+## 16. Practical experiment workflow
 
 ![Experiment decision workflow](images/12-experiment-decision-tree.png)
 
-Use this checklist before and after launch.
-
-### Before launch
-
-- [ ] Define the business question.
-- [ ] Define the target population and eligibility criteria.
-- [ ] Choose the unit of randomisation and unit of analysis.
-- [ ] Specify control and treatment experiences.
-- [ ] Define the null and alternative hypotheses.
-- [ ] Choose one primary metric and guardrail metrics.
-- [ ] Set the MDE, significance level, and desired power.
-- [ ] Calculate sample size and expected duration.
-- [ ] Define allocation ratio and randomisation method.
-- [ ] Define the stopping rule and analysis plan.
-- [ ] Validate event tracking and metric calculations.
-
-### During the experiment
-
-- [ ] Monitor data quality and sample-ratio mismatch.
-- [ ] Check assignment stability and contamination.
-- [ ] Monitor guardrails and safety metrics.
-- [ ] Avoid unplanned peeking and stopping.
-- [ ] Record deviations from the experiment plan.
-
-### After the experiment
-
-- [ ] Confirm the planned sample and duration were reached.
-- [ ] Calculate effect sizes and confidence intervals.
-- [ ] Conduct the pre-specified significance test.
-- [ ] Review guardrail metrics.
-- [ ] Assess practical significance and business impact.
-- [ ] Document limitations and make a rollout decision.
-
 ---
 
-## 29. References
+## References
 
 ### Experimental design and causal inference
 
@@ -766,8 +713,3 @@ Use this checklist before and after launch.
 - [Statsmodels - Proportion Confidence Intervals](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.confint_proportions_2indep.html)
 - [Statsmodels - Power and Sample Size](https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations)
 - [Microsoft - Experimentation Platform and A/B Testing](https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/)
-
----
-
-[← Back to Statistics Repository](https://github.com/Priya200227/statistics)
-
