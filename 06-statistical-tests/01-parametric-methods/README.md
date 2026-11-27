@@ -9,7 +9,7 @@
 
 This folder is a practical reference for four commonly used inferential tests:
 
-1.[Independent two-sample t-test](#3-independent-two-sample-t-test)
+1. [Independent two-sample t-test](#3-independent-two-sample-t-test)
 2. [Paired-sample t-test](#4-paired-sample-t-test)
 3. [Two-proportion z-test](#5-two-proportion-z-test)
 4. [One-way ANOVA](#6-one-way-anova)
