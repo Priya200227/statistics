@@ -1,4 +1,4 @@
-# Regression and Relationships
+# Module 07 - Regression and Relationships
 
 > [!NOTE]
 > **Purpose:** Understand how variables move together, quantify relationships, build regression models, diagnose model problems, and evaluate predictions.
