@@ -1,29 +1,18 @@
 # 01 - Parametric Methods
 
+> [!NOTE]
+> **Section:** Khan Academy - [Sampling Distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
+>
 > **Scope note:** The two-proportion z-test is included here because it is commonly taught alongside these parametric inference procedures. It tests categorical binary outcomes and population proportions, not a quantitative population mean.
 
+[← Back to Statistical Tests Repository](https://github.com/Priya200227/statistics/tree/main/06-statistical-tests)
 
 This folder is a practical reference for four commonly used inferential tests:
 
-1. Independent two-sample t-test
-2. Paired-sample t-test
-3. Two-proportion z-test
-4. One-way ANOVA
-
----
-
-## Contents
-
-- [1. Test-selection guide](#1-test-selection-guide)
-- [2. Shared hypothesis-testing workflow](#2-shared-hypothesis-testing-workflow)
-- [3. Independent two-sample t-test](#3-independent-two-sample-t-test)
-- [4. Paired-sample t-test](#4-paired-sample-t-test)
-- [5. Two-proportion z-test](#5-two-proportion-z-test)
-- [6. One-way ANOVA](#6-one-way-anova)
-- [7. Python reference](#7-python-reference)
-- [8. Common mistakes](#8-common-mistakes)
-- [9. Quick formula sheet](#9-quick-formula-sheet)
-- [10. Suggested learning sequence](#10-suggested-learning-sequence)
+1.[Independent two-sample t-test](#3-independent-two-sample-t-test)
+2. [Paired-sample t-test](#4-paired-sample-t-test)
+3. [Two-proportion z-test](#5-two-proportion-z-test)
+4. [One-way ANOVA](#6-one-way-anova)
 
 ---
 
