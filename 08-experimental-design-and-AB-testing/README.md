@@ -1,4 +1,4 @@
-# Experimental Design and A/B Testing
+# Module 08 - Experimental Design and A/B Testing
 
 > [!NOTE]
 >
