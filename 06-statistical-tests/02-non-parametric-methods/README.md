@@ -148,7 +148,7 @@ The analysis ranks all ten ratings together (ties receive average ranks), calcul
 
 ---
 
-## 4. Kruskal–Wallis test
+## 4. Kruskal-Wallis test
 
 ### 4.1 Purpose
 
