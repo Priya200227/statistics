@@ -230,7 +230,7 @@ For each method, learn the purpose, hypotheses, assumptions, statistic, p-value,
 
 ---
 
-## 9. References
+## References
 
 Use official documentation for implementation details and recognised statistical teaching resources for the underlying concepts.
 
