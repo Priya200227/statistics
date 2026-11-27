@@ -284,7 +284,7 @@ where:
 
 Adjusted R-squared can decrease when a predictor adds too little explanatory value. It is useful for comparing models fitted to the same outcome and dataset, but it does not replace validation on unseen data.
 
-![R-squared concept sketch](images/08-r-squared.png)
+![R-squared concept sketch](images/r-square-and-adjusted.png)
 
 **Caution:** A high R-squared does not prove causation, validate assumptions, or guarantee accurate future predictions.
 
