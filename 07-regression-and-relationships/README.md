@@ -307,7 +307,7 @@ b_2(\text{Visits})+
 b_3(\text{Discount})
 $$
 
-![Multiple regression sketch](images/multiple-linear-regression.png)
+![Multiple regression sketch](images/mult-linear-regression.png)
 
 ### Why use multiple predictors?
 
