@@ -628,19 +628,7 @@ For time series or time-ordered observations, replace random splitting with a ch
 ## Practical workflow
 
 Use this sequence when working on a regression problem:
-
-1. Define the business question and prediction/inference objective.
-2. Identify the outcome and candidate predictors.
-3. Inspect data types, missing values, outliers, and measurement quality.
-4. Use descriptive statistics and visualisations to explore relationships.
-5. Calculate covariance and correlation where appropriate.
-6. Fit a baseline regression model.
-7. Interpret coefficients in context and in original units.
-8. Inspect residual plots and model diagnostics.
-9. Check multicollinearity and influential observations.
-10. Compare suitable model specifications without leaking test data.
-11. Evaluate on held-out data using metrics that match the business objective.
-12. Communicate limitations, uncertainty, and whether the model is intended for explanation or prediction.
+![Model evaluation sketch](images/workflow.png)
 
 ---
 
