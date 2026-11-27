@@ -35,7 +35,7 @@ Covariance describes whether two quantitative variables tend to move together.
 
 ### Sample covariance
 
-For paired observations \( (x_i,y_i) \), \(i=1,\ldots,n\):
+For paired observations $ (x_i,y_i) $, $i=1,\ldots,n$:
 
 $$
 s_{XY}=\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{n-1}
@@ -44,7 +44,7 @@ $$
 Population covariance:
 
 $$
-\operatorname{Cov}(X,Y)=
+\mathrm{Cov}(X,Y)=
 \frac{1}{N}\sum_{i=1}^{N}(x_i-\mu_X)(y_i-\mu_Y)
 $$
 
@@ -71,7 +71,7 @@ $$
 r=\frac{s_{XY}}{s_Xs_Y}
 $$
 
-The population correlation is denoted by \(\rho\).
+The population correlation is denoted by $\rho$.
 
 ### Range and interpretation
 
@@ -91,7 +91,7 @@ A correlation near zero does **not** rule out a strong nonlinear relationship. A
 
 ### Example
 
-If the correlation between advertising spend and sales is \(r=0.82\), the sample shows a strong positive linear association. It does not establish that advertising caused the increase in sales.
+If the correlation between advertising spend and sales is $r=0.82$, the sample shows a strong positive linear association. It does not establish that advertising caused the increase in sales.
 
 ---
 
@@ -118,7 +118,7 @@ Advertising spend and sales may be positively correlated. But seasonal demand co
 
 ## 5. Simple linear regression
 
-Simple linear regression models the relationship between one quantitative predictor \(X\) and a quantitative outcome \(Y\).
+Simple linear regression models the relationship between one quantitative predictor $X$ and a quantitative outcome $Y$.
 
 $$
 \hat{y}=b_0+b_1x
@@ -126,10 +126,10 @@ $$
 
 Where:
 
-- \(\hat{y}\): predicted outcome
-- \(b_0\): estimated intercept
-- \(b_1\): estimated slope
-- \(x\): predictor value
+- $\hat{y}$: predicted outcome
+- $b_0$: estimated intercept
+- $b_1$: estimated slope
+- $x$: predictor value
 
 The model separates observed outcomes from fitted predictions:
 
@@ -137,7 +137,7 @@ $$
 y_i=\hat{y}_i+e_i
 $$
 
-where \(e_i\) is the residual for observation \(i\).
+where $e_i$ is the residual for observation $i$.
 
 ![Simple linear regression sketch](images/04-simple-linear-regression.png)
 
@@ -163,7 +163,7 @@ The model predicts sales of 22 thousand units/currency units, according to the u
 
 The ordinary least-squares (OLS) method estimates regression coefficients by minimising the **sum of squared residuals**.
 
-Residual for observation \(i\):
+Residual for observation $i$:
 
 $$
 e_i=y_i-\hat{y}_i
@@ -191,7 +191,7 @@ $$
 b_0=\bar{y}-b_1\bar{x}
 $$
 
-The fitted line passes through the point \((\bar{x},\bar{y})\).
+The fitted line passes through the point $(\bar{x},\bar{y})$.
 
 **Why square residuals?** Squaring prevents positive and negative residuals from cancelling and penalises larger errors more heavily.
 
@@ -205,8 +205,8 @@ $$
 \hat{y}=b_0+b_1x
 $$
 
-- **Intercept \(b_0\):** predicted value of Y when X is zero. It may not be meaningful if zero is outside the observed or realistic range of X.
-- **Slope \(b_1\):** expected change in the predicted mean of Y for a one-unit increase in X.
+- **Intercept $b_0$:** predicted value of Y when X is zero. It may not be meaningful if zero is outside the observed or realistic range of X.
+- **Slope $b_1$:** expected change in the predicted mean of Y for a one-unit increase in X.
 
 ![Coefficient interpretation sketch](images/06-regression-coefficients.png)
 
@@ -266,7 +266,7 @@ $$
 SST=\sum_{i=1}^{n}(y_i-\bar{y})^2
 $$
 
-For OLS with an intercept, \(R^2\) is between 0 and 1. It is not the percentage of predictions that are correct.
+For OLS with an intercept, $R^2$ is between 0 and 1. It is not the percentage of predictions that are correct.
 
 ### Adjusted R-squared
 
@@ -279,8 +279,8 @@ $$
 
 where:
 
-- \(n\): number of observations
-- \(p\): number of predictors, excluding the intercept
+- $n$: number of observations
+- $p$: number of predictors, excluding the intercept
 
 Adjusted R-squared can decrease when a predictor adds too little explanatory value. It is useful for comparing models fitted to the same outcome and dataset, but it does not replace validation on unseen data.
 
@@ -317,7 +317,7 @@ $$
 
 ### Important cautions
 
-- Adding predictors always gives an OLS training \(R^2\) that stays the same or increases; this does not guarantee better test performance.
+- Adding predictors always gives an OLS training $R^2$ that stays the same or increases; this does not guarantee better test performance.
 - Coefficients are conditional on the other included predictors.
 - Omitted variables, measurement error, multicollinearity, and inappropriate functional form can undermine interpretation.
 - Do not include variables that would not be available at prediction time (data leakage).
@@ -366,7 +366,7 @@ Multicollinearity does not automatically make a model useless for prediction. It
 
 ### Variance Inflation Factor (VIF)
 
-For predictor \(X_j\), regress it on all the other predictors and obtain \(R_j^2\). Then:
+For predictor $X_j$, regress it on all the other predictors and obtain $R_j^2$. Then:
 
 $$
 VIF_j=\frac{1}{1-R_j^2}
@@ -405,7 +405,7 @@ For time-dependent data, use a time-aware split rather than randomly mixing futu
 
 ### Common regression metrics
 
-Let \(y_i\) be observed values, \(\hat{y}_i\) predictions, and \(n\) the number of observations.
+Let $y_i$ be observed values, $\hat{y}_i$ predictions, and $n$ the number of observations.
 
 **Mean Absolute Error (MAE)**
 
@@ -453,19 +453,19 @@ A model can be useful for prediction without supporting causal interpretation.
 
 | Concept | Formula |
 |---|---|
-| Sample covariance | \(s_{XY}=\frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{n-1}\) |
-| Pearson correlation | \(r=\frac{s_{XY}}{s_Xs_Y}\) |
-| Simple regression | \(\hat{y}=b_0+b_1x\) |
-| OLS slope | \(b_1=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}\) |
-| OLS intercept | \(b_0=\bar{y}-b_1\bar{x}\) |
-| Residual | \(e_i=y_i-\hat{y}_i\) |
-| SSE | \(\sum(y_i-\hat{y}_i)^2\) |
-| R-squared | \(R^2=1-\frac{SSE}{SST}\) |
-| Adjusted R-squared | \(1-(1-R^2)\frac{n-1}{n-p-1}\) |
-| Multiple regression | \(\hat{y}=b_0+\sum_{j=1}^{p}b_jx_j\) |
-| VIF | \(VIF_j=\frac{1}{1-R_j^2}\) |
-| MAE | \(\frac{1}{n}\sum|y_i-\hat{y}_i|\) |
-| RMSE | \(\sqrt{\frac{1}{n}\sum(y_i-\hat{y}_i)^2}\) |
+| Sample covariance | $s_{XY}=\frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{n-1}$ |
+| Pearson correlation | $r=\frac{s_{XY}}{s_Xs_Y}$ |
+| Simple regression | $\hat{y}=b_0+b_1x$ |
+| OLS slope | $b_1=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}$ |
+| OLS intercept | $b_0=\bar{y}-b_1\bar{x}$ |
+| Residual | $e_i=y_i-\hat{y}_i$ |
+| SSE | $\sum(y_i-\hat{y}_i)^2$ |
+| R-squared | $R^2=1-\frac{SSE}{SST}$ |
+| Adjusted R-squared | $1-(1-R^2)\frac{n-1}{n-p-1}$ |
+| Multiple regression | $\hat{y}=b_0+\sum_{j=1}^{p}b_jx_j$ |
+| VIF | $VIF_j=\frac{1}{1-R_j^2}$ |
+| MAE | $\frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|$ |
+| RMSE | $\sqrt{\frac{1}{n}\sum(y_i-\hat{y}_i)^2}$ |
 
 ---
 
