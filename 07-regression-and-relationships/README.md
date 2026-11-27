@@ -648,16 +648,16 @@ Use this sequence when working on a regression problem:
 
 ### Official documentation
 
-- [Statsmodels — Regression and Linear Models](https://www.statsmodels.org/stable/regression.html)
-- [Statsmodels — OLS](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html)
-- [Statsmodels — Regression diagnostics](https://www.statsmodels.org/stable/diagnostic.html)
-- [Scikit-learn — Linear models](https://scikit-learn.org/stable/modules/linear_model.html)
-- [Scikit-learn — Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html)
-- [Scikit-learn — Train/test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
-- [SciPy — Pearson correlation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html)
+- [Statsmodels - Regression and Linear Models](https://www.statsmodels.org/stable/regression.html)
+- [Statsmodels - OLS](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html)
+- [Statsmodels - Regression diagnostics](https://www.statsmodels.org/stable/diagnostic.html)
+- [Scikit-learn - Linear models](https://scikit-learn.org/stable/modules/linear_model.html)
+- [Scikit-learn - Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html)
+- [Scikit-learn - Train/test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
+- [SciPy - Pearson correlation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html)
 
 ### Further reading
 
-- [Penn State — STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/)
+- [Penn State - STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
 
