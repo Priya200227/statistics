@@ -1,4 +1,4 @@
-# 08 — Experimental Design and A/B Testing
+# 08 - Experimental Design and A/B Testing
 
 > **Purpose:** Learn how to design credible experiments, compare treatments fairly, analyse A/B tests, and make decisions using statistical evidence and practical impact.
 
@@ -97,7 +97,7 @@ The comparison group. It usually receives the existing experience, standard prac
 
 The group receiving the new intervention or variant being evaluated.
 
-Example — checkout redesign:
+Example - checkout redesign:
 
 | Group | Experience |
 |---|---|
@@ -756,16 +756,16 @@ Use this checklist before and after launch.
 
 ### Experimental design and causal inference
 
-- [Penn State — STAT 200: Experimental Design](https://online.stat.psu.edu/stat200/)
+- [Penn State - STAT 200: Experimental Design](https://online.stat.psu.edu/stat200/)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
 - [The ASA Statement on P-Values](https://www.amstat.org/asa/files/pdfs/P-ValueStatement.pdf)
 
 ### A/B testing and statistical implementation
 
-- [Statsmodels — Proportion Tests](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html)
-- [Statsmodels — Proportion Confidence Intervals](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.confint_proportions_2indep.html)
-- [Statsmodels — Power and Sample Size](https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations)
-- [Microsoft — Experimentation Platform and A/B Testing](https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/)
+- [Statsmodels - Proportion Tests](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html)
+- [Statsmodels - Proportion Confidence Intervals](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.confint_proportions_2indep.html)
+- [Statsmodels - Power and Sample Size](https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations)
+- [Microsoft - Experimentation Platform and A/B Testing](https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/)
 
 ---
 
