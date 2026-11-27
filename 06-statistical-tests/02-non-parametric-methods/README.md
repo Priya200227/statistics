@@ -701,7 +701,7 @@ $$
 6. Chi-square independence: contingency tables, expected cells and association.
 7. Implement all six methods in Python and interpret the outputs.
 
-## 13. References
+## References
 
 - SciPy documentation:
   - [mannwhitneyu](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html)
