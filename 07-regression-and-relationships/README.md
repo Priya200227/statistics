@@ -1,8 +1,9 @@
-# 07 — Regression and Relationships
+# 07 - Regression and Relationships
 
+> [!NOTE]
 > **Purpose:** Understand how variables move together, quantify relationships, build regression models, diagnose model problems, and evaluate predictions.
 
-[← Back to Statistics Repository](https://github.com/Priya200227/statistics) · [← Statistical Tests](../06-statistical-tests/README.md)
+[← Back to Statistics Repository](https://github.com/Priya200227/statistics) 
 
 ---
 
