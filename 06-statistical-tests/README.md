@@ -1,24 +1,12 @@
-# 06 — Statistical Tests
+# 06 - Statistical Tests
 
+> [!NOTE]
+> 
 > **Purpose:** A practical reference to selecting, understanding, implementing, and interpreting statistical tests used in data analysis.
 >
-> This folder is organised into **parametric** and **non-parametric** methods. The choice of a test depends on the research question, outcome type, study design, sampling process, and assumptions—not simply on whether a dataset looks normally distributed.
+> This folder is organised into **parametric** and **non-parametric** methods. The choice of a test depends on the research question, outcome type, study design, sampling process, and assumptions-not simply on whether a dataset looks normally distributed.
 
 [← Back to Statistics Repository](https://github.com/Priya200227/statistics)
-
----
-
-## Contents
-
-1. [Where this folder fits](#1-where-this-folder-fits)
-2. [Test-selection guide](#2-test-selection-guide)
-3. [01 — Parametric methods](#3-01--parametric-methods)
-4. [02 — Non-parametric methods](#4-02--non-parametric-methods)
-5. [A general hypothesis-testing workflow](#5-a-general-hypothesis-testing-workflow)
-6. [How to report a test result](#6-how-to-report-a-test-result)
-7. [Common mistakes](#7-common-mistakes)
-8. [Recommended learning order](#8-recommended-learning-order)
-9. [References](#9-references)
 
 ---
 
@@ -48,11 +36,11 @@ Start with the **outcome variable** and the **study design**. Do not choose a te
 |---|---|---|
 | Compare the means of two independent groups | Independent two-sample t-test (usually Welch's) | Mann–Whitney U test |
 | Compare before-and-after measurements on the same subjects, or matched pairs | Paired-sample t-test | Sign test |
-| Compare proportions from two independent groups | Two-proportion z-test | — |
+| Compare proportions from two independent groups | Two-proportion z-test | - |
 | Compare the means of three or more independent groups | One-way ANOVA | Kruskal–Wallis test |
-| Assess monotonic association between two ranked or ordinal variables | — | Spearman rank correlation |
-| Compare observed counts with a specified categorical distribution | — | Chi-square goodness-of-fit test |
-| Test association between two categorical variables | — | Chi-square test of independence |
+| Assess monotonic association between two ranked or ordinal variables | - | Spearman rank correlation |
+| Compare observed counts with a specified categorical distribution | - | Chi-square goodness-of-fit test |
+| Test association between two categorical variables | - | Chi-square test of independence |
 
 **Important:** Chi-square tests are count-based procedures. They are commonly grouped with non-parametric methods in introductory learning plans, but they are not rank tests and have their own expected-count and sampling assumptions.
 
@@ -66,11 +54,11 @@ Start with the **outcome variable** and the **study design**. Do not choose a te
 
 ---
 
-## 3. 01 — Parametric methods
+## 3. 01 - Parametric methods
 
 Parametric tests evaluate hypotheses about population parameters such as means or proportions. Their reference distributions and standard errors rely on specified modelling assumptions.
 
-**Open the detailed notes:** [01 — Parametric Methods](./01-parametric-methods/README.md)
+**Open the detailed notes:** [01 - Parametric Methods](./01-parametric-methods/README.md)
 
 ### Topics covered
 
@@ -92,13 +80,13 @@ Parametric tests evaluate hypotheses about population parameters such as means o
 
 ---
 
-## 4. 02 — Non-parametric methods
+## 4. 02 - Non-parametric methods
 
 Non-parametric methods often use ranks, signs, or category counts rather than relying on a normal-theory model for population means.
 
 They are useful for ordinal outcomes, skewed data, or situations where a rank-based or count-based question is more appropriate. They are **not assumption-free**: independence, sampling design, measurement scale, and method-specific conditions still matter.
 
-**Open the detailed notes:** [02 — Non-parametric Methods](./02-non-parametric-methods/README.md)
+**Open the detailed notes:** [02 - Non-parametric Methods](./02-non-parametric-methods/README.md)
 
 ### Topics covered
 
@@ -128,7 +116,7 @@ Use this workflow for each test in this folder.
 1. **Define the question.** State exactly what difference, association, or distributional claim is being investigated.
 2. **Identify the design.** Determine whether groups are independent, paired, or repeated; identify the sampling unit.
 3. **Define the parameter.** Examples include a difference in population means, a difference in proportions, a rank association, or a categorical distribution.
-4. **State the hypotheses.** Write \(H_0\) and \(H_a\) using population parameters or the appropriate null model—not sample statistics.
+4. **State the hypotheses.** Write \(H_0\) and \(H_a\) using population parameters or the appropriate null model-not sample statistics.
 5. **Choose \(\alpha\) in advance.** Do not select the significance level after seeing the p-value.
 6. **Check assumptions and conditions.** Document which conditions are satisfied, violated, or assumed.
 7. **Calculate the test statistic.** Use the method-specific formula or a trusted statistical implementation.
@@ -198,7 +186,7 @@ Do not use “accept the null hypothesis” as a substitute for “fail to rejec
 
 Follow this order to build from two-group comparisons to multi-group tests and then categorical/rank-based association methods.
 
-### 01 — Parametric methods
+### 01 - Parametric methods
 
 1. **Independent two-sample t-test**
    - Difference between two independent samples and paired samples
@@ -229,7 +217,7 @@ Follow this order to build from two-group comparisons to multi-group tests and t
    - Assumptions and post-hoc comparisons
    - Python implementation
 
-### 02 — Non-parametric methods
+### 02 - Non-parametric methods
 
 1. Mann–Whitney U test
 2. Kruskal–Wallis test
@@ -249,18 +237,18 @@ Use official documentation for implementation details and recognised statistical
 ### Python / SciPy documentation
 
 - [SciPy statistical functions](https://docs.scipy.org/doc/scipy/reference/stats.html)
-- [SciPy — t-tests and related functions](https://docs.scipy.org/doc/scipy/reference/stats.html#statistical-tests)
-- [SciPy — Mann–Whitney U](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html)
-- [SciPy — Kruskal–Wallis](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html)
-- [SciPy — Binomial test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html)
-- [SciPy — Spearman correlation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html)
-- [SciPy — Chi-square goodness-of-fit](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html)
-- [SciPy — Chi-square test of independence](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html)
+- [SciPy - t-tests and related functions](https://docs.scipy.org/doc/scipy/reference/stats.html#statistical-tests)
+- [SciPy - Mann–Whitney U](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html)
+- [SciPy - Kruskal–Wallis](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html)
+- [SciPy - Binomial test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html)
+- [SciPy - Spearman correlation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html)
+- [SciPy - Chi-square goodness-of-fit](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html)
+- [SciPy - Chi-square test of independence](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html)
 
 ### Statistics learning resources
 
-- [Penn State — STAT 200](https://online.stat.psu.edu/stat200/)
-- [Penn State — STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/)
+- [Penn State - STAT 200](https://online.stat.psu.edu/stat200/)
+- [Penn State - STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/)
 
 ---
 
