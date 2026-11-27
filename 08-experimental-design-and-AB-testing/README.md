@@ -4,7 +4,7 @@
 >
 >**Purpose:** Learn how to design credible experiments, compare treatments fairly, analyse A/B tests, and make decisions using statistical evidence and practical impact.
 
-[← Back to Statistics Repository](https://github.com/Priya200227/statistics) · [← Regression and Relationships](../07-regression-and-relationships/README.md)
+[← Back to Statistics Repository](https://github.com/Priya200227/statistics) 
 
 ---
 
