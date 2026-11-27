@@ -14,6 +14,7 @@ This folder is a practical reference for four commonly used inferential tests:
 3. [Two-proportion z-test](#5-two-proportion-z-test)
 4. [One-way ANOVA](#6-one-way-anova)
 
+
 ---
 
 ## 1. Test-selection guide
@@ -44,20 +45,20 @@ Do not choose a test just because the dataset has two columns or two categories.
 ## 2. Shared hypothesis-testing workflow
 
 1. Define the population parameter(s).
-2. Write the null hypothesis \(H_0\) and alternative hypothesis \(H_a\).
-3. Set the significance level \(\alpha\) before examining the test result.
+2. Write the null hypothesis $H_0$ and alternative hypothesis $H_a$.
+3. Set the significance level $\alpha$ before examining the test result.
 4. Check the test's assumptions and conditions.
 5. Calculate the test statistic and degrees of freedom, where applicable.
 6. Obtain the p-value using the correct tail.
-7. Compare the p-value with \(\alpha\).
+7. Compare the p-value with $\alpha$.
 8. State the conclusion in the context of the original question.
 
 Decision:
 
-- If \(p \leq \alpha\): reject \(H_0\).
-- If \(p > \alpha\): fail to reject \(H_0\).
+- If $p \leq \alpha$: reject $H_0$.
+- If $p > \alpha$: fail to reject $H_0$.
 
-**Interpretation discipline:** a p-value is calculated assuming the null hypothesis is true. It is not the probability that \(H_0\) is true, nor the probability that the observed conclusion is wrong. Failing to reject \(H_0\) does not prove that the null is true.
+**Interpretation discipline:** a p-value is calculated assuming the null hypothesis is true. It is not the probability that $H_0$ is true, nor the probability that the observed conclusion is wrong. Failing to reject $H_0$ does not prove that the null is true.
 
 ---
 
@@ -77,41 +78,41 @@ Examples:
 
 Let:
 
-- \(\mu_1\) = population mean for group 1
-- \(\mu_2\) = population mean for group 2
-- \(\bar{x}_1,\bar{x}_2\) = sample means
-- \(s_1,s_2\) = sample standard deviations
-- \(n_1,n_2\) = sample sizes
+- $\mu_1$ = population mean for group 1
+- $\mu_2$ = population mean for group 2
+- $\bar{x}_1,\bar{x}_2$ = sample means
+- $s_1,s_2$ = sample standard deviations
+- $n_1,n_2$ = sample sizes
 
 The parameter of interest is the difference:
 
-\[
+$$
 \mu_1-\mu_2
-\]
+$$
 
 ### 3.3 Hypotheses
 
 No difference / two-sided:
 
-\[
+$$
 H_0:\mu_1-\mu_2=0
-\]
+$$
 
-\[
+$$
 H_a:\mu_1-\mu_2\ne0
-\]
+$$
 
 Group 1 has a higher mean / right-sided:
 
-\[
+$$
 H_a:\mu_1-\mu_2>0
-\]
+$$
 
 Group 1 has a lower mean / left-sided:
 
-\[
+$$
 H_a:\mu_1-\mu_2<0
-\]
+$$
 
 The null is normally expressed as equality to zero. The direction comes from the research question and the order of subtraction.
 
@@ -121,27 +122,27 @@ Welch's test does not require equal population variances. It is a sensible defau
 
 Standard error:
 
-\[
+$$
 SE=\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}
-\]
+$$
 
-Test statistic for \(H_0:\mu_1-\mu_2=\Delta_0\):
+Test statistic for $H_0:\mu_1-\mu_2=\Delta_0$:
 
-\[
+$$
 t=\frac{(\bar{x}_1-\bar{x}_2)-\Delta_0}
 {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
-\]
+$$
 
-For the usual no-difference null, \(\Delta_0=0\).
+For the usual no-difference null, $\Delta_0=0$.
 
 Welch–Satterthwaite degrees of freedom:
 
-\[
+$$
 df \approx
 \frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}
 {\frac{\left(s_1^2/n_1\right)^2}{n_1-1}
 +\frac{\left(s_2^2/n_2\right)^2}{n_2-1}}
-\]
+$$
 
 Software may use fractional degrees of freedom. Do not automatically replace them with the smaller sample size minus one.
 
@@ -151,29 +152,29 @@ The pooled Student's t-test assumes equal population variances.
 
 Pooled variance:
 
-\[
+$$
 s_p^2=
 \frac{(n_1-1)s_1^2+(n_2-1)s_2^2}
 {n_1+n_2-2}
-\]
+$$
 
 Standard error:
 
-\[
+$$
 SE=s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}
-\]
+$$
 
 Test statistic:
 
-\[
+$$
 t=\frac{(\bar{x}_1-\bar{x}_2)-\Delta_0}{SE}
-\]
+$$
 
 Degrees of freedom:
 
-\[
+$$
 df=n_1+n_2-2
-\]
+$$
 
 Use the pooled version only when the equal-variance assumption is appropriate and the analysis calls for it. Do not confuse the pooled and Welch standard errors.
 
@@ -187,7 +188,7 @@ Use the pooled version only when the equal-variance assumption is appropriate an
 
 A large sample does not repair dependence, selection bias, or extreme data problems.
 
-### 3.7 Worked example - tomato plant heights
+### 3.7 Worked example — tomato plant heights
 
 The supplied lesson example reports:
 
@@ -199,23 +200,23 @@ The supplied lesson example reports:
 
 Question: do the population mean plant heights differ?
 
-\[
+$$
 H_0:\mu_A-\mu_B=0
 \qquad
 H_a:\mu_A-\mu_B\ne0
-\]
+$$
 
 Using the Welch standard error:
 
-\[
+$$
 SE=\sqrt{\frac{0.5^2}{22}+\frac{0.3^2}{24}}
-\]
+$$
 
-\[
+$$
 t=\frac{1.3-1.6}{SE}\approx -2.44
-\]
+$$
 
-The Khan Academy transcript uses a conservative df approximation of \(22-1=21\) and reports a two-sided p-value of approximately \(0.024\). With \(\alpha=0.05\), reject \(H_0\).
+The Khan Academy transcript uses a conservative df approximation of $22-1=21$ and reports a two-sided p-value of approximately $0.024$. With $\alpha=0.05$, reject $H_0$.
 
 **Conclusion:** there is statistically significant evidence that the population mean plant heights differ between the two fields.
 
@@ -223,13 +224,13 @@ The Khan Academy transcript uses a conservative df approximation of \(22-1=21\) 
 
 ### 3.8 Interpretation example
 
-If a separate test reports \(p=0.13\) and \(\alpha=0.05\):
+If a separate test reports $p=0.13$ and $\alpha=0.05$:
 
-\[
+$$
 0.13>0.05
-\]
+$$
 
-Fail to reject \(H_0\). There is insufficient evidence of a difference in the population means. This does **not** establish that the means are equal.
+Fail to reject $H_0$. There is insufficient evidence of a difference in the population means. This does **not** establish that the means are equal.
 
 ![Independent two-sample t-test workflow](images/02-two-sample-t-test-workflow.png)
 
@@ -254,15 +255,15 @@ A paired t-test is mathematically a **one-sample t-test on the within-pair diffe
 
 Choose and state an order:
 
-\[
+$$
 d_i=X_{i,1}-X_{i,2}
-\]
+$$
 
 Then calculate:
 
-- \(\bar d\) = mean of the sample differences
-- \(s_d\) = standard deviation of the differences
-- \(n\) = number of complete pairs
+- $\bar d$ = mean of the sample differences
+- $s_d$ = standard deviation of the differences
+- $n$ = number of complete pairs
 
 The sample size is the number of pairs, not the total number of individual measurements.
 
@@ -270,49 +271,49 @@ The sample size is the number of pairs, not the total number of individual measu
 
 For no average change:
 
-\[
+$$
 H_0:\mu_d=0
-\]
+$$
 
 Two-sided:
 
-\[
+$$
 H_a:\mu_d\ne0
-\]
+$$
 
 Right-sided:
 
-\[
+$$
 H_a:\mu_d>0
-\]
+$$
 
 Left-sided:
 
-\[
+$$
 H_a:\mu_d<0
-\]
+$$
 
-The direction depends on how \(d\) was defined.
+The direction depends on how $d$ was defined.
 
 ### 4.4 Test statistic
 
 Standard error:
 
-\[
+$$
 SE_{\bar d}=\frac{s_d}{\sqrt n}
-\]
+$$
 
 Test statistic:
 
-\[
+$$
 t=\frac{\bar d-0}{s_d/\sqrt n}
-\]
+$$
 
 Degrees of freedom:
 
-\[
+$$
 df=n-1
-\]
+$$
 
 ### 4.5 Conditions
 
@@ -324,29 +325,29 @@ df=n-1
 
 Do not check normality only on the before values and after values separately. For a paired t-test, the relevant distribution is the distribution of the differences.
 
-### 4.6 Worked example - running shoes
+### 4.6 Worked example — running shoes
 
 Six runners each run using both shoe brands. Define:
 
-\[
+$$
 d=\text{Zeppo time}-\text{Harpo time}
-\]
+$$
 
-The question is whether Harpo's shoes produce lower times. Lower Harpo times make \(d\) positive.
+The question is whether Harpo's shoes produce lower times. Lower Harpo times make $d$ positive.
 
-\[
+$$
 H_0:\mu_d=0
 \qquad
 H_a:\mu_d>0
-\]
+$$
 
 The test procedure is:
 
 1. Calculate one difference per runner.
-2. Find \(\bar d\) and \(s_d\).
-3. Calculate \(t=\bar d/(s_d/\sqrt 6)\).
-4. Use \(df=5\) and the right-tail p-value.
-5. Compare the p-value with the preselected \(\alpha\).
+2. Find $\bar d$ and $s_d$.
+3. Calculate $t=\bar d/(s_d/\sqrt 6)$.
+4. Use $df=5$ and the right-tail p-value.
+5. Compare the p-value with the preselected $\alpha$.
 
 The transcript establishes the design and hypotheses but does not provide the six actual running-time pairs. Therefore, a numerical t-statistic or p-value cannot be calculated from that transcript alone.
 
@@ -369,62 +370,62 @@ Examples:
 
 Let:
 
-- \(x_1,x_2\) = number of successes in groups 1 and 2
-- \(n_1,n_2\) = sample sizes
-- \(\hat p_1=x_1/n_1\), \(\hat p_2=x_2/n_2\) = sample proportions
-- \(p_1,p_2\) = population proportions
+- $x_1,x_2$ = number of successes in groups 1 and 2
+- $n_1,n_2$ = sample sizes
+- $\hat p_1=x_1/n_1$, $\hat p_2=x_2/n_2$ = sample proportions
+- $p_1,p_2$ = population proportions
 
 ### 5.2 Hypotheses
 
 No difference:
 
-\[
+$$
 H_0:p_1-p_2=0
-\]
+$$
 
 Two-sided:
 
-\[
+$$
 H_a:p_1-p_2\ne0
-\]
+$$
 
 Right-sided:
 
-\[
+$$
 H_a:p_1-p_2>0
-\]
+$$
 
 Left-sided:
 
-\[
+$$
 H_a:p_1-p_2<0
-\]
+$$
 
 ### 5.3 Pooled proportion under the null
 
-For the standard two-proportion z-test of \(H_0:p_1=p_2\), pool the observed successes:
+For the standard two-proportion z-test of $H_0:p_1=p_2$, pool the observed successes:
 
-\[
+$$
 \hat p_{\text{pool}}=
 \frac{x_1+x_2}{n_1+n_2}
-\]
+$$
 
 The pooled estimate is used because the null hypothesis assumes one common population proportion.
 
 ### 5.4 Null standard error and z-statistic
 
-\[
+$$
 SE_0=
 \sqrt{\hat p_{\text{pool}}(1-\hat p_{\text{pool}})
 \left(\frac{1}{n_1}+\frac{1}{n_2}\right)}
-\]
+$$
 
-\[
+$$
 z=
 \frac{\hat p_1-\hat p_2}{SE_0}
-\]
+$$
 
-**Important:** use the pooled proportion in the standard error for this hypothesis test. Do not substitute \(\hat p_1\) or \(\hat p_2\) into the pooled null standard error.
+**Important:** use the pooled proportion in the standard error for this hypothesis test. Do not substitute $\hat p_1$ or $\hat p_2$ into the pooled null standard error.
 
 ### 5.5 Conditions
 
@@ -432,22 +433,22 @@ z=
 - Binary outcome: each observation is classified as success or failure.
 - Random sampling or random assignment appropriate to the study.
 - Independent observations within each group; apply the 10% condition when relevant for sampling without replacement.
-- Large-count / normal approximation condition under \(H_0\). A common check is that the pooled expected successes and failures in each group are sufficiently large:
+- Large-count / normal approximation condition under $H_0$. A common check is that the pooled expected successes and failures in each group are sufficiently large:
 
-\[
+$$
 n_1\hat p_{\text{pool}},\quad n_1(1-\hat p_{\text{pool}}),
 \quad n_2\hat p_{\text{pool}},\quad n_2(1-\hat p_{\text{pool}})
-\]
+$$
 
 A common classroom threshold is at least 10 for each expected count. Follow the convention specified by the course or analysis standard you are using.
 
 ### 5.6 P-value direction
 
-- Left-tailed: \(P(Z\le z_{\text{obs}})\)
-- Right-tailed: \(P(Z\ge z_{\text{obs}})\)
-- Two-tailed: \(2P(Z\ge |z_{\text{obs}}|)\)
+- Left-tailed: $P(Z\le z_{\text{obs}})$
+- Right-tailed: $P(Z\ge z_{\text{obs}})$
+- Two-tailed: $2P(Z\ge |z_{\text{obs}}|)$
 
-### 5.7 Worked example - conversion rates
+### 5.7 Worked example — conversion rates
 
 Suppose two independent website experiences are tested:
 
@@ -458,47 +459,47 @@ Suppose two independent website experiences are tested:
 
 Question: is the conversion rate different?
 
-\[
+$$
 H_0:p_A-p_B=0
 \qquad
 H_a:p_A-p_B\ne0
-\]
+$$
 
 Pooled proportion:
 
-\[
+$$
 \hat p_{\text{pool}}=\frac{120+150}{1000+1000}=0.135
-\]
+$$
 
 Null standard error:
 
-\[
+$$
 SE_0=\sqrt{0.135(1-0.135)(1/1000+1/1000)}
-\]
+$$
 
-\[
+$$
 SE_0\approx0.01528
-\]
+$$
 
 Test statistic:
 
-\[
+$$
 z=\frac{0.12-0.15}{0.01528}\approx-1.96
-\]
+$$
 
-The two-sided p-value is approximately \(0.050\). The exact software result should be used for a decision close to the chosen significance threshold. At \(\alpha=0.05\), this is a borderline result; do not round the p-value prematurely.
+The two-sided p-value is approximately $0.050$. The exact software result should be used for a decision close to the chosen significance threshold. At $\alpha=0.05$, this is a borderline result; do not round the p-value prematurely.
 
 ### 5.8 Test vs confidence interval
 
-For a hypothesis test of equal proportions, the standard error is pooled under \(H_0\).
+For a hypothesis test of equal proportions, the standard error is pooled under $H_0$.
 
-For a confidence interval for \(p_1-p_2\), the usual unpooled standard error is:
+For a confidence interval for $p_1-p_2$, the usual unpooled standard error is:
 
-\[
+$$
 SE_{\text{CI}}=
 \sqrt{\frac{\hat p_1(1-\hat p_1)}{n_1}
 +\frac{\hat p_2(1-\hat p_2)}{n_2}}
-\]
+$$
 
 Do not mix the hypothesis-test and confidence-interval standard errors.
 
@@ -523,25 +524,25 @@ Examples:
 
 ### 6.2 Hypotheses
 
-For \(k\) groups:
+For $k$ groups:
 
-\[
+$$
 H_0:\mu_1=\mu_2=\cdots=\mu_k
-\]
+$$
 
-\[
+$$
 H_a:\text{Not all population means are equal}
-\]
+$$
 
 The alternative means at least one population mean differs. It does not mean every group differs from every other group.
 
 ### 6.3 Why not run many t-tests?
 
-With \(k\) groups, the number of possible pairwise comparisons is:
+With $k$ groups, the number of possible pairwise comparisons is:
 
-\[
+$$
 \frac{k(k-1)}{2}
-\]
+$$
 
 For five groups, there are ten pairwise comparisons. Running many unadjusted t-tests increases the overall Type I error risk.
 
@@ -549,9 +550,9 @@ ANOVA provides one overall (omnibus) test of whether all population means are eq
 
 ### 6.4 Core idea: total, between, and within variation
 
-\[
+$$
 SS_{\text{Total}}=SS_{\text{Between}}+SS_{\text{Within}}
-\]
+$$
 
 - **Total SS (SST):** variation of all observations around the grand mean.
 - **Between SS (SSB):** variation attributable to differences between group means and the grand mean.
@@ -561,70 +562,70 @@ SS_{\text{Total}}=SS_{\text{Between}}+SS_{\text{Within}}
 
 For unequal group sizes, let:
 
-- \(k\) = number of groups
-- \(N\) = total number of observations
-- \(n_j\) = sample size in group \(j\)
-- \(\bar x_j\) = mean of group \(j\)
-- \(\bar x_{\cdot}\) = grand mean
+- $k$ = number of groups
+- $N$ = total number of observations
+- $n_j$ = sample size in group $j$
+- $\bar x_j$ = mean of group $j$
+- $\bar x_{\cdot}$ = grand mean
 
 Then:
 
-\[
+$$
 SS_{\text{Between}}=\sum_{j=1}^{k}n_j(\bar x_j-\bar x_{\cdot})^2
-\]
+$$
 
-\[
+$$
 SS_{\text{Within}}=\sum_{j=1}^{k}\sum_{i=1}^{n_j}(x_{ij}-\bar x_j)^2
-\]
+$$
 
-\[
+$$
 SS_{\text{Total}}=\sum_{j=1}^{k}\sum_{i=1}^{n_j}(x_{ij}-\bar x_{\cdot})^2
-\]
+$$
 
 ### 6.5 Degrees of freedom
 
-\[
+$$
 df_{\text{Between}}=k-1
-\]
+$$
 
-\[
+$$
 df_{\text{Within}}=N-k
-\]
+$$
 
-\[
+$$
 df_{\text{Total}}=N-1
-\]
+$$
 
 The degrees of freedom add up:
 
-\[
+$$
 (k-1)+(N-k)=N-1
-\]
+$$
 
 ### 6.6 Mean squares and F-statistic
 
-\[
+$$
 MS_{\text{Between}}=
 \frac{SS_{\text{Between}}}{k-1}
-\]
+$$
 
-\[
+$$
 MS_{\text{Within}}=
 \frac{SS_{\text{Within}}}{N-k}
-\]
+$$
 
-\[
+$$
 F=\frac{MS_{\text{Between}}}{MS_{\text{Within}}}
-\]
+$$
 
 A larger F-statistic indicates that the observed separation between group means is large relative to the variation within groups.
 
 The p-value is the **right-tail** probability from the F-distribution using:
 
-- Numerator df: \(k-1\)
-- Denominator df: \(N-k\)
+- Numerator df: $k-1$
+- Denominator df: $N-k$
 
-### 6.7 Worked example - three groups
+### 6.7 Worked example — three groups
 
 The Khan Academy calculation uses these observations:
 
@@ -637,9 +638,9 @@ The Khan Academy calculation uses these observations:
 
 Grand mean:
 
-\[
+$$
 \bar x_{\cdot}=4
-\]
+$$
 
 The lesson calculates:
 
@@ -651,27 +652,27 @@ The lesson calculates:
 
 Check:
 
-\[
+$$
 24+6=30
-\]
+$$
 
 Mean squares:
 
-\[
+$$
 MS_{\text{Between}}=24/2=12
-\]
+$$
 
-\[
+$$
 MS_{\text{Within}}=6/6=1
-\]
+$$
 
 F-statistic:
 
-\[
+$$
 F=12/1=12
-\]
+$$
 
-At \(\alpha=0.10\), the transcript gives a critical F-value of approximately 3.46 for df \((2,6)\). Since \(12>3.46\), reject \(H_0\). There is evidence that the three population means are not all equal.
+At $\alpha=0.10$, the transcript gives a critical F-value of approximately 3.46 for df $(2,6)$. Since $12>3.46$, reject $H_0$. There is evidence that the three population means are not all equal.
 
 ### 6.8 Assumptions
 
@@ -705,12 +706,12 @@ The supplied Penn State lesson demonstrates a one-way ANOVA comparing four indep
 
 The reported output includes:
 
-- \(k=4\) groups
-- \(N=20\) total observations
+- $k=4$ groups
+- $N=20$ total observations
 - Between-groups df = 3
 - Within-groups df = 16
-- \(F=206.72\)
-- Reported p-value = 0.000 (software rounding; report as \(p<0.001\), not as a literal zero)
+- $F=206.72$
+- Reported p-value = 0.000 (software rounding; report as $p<0.001$, not as a literal zero)
 
 The ANOVA indicates that not all four population mean weights are equal. Tukey comparisons are then used to identify which diet pairs differ.
 
@@ -718,11 +719,11 @@ The ANOVA indicates that not all four population mean weights are equal. Tukey c
 
 If an ANOVA output reports:
 
-\[
+$$
 F(2,242)=1.07,\qquad p=0.346
-\]
+$$
 
-At \(\alpha=0.05\), fail to reject \(H_0\). There is insufficient evidence to conclude that the three population means differ.
+At $\alpha=0.05$, fail to reject $H_0$. There is insufficient evidence to conclude that the three population means differ.
 
 ---
 
@@ -734,7 +735,7 @@ Install the packages if needed:
 pip install scipy statsmodels pandas numpy
 ```
 
-### 7.1 Independent two-sample t-test - Welch
+### 7.1 Independent two-sample t-test — Welch
 
 ```python
 from scipy import stats
@@ -849,12 +850,12 @@ The `values` and `groups` arrays must have the same length and matching row orde
 | Using the total number of measurements as the paired sample size | Use the number of complete pairs |
 | Forgetting the order of subtraction | Define the difference and align the alternative hypothesis with it |
 | Assuming equal variances automatically | Use Welch's test unless equal variances are justified |
-| Using separate group proportions in the null SE for a standard two-proportion test | Use the pooled proportion under \(H_0:p_1=p_2\) |
+| Using separate group proportions in the null SE for a standard two-proportion test | Use the pooled proportion under $H_0:p_1=p_2$ |
 | Using a z-test for two means just because the sample is large | For unknown population SDs, t procedures are standard |
 | Running many unadjusted t-tests across several groups | Use ANOVA followed by an appropriate post-hoc procedure |
 | Saying significant ANOVA proves every group differs | It means at least one population mean differs |
 | Assuming ANOVA identifies which groups differ | Use post-hoc comparisons such as Tukey HSD |
-| Reporting software p-value `0.000` as exactly zero | Report the appropriate bound, e.g. \(p<0.001\) |
+| Reporting software p-value `0.000` as exactly zero | Report the appropriate bound, e.g. $p<0.001$ |
 | Treating failure to reject as proof of equality | Say there is insufficient evidence against the null |
 | Confusing statistical significance with business importance | Also evaluate effect size, uncertainty, and practical impact |
 
@@ -864,47 +865,47 @@ The `values` and `groups` arrays must have the same length and matching row orde
 
 ### Independent two-sample t-test (Welch)
 
-\[
+$$
 t=\frac{(\bar x_1-\bar x_2)-\Delta_0}
 {\sqrt{s_1^2/n_1+s_2^2/n_2}}
-\]
+$$
 
 ### Paired-sample t-test
 
-\[
+$$
 t=\frac{\bar d-0}{s_d/\sqrt n},
 \qquad df=n-1
-\]
+$$
 
 ### Two-proportion z-test
 
-\[
+$$
 \hat p_{\text{pool}}=\frac{x_1+x_2}{n_1+n_2}
-\]
+$$
 
-\[
+$$
 z=\frac{\hat p_1-\hat p_2}
 {\sqrt{\hat p_{\text{pool}}(1-\hat p_{\text{pool}})
 (1/n_1+1/n_2)}}
-\]
+$$
 
 ### One-way ANOVA
 
-\[
+$$
 SS_T=SS_B+SS_W
-\]
+$$
 
-\[
+$$
 df_B=k-1,\qquad df_W=N-k
-\]
+$$
 
-\[
+$$
 MS_B=SS_B/(k-1),\qquad MS_W=SS_W/(N-k)
-\]
+$$
 
-\[
+$$
 F=MS_B/MS_W
-\]
+$$
 
 ---
 
@@ -924,13 +925,12 @@ Recommended order for studying and adding notes to this folder:
 
 ### Reference sources
 
-- Khan Academy - *Inference for categorical data: proportions* and *Inference for quantitative data: means* (lesson material and transcripts used for the proportion and mean-testing foundations).
-- Khan Academy - supplied lesson transcripts on hypotheses for two-sample and paired t-tests, the tomato-field two-sample t-test, ANOVA sums of squares, and the F-statistic.
-- Penn State STAT 200 - [Lesson 10: One-Way ANOVA](https://online.stat.psu.edu/stat200/Lesson10), including ANOVA assumptions, the F distribution, ANOVA source tables, and Tukey pairwise comparisons.
-- SciPy documentation - [scipy.stats.ttest_ind](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html), [ttest_rel](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html), [f_oneway](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html).
-- Statsmodels documentation - [proportions_ztest](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html), [pairwise_tukeyhsd](https://www.statsmodels.org/stable/generated/statsmodels.stats.multicomp.pairwise_tukeyhsd.html).
+- Khan Academy — *Inference for categorical data: proportions* and *Inference for quantitative data: means* (lesson material and transcripts used for the proportion and mean-testing foundations).
+- Khan Academy — supplied lesson transcripts on hypotheses for two-sample and paired t-tests, the tomato-field two-sample t-test, ANOVA sums of squares, and the F-statistic.
+- Penn State STAT 200 — [Lesson 10: One-Way ANOVA](https://online.stat.psu.edu/stat200/Lesson10), including ANOVA assumptions, the F distribution, ANOVA source tables, and Tukey pairwise comparisons.
+- SciPy documentation — [scipy.stats.ttest_ind](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html), [ttest_rel](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html), [f_oneway](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html).
+- Statsmodels documentation — [proportions_ztest](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html), [pairwise_tukeyhsd](https://www.statsmodels.org/stable/generated/statsmodels.stats.multicomp.pairwise_tukeyhsd.html).
 
 ---
 
 **Folder purpose:** a compact, reusable reference for selecting, checking, implementing, and interpreting common parametric tests in practical data analysis.
-
