@@ -7,29 +7,6 @@
 
 ---
 
-## Contents
-
-1. [Where regression fits](#1-where-regression-fits)
-2. [Covariance](#2-covariance)
-3. [Pearson correlation](#3-pearson-correlation)
-4. [Correlation vs causation](#4-correlation-vs-causation)
-5. [Simple linear regression](#5-simple-linear-regression)
-6. [Least-squares method](#6-least-squares-method)
-7. [Regression coefficients and interpretation](#7-regression-coefficients-and-interpretation)
-8. [Residuals and residual plots](#8-residuals-and-residual-plots)
-9. [R-squared and adjusted R-squared](#9-r-squared-and-adjusted-r-squared)
-10. [Multiple linear regression](#10-multiple-linear-regression)
-11. [Regression assumptions and diagnostics](#11-regression-assumptions-and-diagnostics)
-12. [Multicollinearity](#12-multicollinearity)
-13. [Model evaluation and prediction](#13-model-evaluation-and-prediction)
-14. [Formula sheet](#14-formula-sheet)
-15. [Python implementation](#15-python-implementation)
-16. [Common mistakes](#16-common-mistakes)
-17. [Practical workflow](#17-practical-workflow)
-18. [References](#18-references)
-
----
-
 ## 1. Where regression fits
 
 Regression and relationship analysis are used to answer questions such as:
@@ -648,7 +625,7 @@ For time series or time-ordered observations, replace random splitting with a ch
 
 ---
 
-## 17. Practical workflow
+## Practical workflow
 
 Use this sequence when working on a regression problem:
 
@@ -667,7 +644,7 @@ Use this sequence when working on a regression problem:
 
 ---
 
-## 18. References
+## References
 
 ### Official documentation
 
@@ -683,8 +660,4 @@ Use this sequence when working on a regression problem:
 
 - [Penn State — STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/)
 - [NIST/SEMATECH e-Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/)
-
----
-
-[← Back to Statistics Repository](https://github.com/Priya200227/statistics)
 
