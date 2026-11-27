@@ -56,17 +56,6 @@ The sequence is intentional: first understand the data, then quantify uncertaint
 
 ---
 
-## What this repository emphasises
-
-- **Conceptual understanding:** explain what a statistic or method measures before applying its formula.
-- **Assumptions and conditions:** check whether the data and study design justify the method.
-- **Interpretation:** translate numerical results into clear statements in the context of the problem.
-- **Practical application:** connect statistical methods to analytics, product metrics, business questions, and experiments.
-- **Python implementation:** use Python to calculate, visualise, validate, and reproduce analyses.
-- **Responsible conclusions:** distinguish association from causation, statistical significance from practical importance, and failure to reject from proof of a null hypothesis.
-
----
-
 ## Statistical methods covered
 
 ### Descriptive and exploratory analysis
@@ -115,35 +104,6 @@ The sequence is intentional: first understand the data, then quantify uncertaint
 
 ---
 
-## How to use this repository
-
-1. Start with the module folders in numerical order.
-2. Read the module README to understand the concepts, notation, assumptions, and workflow.
-3. Work through the examples instead of only reading the final answers.
-4. Recreate calculations in Python and compare them with the mathematical results.
-5. Use the diagrams and formula sheets for revision.
-6. Before applying a method to a dataset, check its assumptions and whether the study design supports the conclusion.
-7. Record uncertainties and limitations in the final analysis.
-
-Each module is intended to be independently revisable while remaining connected to the overall learning path.
-
----
-
-## Tools and technologies
-
-- **Python** - statistical calculations and reproducible analysis
-- **Jupyter Notebook / VS Code** - exploration and implementation
-- **NumPy** - numerical operations
-- **Pandas** - data manipulation
-- **Matplotlib** - visualisation
-- **SciPy** - statistical distributions and hypothesis tests
-- **Statsmodels** - statistical modelling and regression analysis
-- **Git and GitHub** - version control and documentation
-
-The exact libraries used may vary by topic. The mathematical reasoning and interpretation remain central.
-
----
-
 ## Important statistical principles
 
 1. A sample statistic is an estimate; it is not automatically equal to the population parameter.
@@ -154,26 +114,3 @@ The exact libraries used may vary by topic. The mathematical reasoning and inter
 6. Correlation does not establish causation.
 7. A model that fits training data well may still perform poorly on unseen data.
 8. Statistical conclusions are only as credible as the data quality, sampling process, experimental design, and assumptions behind the method.
-
----
-
-## Progress
-
-This repository is organised into eight learning modules. The module folders contain the detailed notes and topic-specific material.
-
-| Module | Status |
-|---|---|
-| 01 - Statistical Foundations | Completed |
-| 02 - Descriptive Statistics | Completed |
-| 03 - Data Visualization | Completed |
-| 04 - Probability | Completed |
-| 05 - Inferential Statistics | Completed |
-| 06 - Statistical Tests | Completed |
-| 07 - Regression and Relationships | Completed |
-| 08 - Experimental Design and A/B Testing | Completed |
-
----
-
-## Purpose
-
-The purpose of this repository is to build a reliable statistical foundation for data analysis and data-driven decision-making. It is a learning resource and revision reference, not a substitute for checking the assumptions, documentation, and context of a real analysis.
