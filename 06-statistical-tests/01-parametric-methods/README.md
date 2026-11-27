@@ -1,4 +1,7 @@
-# 01 — Parametric Methods
+# 01 - Parametric Methods
+
+> **Scope note:** The two-proportion z-test is included here because it is commonly taught alongside these parametric inference procedures. It tests categorical binary outcomes and population proportions, not a quantitative population mean.
+
 
 This folder is a practical reference for four commonly used inferential tests:
 
@@ -6,10 +9,6 @@ This folder is a practical reference for four commonly used inferential tests:
 2. Paired-sample t-test
 3. Two-proportion z-test
 4. One-way ANOVA
-
-The goal is not to memorise test names. The goal is to identify the correct test from the **outcome type, number of groups, and study design**, check its assumptions, calculate or obtain the test statistic, interpret the p-value, and communicate the result in context.
-
-> **Scope note:** The two-proportion z-test is included here because it is commonly taught alongside these parametric inference procedures. It tests categorical binary outcomes and population proportions, not a quantitative population mean.
 
 ---
 
@@ -199,7 +198,7 @@ Use the pooled version only when the equal-variance assumption is appropriate an
 
 A large sample does not repair dependence, selection bias, or extreme data problems.
 
-### 3.7 Worked example — tomato plant heights
+### 3.7 Worked example - tomato plant heights
 
 The supplied lesson example reports:
 
@@ -336,7 +335,7 @@ df=n-1
 
 Do not check normality only on the before values and after values separately. For a paired t-test, the relevant distribution is the distribution of the differences.
 
-### 4.6 Worked example — running shoes
+### 4.6 Worked example - running shoes
 
 Six runners each run using both shoe brands. Define:
 
@@ -459,7 +458,7 @@ A common classroom threshold is at least 10 for each expected count. Follow the 
 - Right-tailed: \(P(Z\ge z_{\text{obs}})\)
 - Two-tailed: \(2P(Z\ge |z_{\text{obs}}|)\)
 
-### 5.7 Worked example — conversion rates
+### 5.7 Worked example - conversion rates
 
 Suppose two independent website experiences are tested:
 
@@ -636,7 +635,7 @@ The p-value is the **right-tail** probability from the F-distribution using:
 - Numerator df: \(k-1\)
 - Denominator df: \(N-k\)
 
-### 6.7 Worked example — three groups
+### 6.7 Worked example - three groups
 
 The Khan Academy calculation uses these observations:
 
@@ -746,7 +745,7 @@ Install the packages if needed:
 pip install scipy statsmodels pandas numpy
 ```
 
-### 7.1 Independent two-sample t-test — Welch
+### 7.1 Independent two-sample t-test - Welch
 
 ```python
 from scipy import stats
@@ -936,11 +935,11 @@ Recommended order for studying and adding notes to this folder:
 
 ### Reference sources
 
-- Khan Academy — *Inference for categorical data: proportions* and *Inference for quantitative data: means* (lesson material and transcripts used for the proportion and mean-testing foundations).
-- Khan Academy — supplied lesson transcripts on hypotheses for two-sample and paired t-tests, the tomato-field two-sample t-test, ANOVA sums of squares, and the F-statistic.
-- Penn State STAT 200 — [Lesson 10: One-Way ANOVA](https://online.stat.psu.edu/stat200/Lesson10), including ANOVA assumptions, the F distribution, ANOVA source tables, and Tukey pairwise comparisons.
-- SciPy documentation — [scipy.stats.ttest_ind](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html), [ttest_rel](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html), [f_oneway](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html).
-- Statsmodels documentation — [proportions_ztest](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html), [pairwise_tukeyhsd](https://www.statsmodels.org/stable/generated/statsmodels.stats.multicomp.pairwise_tukeyhsd.html).
+- Khan Academy - *Inference for categorical data: proportions* and *Inference for quantitative data: means* (lesson material and transcripts used for the proportion and mean-testing foundations).
+- Khan Academy - supplied lesson transcripts on hypotheses for two-sample and paired t-tests, the tomato-field two-sample t-test, ANOVA sums of squares, and the F-statistic.
+- Penn State STAT 200 - [Lesson 10: One-Way ANOVA](https://online.stat.psu.edu/stat200/Lesson10), including ANOVA assumptions, the F distribution, ANOVA source tables, and Tukey pairwise comparisons.
+- SciPy documentation - [scipy.stats.ttest_ind](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html), [ttest_rel](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html), [f_oneway](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html).
+- Statsmodels documentation - [proportions_ztest](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.proportions_ztest.html), [pairwise_tukeyhsd](https://www.statsmodels.org/stable/generated/statsmodels.stats.multicomp.pairwise_tukeyhsd.html).
 
 ---
 
