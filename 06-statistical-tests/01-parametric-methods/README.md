@@ -1,7 +1,7 @@
 # 01 - Parametric Methods
 
 > [!NOTE]
-> **Section:** Khan Academy - [Sampling Distributions](https://www.khanacademy.org/math/ap-statistics?utm_source=chatgpt.com)
+> **Section:** Khan Academy - [Parametric Methods](https://www.khanacademy.org/math/ap-statistics?utm_source=chatgpt.com)
 >
 > **Scope note:** The two-proportion z-test is included here because it is commonly taught alongside these parametric inference procedures. It tests categorical binary outcomes and population proportions, not a quantitative population mean.
 
