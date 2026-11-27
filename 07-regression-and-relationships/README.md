@@ -21,7 +21,7 @@ Regression and relationship analysis are used to answer questions such as:
 
 ### Relationship-analysis map
 
-![Covariance and correlation patterns](images/02-pearson-correlation.png)
+![Covariance and correlation patterns](images/pearson-correlation.png)
 
 ---
 
@@ -50,7 +50,7 @@ $$
 
 **Interpretation:** The sign gives the direction of linear co-movement. The magnitude depends on the units and scales of both variables, so covariance values are not directly comparable across differently scaled datasets.
 
-![Covariance concept sketch](images/01-covariance.png)
+![Covariance concept sketch](images/covariance.png)
 
 ---
 
@@ -87,7 +87,7 @@ $$
 
 A correlation near zero does **not** rule out a strong nonlinear relationship. Always inspect a scatterplot and investigate outliers.
 
-![Pearson correlation patterns](images/02-pearson-correlation.png)
+![Pearson correlation patterns](images/pearson-correlation.png)
 
 ### Example
 
@@ -106,7 +106,7 @@ Possible explanations for an observed association:
 3. A third variable may affect both (confounding).
 4. The association may be coincidental or affected by selection or measurement bias.
 
-![Correlation versus causation sketch](images/03-correlation-vs-causation.png)
+![Correlation versus causation sketch](images/causation.png)
 
 ### Example
 
@@ -139,7 +139,7 @@ $$
 
 where $e_i$ is the residual for observation $i$.
 
-![Simple linear regression sketch](images/04-simple-linear-regression.png)
+![Simple linear regression sketch](images/simple-linear-regression.png)
 
 ### Example
 
@@ -177,7 +177,7 @@ $$
 
 OLS chooses the coefficients that minimise this quantity.
 
-![Least squares sketch](images/05-least-squares.png)
+![Least squares sketch](images/least-square-method.png)
 
 For simple linear regression with an intercept:
 
@@ -208,7 +208,7 @@ $$
 - **Intercept $b_0$:** predicted value of Y when X is zero. It may not be meaningful if zero is outside the observed or realistic range of X.
 - **Slope $b_1$:** expected change in the predicted mean of Y for a one-unit increase in X.
 
-![Coefficient interpretation sketch](images/06-regression-coefficients.png)
+![Coefficient interpretation sketch](images/regression-coefficients.png)
 
 ### Multiple regression coefficient interpretation
 
@@ -230,7 +230,7 @@ $$
 - Negative residual: the model overpredicted the observation.
 - Residual near zero: prediction was close to the observed value.
 
-![Residuals sketch](images/07-residuals.png)
+![Residuals sketch](images/residual-plots.png)
 
 ### What to inspect
 
@@ -307,7 +307,7 @@ b_2(\text{Visits})+
 b_3(\text{Discount})
 $$
 
-![Multiple regression sketch](images/09-multiple-regression.png)
+![Multiple regression sketch](images/multiple-linear-regression.png)
 
 ### Why use multiple predictors?
 
@@ -337,7 +337,7 @@ Assumptions depend on the model and the purpose of inference or prediction. For 
 | No perfect multicollinearity | Predictors are not exact linear combinations of other predictors | Design-matrix checks, VIF |
 | No highly influential data point dominating fit | Estimates are not unduly driven by a small number of observations | Leverage, studentised residuals, Cook's distance |
 
-![Regression diagnostics sketch](images/10-regression-diagnostics.png)
+![Regression diagnostics sketch](images/regression-assumptions.png)
 
 ### Important distinctions
 
@@ -353,7 +353,7 @@ Assumptions depend on the model and the purpose of inference or prediction. For 
 
 Multicollinearity occurs when two or more predictors in a multiple regression are strongly linearly related.
 
-![Multicollinearity sketch](images/11-multicollinearity.png)
+![Multicollinearity sketch](images/multicollinearity.png)
 
 ### Why it matters
 
@@ -401,7 +401,7 @@ Do not evaluate a predictive model only on the data used to fit it.
 
 For time-dependent data, use a time-aware split rather than randomly mixing future observations into training.
 
-![Model evaluation sketch](images/12-model-evaluation.png)
+![Model evaluation sketch](images/model-evaluation.png)
 
 ### Common regression metrics
 
