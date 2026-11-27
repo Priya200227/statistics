@@ -1,6 +1,6 @@
 # Statistics for Data Analysis
 
-A structured, practical study of statistics for data analysis, experimentation, and predictive modelling — with concepts, mathematical foundations, worked examples, visual explanations, and Python applications.
+A structured, practical study of statistics for data analysis, experimentation, and predictive modelling - with concepts, mathematical foundations, worked examples, visual explanations, and Python applications.
 
 This repository documents a progressive learning path from statistical foundations to regression and A/B testing. The goal is not just to memorise formulas, but to understand **when a method is appropriate, what its results mean, and how to use it responsibly in real data work**.
 
@@ -10,14 +10,14 @@ This repository documents a progressive learning path from statistical foundatio
 
 | Module | Topic | What it covers |
 |---|---|---|
-| [01 — Statistical Foundations](./01-statistical-foundations/) | Foundations | Population and sample, parameters and statistics, data types, sampling, study design, and the role of statistics |
-| [02 — Descriptive Statistics](./02-descriptive-statistics/) | Summarising data | Measures of centre and spread, quartiles, IQR, outliers, distribution shape, z-scores, and the normal distribution |
-| [03 — Data Visualization](./03-data-visualization/) | Exploring data visually | Choosing appropriate charts, reading distributions, comparing groups, and communicating patterns |
-| [04 — Probability](./04-probability/) | Quantifying uncertainty | Probability rules, conditional probability, independence, counting, and related probability concepts |
-| [05 — Inferential Statistics](./05-inferential-statistics/) | Learning from samples | Sampling distributions, standard error, the Central Limit Theorem, confidence intervals, and statistical inference |
-| [06 — Statistical Tests](./06-statistical-tests/) | Testing claims | Hypothesis testing, p-values, significance, errors and power, parametric tests, and non-parametric tests |
-| [07 — Regression and Relationships](./07-regression-and-relationships/) | Modelling relationships | Covariance, correlation, simple and multiple linear regression, least squares, residuals, diagnostics, multicollinearity, and prediction |
-| [08 — Experimental Design and A/B Testing](./08-experimental-design-and-AB-testing/) | Measuring interventions | Study design, randomisation, confounding, metrics, sample size, power, significance testing, and practical interpretation of experiments |
+| [01 - Statistical Foundations](./01-statistical-foundations/) | Foundations | Population and sample, parameters and statistics, data types, sampling, study design, and the role of statistics |
+| [02 - Descriptive Statistics](./02-descriptive-statistics/) | Summarising data | Measures of centre and spread, quartiles, IQR, outliers, distribution shape, z-scores, and the normal distribution |
+| [03 - Data Visualization](./03-data-visualization/) | Exploring data visually | Choosing appropriate charts, reading distributions, comparing groups, and communicating patterns |
+| [04 - Probability](./04-probability/) | Quantifying uncertainty | Probability rules, conditional probability, independence, counting, and related probability concepts |
+| [05 - Inferential Statistics](./05-inferential-statistics/) | Learning from samples | Sampling distributions, standard error, the Central Limit Theorem, confidence intervals, and statistical inference |
+| [06 - Statistical Tests](./06-statistical-tests/) | Testing claims | Hypothesis testing, p-values, significance, errors and power, parametric tests, and non-parametric tests |
+| [07 - Regression and Relationships](./07-regression-and-relationships/) | Modelling relationships | Covariance, correlation, simple and multiple linear regression, least squares, residuals, diagnostics, multicollinearity, and prediction |
+| [08 - Experimental Design and A/B Testing](./08-experimental-design-and-AB-testing/) | Measuring interventions | Study design, randomisation, confounding, metrics, sample size, power, significance testing, and practical interpretation of experiments |
 
 ---
 
@@ -131,14 +131,14 @@ Each module is intended to be independently revisable while remaining connected 
 
 ## Tools and technologies
 
-- **Python** — statistical calculations and reproducible analysis
-- **Jupyter Notebook / VS Code** — exploration and implementation
-- **NumPy** — numerical operations
-- **Pandas** — data manipulation
-- **Matplotlib** — visualisation
-- **SciPy** — statistical distributions and hypothesis tests
-- **Statsmodels** — statistical modelling and regression analysis
-- **Git and GitHub** — version control and documentation
+- **Python** - statistical calculations and reproducible analysis
+- **Jupyter Notebook / VS Code** - exploration and implementation
+- **NumPy** - numerical operations
+- **Pandas** - data manipulation
+- **Matplotlib** - visualisation
+- **SciPy** - statistical distributions and hypothesis tests
+- **Statsmodels** - statistical modelling and regression analysis
+- **Git and GitHub** - version control and documentation
 
 The exact libraries used may vary by topic. The mathematical reasoning and interpretation remain central.
 
@@ -163,14 +163,14 @@ This repository is organised into eight learning modules. The module folders con
 
 | Module | Status |
 |---|---|
-| 01 — Statistical Foundations | Completed |
-| 02 — Descriptive Statistics | Completed |
-| 03 — Data Visualization | Completed |
-| 04 — Probability | Completed |
-| 05 — Inferential Statistics | Completed |
-| 06 — Statistical Tests | Completed |
-| 07 — Regression and Relationships | Completed |
-| 08 — Experimental Design and A/B Testing | Completed |
+| 01 - Statistical Foundations | Completed |
+| 02 - Descriptive Statistics | Completed |
+| 03 - Data Visualization | Completed |
+| 04 - Probability | Completed |
+| 05 - Inferential Statistics | Completed |
+| 06 - Statistical Tests | Completed |
+| 07 - Regression and Relationships | Completed |
+| 08 - Experimental Design and A/B Testing | Completed |
 
 ---
 
