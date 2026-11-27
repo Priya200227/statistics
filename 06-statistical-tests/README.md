@@ -1,4 +1,4 @@
-# 06 - Statistical Tests
+# Module 06 - Statistical Tests
 
 > [!NOTE]
 > 
