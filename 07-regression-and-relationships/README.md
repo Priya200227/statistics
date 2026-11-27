@@ -628,6 +628,7 @@ For time series or time-ordered observations, replace random splitting with a ch
 ## Practical workflow
 
 Use this sequence when working on a regression problem:
+
 ![Model evaluation sketch](images/workflow.png)
 
 ---
